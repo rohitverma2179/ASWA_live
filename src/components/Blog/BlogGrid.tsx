@@ -1,31 +1,32 @@
-import React from 'react';
-import blog_1 from '../../assets/HomeImg/blog_1.png'
-import blog_2 from '../../assets/HomeImg/blog_2.png'
-import blog_3 from '../../assets/HomeImg/blog_3.png'
-import blog_4 from '../../assets/HomeImg/blog_4.png'
-import blog_5 from '../../assets/HomeImg/blog_5.png'
-import blog_6 from '../../assets/HomeImg/blog_6.png'
-
-const BLOG_POSTS = [
-    { id: 1, title: 'The Best Bottled Water Brands of 2023', image: blog_1 },
-    { id: 2, title: 'The Best Bottled Water Brands of 2023', image: blog_2 },
-    { id: 3, title: 'The Best Bottled Water Brands of 2023', image: blog_3 },
-    { id: 4, title: 'The Best Bottled Water Brands of 2023', image: blog_4 },
-    { id: 5, title: 'The Best Bottled Water Brands of 2023', image: blog_5 },
-    { id: 6, title: 'The Best Bottled Water Brands of 2023', image: blog_6 },
-    { id: 7, title: 'The Best Bottled Water Brands of 2023', image: '/assets/hero-bottles.png' },
-    { id: 8, title: 'The Best Bottled Water Brands of 2023', image: '/assets/hero-bottles.png' },
-    { id: 9, title: 'The Best Bottled Water Brands of 2023', image: '/assets/hero-bottles.png' },
-];
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { blogPosts } from '../../data/blogData';
+import { Pagination } from './Pagination';
 
 export const BlogGrid: React.FC = () => {
+    const navigate = useNavigate();
+    const [currentPage, setCurrentPage] = useState(1);
+    const postsPerPage = 9;
+
+    // Calculate posts for current page
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentPosts = blogPosts.slice(indexOfFirstPost, indexOfLastPost);
+
+    // Change page
+    const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+
     return (
         <section className="container mx-auto px-6 md:px-12 py-12">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-                {BLOG_POSTS.map((post) => (
-                    <div key={post.id} className="flex flex-col group cursor-pointer">
+                {currentPosts.map((post) => (
+                    <article
+                        key={post.id}
+                        className="flex flex-col group cursor-pointer"
+                        onClick={() => navigate(`/blog/${post.id}`)}
+                    >
                         {/* Image Container - Aspect Ratio Landscape */}
-                        <div className="w-full aspect-video overflow-hidden mb-6">
+                        <div className="w-full aspect-video overflow-hidden mb-6 rounded-lg">
                             <img
                                 src={post.image}
                                 alt={post.title}
@@ -33,13 +34,30 @@ export const BlogGrid: React.FC = () => {
                             />
                         </div>
 
-                        {/* Title */}
-                        <h3 className="text-xl md:text-2xl font-serif text-center text-gray-800 leading-snug group-hover:text-blue-900 transition-colors px-4">
-                            {post.title}
-                        </h3>
-                    </div>
+                        {/* Content */}
+                        <div className="flex flex-col gap-2 px-2">
+                            <div className="flex items-center gap-2 text-xs font-medium text-gray-500 uppercase tracking-widest">
+                                <span>{post.author}</span>
+                                <span>•</span>
+                                <span>{post.date}</span>
+                            </div>
+                            <h3 className="text-xl md:text-2xl font-serif text-gray-900 leading-snug group-hover:text-blue-900 transition-colors">
+                                {post.title}
+                            </h3>
+                            <span className="text-sm font-bold underline decoration-1 underline-offset-4 text-gray-900 mt-2">
+                                Read More
+                            </span>
+                        </div>
+                    </article>
                 ))}
             </div>
+
+            <Pagination
+                postsPerPage={postsPerPage}
+                totalPosts={blogPosts.length}
+                paginate={paginate}
+                currentPage={currentPage}
+            />
         </section>
     );
 };

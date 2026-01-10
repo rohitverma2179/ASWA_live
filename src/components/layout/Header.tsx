@@ -7,11 +7,16 @@ import { LuShoppingCart } from 'react-icons/lu';
 export const Header: React.FC = () => {
     const [open, setOpen] = useState<boolean>(false);
     const [scrolled, setScrolled] = useState<boolean>(false);
-
+    const [openSearch, setOpenSearch] = useState<boolean>(false);
 
     const handleToggleMenu = () => {
         setOpen(prev => !prev);
     };
+
+    const handleOpenSearch = () => {
+        console.log("openSearch", openSearch);
+        setOpenSearch(prev => !prev);
+    }
 
     useEffect(() => {
         const handleScroll = () => {
@@ -30,11 +35,11 @@ export const Header: React.FC = () => {
 
 
         <>
-            <header className={`fixed top-0 left-0 right-0 z-50    ${scrolled ? ' bg-white/50 bg-blend-saturation backdrop-blur-xl' : 'bg-transparent'}`}>
+            <header className={`fixed top-0 left-0 right-0 z-50    ${scrolled ? 'bg-white/50 bg-blend-saturation backdrop-blur-xl' : 'bg-transparent'}`}>
                 <div className="max-w-[1440px] mx-auto px-6 py-4 flex items-center justify-between relative">
 
                     {/* Menu Button */}
-                    
+
                     <button
                         onClick={handleToggleMenu}
                         className="p-2 hover:bg-gray-100 rounded-lg"
@@ -44,11 +49,13 @@ export const Header: React.FC = () => {
                     </button>
                     {/* Logo */}
                     <div className="absolute left-1/2 -translate-x-1/2">
-                        <img
+                       <Link to='/'>
+                         <img
                             src={imgAsva}
                             alt="ASVA"
                             className="h-[5rem] w-[5rem] object-contain"
                         />
+                        </Link>
                     </div>
 
                     {/* Right Icons */}
@@ -57,13 +64,23 @@ export const Header: React.FC = () => {
                             className="p-2 hover:bg-gray-100 rounded-lg"
                             aria-label="Search"
                         >
-                            <Search className="w-6 h-6" />
+                            <Search onClick={handleOpenSearch} className="w-6 h-6" />
                         </button>
+                        <div className={`overflow-hidden transition-all duration-500 ease-in-out flex items-center ${openSearch ? 'max-w-[200px] opacity-100 ml-2' : 'max-w-0 opacity-0 ml-0'}`}>
+                            <input
+                                type="text"
+                                placeholder="Search..."
+                                className="bg-transparent border-b border-black outline-none py-1 w-full text-sm"
+                                autoFocus={openSearch}
+                            />
+                        </div>
                         <button
                             className="p-2 hover:bg-gray-100 rounded-lg"
                             aria-label="User"
                         >
-                            <LuShoppingCart className="w-6 h-6" />
+                            <Link to={"/shop"}>
+                                <LuShoppingCart className="w-6 h-6" />
+                            </Link>
                         </button>
                     </div>
                 </div>

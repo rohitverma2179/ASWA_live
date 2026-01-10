@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import Button from '../../assets/bottle_png_.png';
+
 export const SubscriptionForm: React.FC = () => {
     const BASE_PRICE = 99.95;
 
@@ -38,7 +40,7 @@ export const SubscriptionForm: React.FC = () => {
                 {/* Left: Bottles */}
                 <div className="flex justify-center relative lg:w-1/3">
                     <div className="flex gap-4">
-                        <img src="/assets/hero-bottles.png" alt="Bottle 1" className="h-64 md:h-96 w-auto object-contain" />
+                        <img src={Button} alt="Bottle 1" className="h-64 md:h-96 w-auto object-contain" />
                         {/* <img src="/assets/hero-bottles.png" alt="Bottle 2" className="h-64 md:h-96 w-auto object-contain translate-y-8" /> */}
                     </div>
                     {/* Badges */}
@@ -66,7 +68,7 @@ export const SubscriptionForm: React.FC = () => {
 
                         <div className="flex items-center justify-between mb-8">
                             <div className="border border-gray-300 rounded-full px-6 py-2 text-sm font-bold text-gray-700">
-                                €{BASE_PRICE}
+                                ₹{BASE_PRICE}
                             </div>
 
                             {/* Quantity Selector */}
@@ -142,7 +144,7 @@ export const SubscriptionForm: React.FC = () => {
                         </div>
 
                         <div className="pt-2 text-right">
-                            <p className="text-xs font-bold text-gray-900">Total: €{totalPrice}</p>
+                            <p className="text-xs font-bold text-gray-900">Total: ₹{totalPrice}</p>
                         </div>
                     </div>
                 </div>

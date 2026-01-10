@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Button from '../../assets/bottle_png_.png';
 
 export const SubscribeBanner: React.FC = () => {
     return (
@@ -10,7 +11,7 @@ export const SubscribeBanner: React.FC = () => {
                     <div className="relative w-64 md:w-80 h-80 md:h-96">
                         {/* Placeholder for bottles - using hero bottles again as proxy */}
                         <img
-                            src="/assets/hero-bottles.png"
+                            src={Button}
                             alt="Subscription Bottles"
                             className="w-full h-full object-contain drop-shadow-xl"
                         />

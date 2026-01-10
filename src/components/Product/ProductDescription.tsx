@@ -1,6 +1,7 @@
 import React from 'react';
 
 export const ProductDescription: React.FC = () => {
+    
     return (
         <div className="mt-12 md:ml-8 lg:ml-16 bg-linear-to-b from-[#cbf1fa] via-[#dcf6fc]/50 to-white/10 rounded-3xl p-8 md:p-12 shadow-sm">
             <div className="space-y-6 text-sm text-gray-800 leading-relaxed font-medium">

@@ -1,8 +1,15 @@
-import React from 'react';
-import { Droplets, Instagram, Twitter, Facebook } from 'lucide-react';
+import React, { useEffect } from 'react';
+import { Droplets, Instagram, Twitter, Facebook, X } from 'lucide-react';
 // import imgAsva from "../../assets/logo.png";
 import imgAsva from "../../assets/ASVA_Logo.png";
+import { Link } from 'react-router-dom';
+import { BsTwitterX } from 'react-icons/bs';
 export const Footer: React.FC = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
+
     return (
         <footer className="w-full h-1/2 bg-linear-to-b from-[#cbf1fa] to-white pt-20 pb-10">
             <div className="container mx-auto px-16">
@@ -10,10 +17,10 @@ export const Footer: React.FC = () => {
 
                     {/* Left: Navigation */}
                     <nav className="flex flex-col gap-6 text-[16px] uppercase font-bold tracking-widest text-black mb-12 md:mb-0 w-full md:w-1/3">
-                        <a href="#" className="hover:text-blue-600 transition-colors">Home</a>
-                        <a href="#" className="hover:text-blue-600 transition-colors">Shop</a>
-                        <a href="#" className="hover:text-blue-600 transition-colors">Blog</a>
-                        {/* <a href="#" className="hover:text-blue-600 transition-colors">Subscribe</a> */}
+                        <Link to="/" className="hover:text-blue-600  transition-colors">Home</Link>
+                        <Link to="/shop" className="hover:text-blue-600  transition-colors">Shop</Link>
+                        <Link to="/blog" className="hover:text-blue-600  transition-colors">Blog</Link>
+                        <Link to="/subscribe" className="hover:text-blue-600  transition-colors">Subscribe</Link>
                     </nav>
 
                     {/* Center: Logo */}
@@ -42,9 +49,9 @@ export const Footer: React.FC = () => {
                         </div>
 
                         <div className="flex gap-6 mt-2">
-                            <Twitter size={16} className="text-gray-800 hover:text-blue-500 cursor-pointer transition-colors" />
-                            <Instagram size={16} className="text-gray-800 hover:text-pink-600 cursor-pointer transition-colors" />
-                            <Facebook size={16} className="text-gray-800 hover:text-blue-700 cursor-pointer transition-colors" />
+                            <BsTwitterX  size={30} className="text-gray-800 hover:text-black cursor-pointer transition-colors" />
+                            <Instagram size={30} className="text-gray-800 hover:text-pink-600 cursor-pointer transition-colors" />
+                            <Facebook size={30} className="text-gray-800 hover:text-blue-700 cursor-pointer transition-colors" />
                         </div>
                     </div>
                 </div>

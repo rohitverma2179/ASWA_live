@@ -1,5 +1,4 @@
 // import React from 'react';
-
 // const BLOG_POSTS = [
 //     { id: 1, title: 'The New Bottled Water Standard 2023', date: 'November 20, 2023', color: 'bg-linear-to-br from-blue-300 to-blue-500' },
 //     { id: 2, title: 'Hydration and Health: The Facts', date: 'October 15, 2023', color: 'bg-linear-to-br from-teal-300 to-teal-500' },
@@ -51,59 +50,14 @@
 // };
 
 
-import img1 from "../../assets/HomeImg/blog_1.png";
-import img2 from "../../assets/HomeImg/blog_2.png";
-import img3 from "../../assets/HomeImg/blog_3.png";
-import img4 from "../../assets/HomeImg/blog_4.png";
-import img5 from "../../assets/HomeImg/blog_5.png";
-import img6 from "../../assets/HomeImg/blog_6.png";
-
-const blogPosts = [
-  {
-    id: 1,
-    image: img1,
-    title: "The Best Bottled Water Brands of 2023",
-    author: "Wpsmasher",
-    date: "Oct 15, 2021"
-  },
-  {
-    id: 2,
-    image: img2,
-    title: "The Best Bottled Water Brands of 2023",
-    author: "Wpsmasher",
-    date: "Oct 15, 2021"
-  },
-  {
-    id: 3,
-    image: img3,
-    title: "The Best Bottled Water Brands of 2023",
-    author: "Wpsmasher",
-    date: "Oct 15, 2021"
-  },
-  {
-    id: 4,
-    image: img4,
-    title: "The Best Bottled Water Brands of 2023",
-    author: "Wpsmasher",
-    date: "Oct 15, 2021"
-  },
-  {
-    id: 5,
-    image: img5,
-    title: "The Best Bottled Water Brands of 2023",
-    author: "Wpsmasher",
-    date: "Oct 15, 2021"
-  },
-  {
-    id: 6,
-    image: img6,
-    title: "The Best Bottled Water Brands of 2023",
-    author: "Wpsmasher",
-    date: "Oct 15, 2021"
-  }
-];
+import { useNavigate } from 'react-router-dom';
+import { blogPosts } from '../../data/blogData';
 
 export const BlogSection: React.FC = () => {
+  const navigate = useNavigate();
+  // Display only the first 3 posts on the home section
+  const displayedPosts = blogPosts.slice(0, 6);
+
   return (
     <section className="py-24 px-6 lg:px-12 bg-white">
       <div className="max-w-[1440px] mx-auto">
@@ -119,7 +73,10 @@ export const BlogSection: React.FC = () => {
 
 
         <div className="flex justify-center  mb-20 ">
-          <button className="relative inline-flex items-center text-[#1a3b5c] px-6 py-2  group">
+          <button
+            onClick={() => navigate('/blog')}
+            className="relative inline-flex items-center text-[#1a3b5c] px-6 py-2  group cursor-pointer"
+          >
 
             {/* Left Line */}
             <span className="relative mr-3 h-[1px] w-8 bg-[#1a3b5c] scale-x-0 origin-right transition-transform duration-300 group-hover:scale-x-100" />
@@ -135,10 +92,11 @@ export const BlogSection: React.FC = () => {
 
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post) => (
+          {displayedPosts.map((post) => (
             <article
               key={post.id}
-              className="group cursor-pointer bg-white rounded-lg overflow-hidden  transition-shadow duration-300"
+              className="group cursor-pointer bg-white rounded-lg overflow-hidden transition-shadow duration-300"
+              onClick={() => navigate(`/blog/${post.id}`)}
             >
               {/* Image */}
               <div className="aspect-[16/9] overflow-hidden">
@@ -157,7 +115,7 @@ export const BlogSection: React.FC = () => {
                 <h3 className="font-['Kaisei_Decol'] font-medium text-xl">
                   {post.title}
                 </h3>
-                <button className="font-['Kaisei_Decol'] font-medium text-lg hover:underline">
+                <button className="font-['Kaisei_Decol'] font-medium text-lg hover:underline cursor-pointer">
                   Learn More
                 </button>
               </div>

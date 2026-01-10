@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../../assets/bottle_png_.png';
 
 export const AboutAboutPlan: React.FC = () => {
     return (
@@ -36,7 +37,7 @@ export const AboutAboutPlan: React.FC = () => {
                 <div className="w-full md:w-1/2 flex justify-center relative">
                     <div className="relative h-80 md:h-[500px] w-auto">
                         <img
-                            src="/assets/hero-bottles.png"
+                            src={Button}
                             alt="Subscription Bottle"
                             className="h-full w-auto object-contain"
                         />

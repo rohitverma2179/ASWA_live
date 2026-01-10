@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Header } from '../../components/layout/Header';
 import { Footer } from '../../components/layout/Footer';
 import { BlogGrid } from '../../components/Blog/BlogGrid';
-import { Pagination } from '../../components/Blog/Pagination';
+
 import { FeaturedBanner } from '../../components/HomeSection/FeaturedBanner';
 
 export const BlogPage: React.FC = () => {
@@ -23,7 +23,6 @@ export const BlogPage: React.FC = () => {
                 </div>
 
                 <BlogGrid />
-                <Pagination />
                 <FeaturedBanner />
             </main>
 

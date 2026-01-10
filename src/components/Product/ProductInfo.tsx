@@ -23,21 +23,26 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ title, price }) => {
             <div className="flex items-start gap-8 mb-4">
                 {/* Price Button */}
                 <div className="flex flex-col items-center gap-2">
-                    <button className="px-8 py-3 rounded-full border border-gray-800 text-lg font-medium min-w-[140px]">
+                    <button className=" cursor-pointer px-8 py-3 rounded-full border border-gray-800 text-lg font-medium min-w-[140px]">
                         {price}
                     </button>
-                    <span className="text-xs text-black font-medium">Price</span>
+                    <span className=" ">
+                        <button className=" cursor-pointer px-4 py-3 rounded-full border border-gray-800 text-lg font-medium min-w-[140px]">
+                            Add to Cart
+                        </button>
+                    </span>
                 </div>
 
                 {/* Quantity Selector */}
                 <div className="flex items-center border border-gray-800 rounded-full px-4 py-3 gap-6">
                     <button
                         onClick={() => setQuantity(q => Math.max(1, q - 1))}
-                        className="text-xl font-medium w-4 disabled:opacity-30"
+                        className=" cursor-pointer text-xl font-medium w-4 disabled:opacity-30"
                         disabled={quantity <= 1}
                     >
                         -
                     </button>
+
                     <span className="text-lg font-medium w-4 text-center">{quantity}</span>
                     <button
                         onClick={() => setQuantity(q => q + 1)}

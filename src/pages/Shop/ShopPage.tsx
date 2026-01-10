@@ -35,12 +35,10 @@ export const ShopPage: React.FC = () => {
                         ))}
                     </div>
                 </div>
-
                 <InfoSection />
                 <FAQSection />
                 <FeaturedBanner />
             </main>
-
             <Footer />
         </div>
     );

@@ -1,5 +1,5 @@
 
-import aswaImg from '../assets/bottle png_.png';
+import aswaImg from '../assets/bottle_png_.png';
 export interface Product {
     id: string;
     title: string;
@@ -11,7 +11,6 @@ export interface Product {
     price?: string;
 }
 
-
 export const PRODUCTS: Product[] = [
     {
         id: '1',
@@ -21,8 +20,9 @@ export const PRODUCTS: Product[] = [
         badges: ['1L'],
         date: 'Oct 15, 2023',
         author: 'Admin',
-        price: '₹ 99.95'
+        price: '₹ 120'
     },
+
     {
         id: '2',
         title: 'Asva 1L Glass Bottle',
@@ -31,7 +31,7 @@ export const PRODUCTS: Product[] = [
         badges: ['1L'],
         date: 'Oct 15, 2023',
         author: 'Admin',
-        price: '₹ 99.95'
+        price: '₹ 120'
     },
     {
         id: '3',
@@ -41,7 +41,7 @@ export const PRODUCTS: Product[] = [
         badges: ['1L'],
         date: 'Oct 15, 2023',
         author: 'Admin',
-        price: '₹ 99.95'
+        price: '₹ 120'
     },
     {
         id: '4',
@@ -51,7 +51,7 @@ export const PRODUCTS: Product[] = [
         badges: ['1L'],
         date: 'Oct 15, 2023',
         author: 'Admin',
-        price: '₹ 99.95'
+        price: '₹ 120'
     },
     {
         id: '5',
@@ -61,7 +61,7 @@ export const PRODUCTS: Product[] = [
         badges: ['1L'],
         date: 'Oct 15, 2023',
         author: 'Admin',
-        price: '₹ 99.95'
+        price: '₹ 10lack'
     },
     {
         id: '6',
@@ -71,6 +71,6 @@ export const PRODUCTS: Product[] = [
         badges: ['1L'],
         date: 'Oct 15, 2023',
         author: 'Admin',
-        price: '₹ 99.95'
-    }
+        price: '₹ 1cr'
+    },
 ];
