@@ -19,10 +19,10 @@ export const SubscriptionPage: React.FC = () => {
 
             <main>
                 <SubscribeBanner />
-                 {/* <HowItWorks /> */}
-               {/* <AboutAboutPlan />
+                 <HowItWorks />
+                <AboutAboutPlan />
                 <SubscriptionForm />
-                <SubscriptionFAQ /> */}
+                <SubscriptionFAQ />
             </main>
 
             <Footer />
