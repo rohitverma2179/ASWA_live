@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Menu, Search, ShoppingBag, X, MenuIcon } from 'lucide-react';
+import { Menu, Search, X} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import imgAsva from "../../assets/ASVA_Logo.png";
 import { LuShoppingCart } from 'react-icons/lu';

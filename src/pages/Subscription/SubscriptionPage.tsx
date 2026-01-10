@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import { Header } from '../../components/layout/Header';
 import { Footer } from '../../components/layout/Footer';
 import { SubscribeBanner } from '../../components/Subscription/SubscribeBanner';
-import { HowItWorks } from '../../components/Subscription/HowItWorks';
+// import { HowItWorks } from '../../components/Subscription/HowItWorks';
 import { AboutAboutPlan } from '../../components/Subscription/AboutPlan';
 // AboutAboutPlan named export matches file export name, though filename is AboutPlan.tsx
-import { SubscriptionForm } from '../../components/Subscription/SubscriptionForm';
+// import { SubscriptionForm } from '../../components/Subscription/SubscriptionForm';
 import { SubscriptionFAQ } from '../../components/Subscription/SubscriptionFAQ';
 
 export const SubscriptionPage: React.FC = () => {
@@ -21,7 +21,7 @@ export const SubscriptionPage: React.FC = () => {
                 <SubscribeBanner />
                  {/* <HowItWorks /> */}
                 <AboutAboutPlan />
-                <SubscriptionForm />
+                {/* <SubscriptionForm /> */}
                 <SubscriptionFAQ />
             </main>
 

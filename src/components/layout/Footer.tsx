@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Droplets, Instagram, Twitter, Facebook, X } from 'lucide-react';
+import {  Instagram,  Facebook } from 'lucide-react';
 // import imgAsva from "../../assets/logo.png";
 import imgAsva from "../../assets/ASVA_Logo.png";
 import { Link } from 'react-router-dom';
