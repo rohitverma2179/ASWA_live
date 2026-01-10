@@ -19,7 +19,7 @@ export const SubscriptionPage: React.FC = () => {
 
             <main>
                 <SubscribeBanner />
-                 <HowItWorks />
+                 {/* <HowItWorks /> */}
                 <AboutAboutPlan />
                 <SubscriptionForm />
                 <SubscriptionFAQ />
