@@ -80,12 +80,12 @@ export const BlogSection: React.FC = () => {
           >
 
             {/* Left Line */}
-            <span className="relative mr-3 h-[1px] w-8 bg-[#1a3b5c] scale-x-0 origin-right transition-transform duration-300 group-hover:scale-x-100" />
+            <span className="relative mr-3 h-px w-8 bg-[#1a3b5c] scale-x-0 origin-right transition-transform duration-300 group-hover:scale-x-100" />
 
             <span className="relative z-10">Explore More</span>
 
             {/* Right Line */}
-            <span className="relative ml-3 h-[1px] w-8 bg-[#1a3b5c] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
+            <span className="relative ml-3 h-px w-8 bg-[#1a3b5c] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
 
           </button>
         </div>
@@ -100,7 +100,8 @@ export const BlogSection: React.FC = () => {
               onClick={() => navigate(`/blog/${post.id}`)}
             >
               {/* Image */}
-              <div className="aspect-[16/9] overflow-hidden">
+              {/* <div className="aspect-[16/9] overflow-hidden"></div> */}
+              <div className="aspect-video overflow-hidden">
                 <img
                   src={post.image}
                   alt={post.title}
@@ -111,7 +112,7 @@ export const BlogSection: React.FC = () => {
               {/* Content */}
               <div className="p-6 space-y-4">
                 <p className="font-['Inter'] text-sm text-gray-500">
-                  By {post.author} | {post.date}
+                  By {post.author}
                 </p>
                 <h3 className="font-['Kaisei_Decol'] font-medium text-xl">
                   {post.title}

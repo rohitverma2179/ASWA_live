@@ -60,8 +60,8 @@ export const Hero: React.FC = () => {
             <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-12 lg:py-16">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     <div className="relative space-y-6 lg:space-y-6">
-                        <div className="absolute left-4 lg:left-[-4rem] top-[50%] hidden lg:block">
-                            <p className="text-3xl lg:text-4xl tracking-[0.08em] rotate-[-90deg] origin-left font-['Kalnia'] font-medium whitespace-nowrap">
+                        <div className="absolute left-4  lg:-left-16 top-[50%] hidden lg:block">
+                            <p className="text-3xl lg:text-4xl tracking-[0.08em] -rotate-90 origin-left font-['Kalnia'] font-medium whitespace-nowrap">
                                 ASVA
                             </p>
                         </div>

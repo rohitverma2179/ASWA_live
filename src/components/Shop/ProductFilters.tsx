@@ -27,7 +27,6 @@
 //     );
 // };
 
-
 import React from "react";
 
 interface ProductFiltersProps {
@@ -39,47 +38,35 @@ export const ProductFilters: React.FC<ProductFiltersProps> = ({
   activeFilter,
   onFilterChange,
 }) => {
-  const filters = ["All Products", "Bottles", "Jars & Cans", "Machines", "Filters", "Accessories", "Corporate"];
+  const filters = [
+    "All Products",
+    "Bottles",
+    "Jars & Cans",
+    "Machines",
+    "Filters",
+    "Accessories",
+    "Corporate",
+  ];
 
   return (
-    <div
-      className="
-        flex items-center gap-3
-        px-4 py-4
-        overflow-x-auto
-        scrollbar-hide
-        sm:justify-center
-        sm:px-6
-        sm:py-6
-        md:gap-4
-        md:py-8
-      "
-    >
-      {filters.map((filter) => {
-        console.log(activeFilter);
-
-        return (
-          <button
-            key={filter}
-            onClick={() => onFilterChange(filter)}
-            className={`
-            whitespace-nowrap
-            rounded-full border
-            transition-all duration-200
-            px-4 py-2 text-xs
-            sm:px-6 sm:py-2.5 sm:text-sm
-            md:px-8 md:text-sm
-
-            ${activeFilter === filter
-                ? "border-gray-800 text-black bg-white"
-                : "border-gray-200 text-gray-500 hover:border-gray-400 bg-white"
-              }
-          `}
-          >
-            {filter}
-          </button>
-        )
-      })}
-    </div>
+    <nav className="w-full bg-white py-6">
+      <div className="max-w-[1440px] mx-auto px-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3 md:gap-4">
+          {filters.map((filter) => (
+            <button
+              key={filter}
+              onClick={() => onFilterChange(filter)}
+              className={`w-full py-2.5 rounded-full border text-sm font-medium transition-all duration-200 text-center
+              ${activeFilter === filter
+                  ? "border-gray-800 text-black bg-white shadow-sm"
+                  : "border-gray-200 text-gray-500 hover:border-gray-400 bg-white"
+                }`}
+            >
+              {filter}
+            </button>
+          ))}
+        </div>
+      </div>
+    </nav>
   );
 };

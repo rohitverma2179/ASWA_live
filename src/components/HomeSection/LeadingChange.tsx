@@ -62,7 +62,7 @@ export const LeadingChange: React.FC = () => {
                     </div>
 
                     {/* White Card Overlay */}
-                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[95%] lg:w-[85%] bg-gradient-to-b from-white to-[#ACE3F1] mb-6 rounded-t-3xl shadow-2xl p-8 lg:p-12">
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[95%] lg:w-[85%] bg-linear-to-b from-white to-[#ACE3F1] mb-6 rounded-t-3xl shadow-2xl p-8 lg:p-12">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                             {/* Left - Text Content */}
                             <div className="space-y-6">
