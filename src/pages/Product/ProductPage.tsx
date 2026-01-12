@@ -29,8 +29,8 @@ export const ProductPage: React.FC = () => {
                     </div>
                     {/* Right Column: Info & Description */}
                     <div className="w-full lg:w-1/2">
-                        <ProductInfo title={product.title} price={product.price || "₹99.95"} />
-                        <ProductDescription />
+                        <ProductInfo title={product.title} price={product.price } />
+                        <ProductDescription description={product.description} disclaimer={product.disclaimer} subDescription={product.subDescription} faq={product.faq} />
                     </div>
 
                 </div>

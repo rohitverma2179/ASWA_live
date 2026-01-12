@@ -68,7 +68,6 @@ export const BlogSection: React.FC = () => {
           </h2>
           <p className="text-[16px] text-gray-600 max-w-2xl mx-auto">
             Alkaline science, safe drinking practices, subscription guidance and machine care, simple, evidence-based education.
-
           </p>
         </div>
 
@@ -92,11 +91,11 @@ export const BlogSection: React.FC = () => {
 
 
         {/* Blog Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {displayedPosts.map((post) => (
             <article
               key={post.id}
-              className="group cursor-pointer bg-white rounded-lg overflow-hidden transition-shadow duration-300"
+              className="group lg:mb-24 cursor-pointer  bg-white rounded-lg overflow-hidden transition-shadow duration-300"
               onClick={() => navigate(`/blog/${post.id}`)}
             >
               {/* Image */}

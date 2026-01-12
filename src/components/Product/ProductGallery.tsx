@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 interface ProductGalleryProps {
     image: string;
+    badges: string[];
 }
 
 export const ProductGallery: React.FC<ProductGalleryProps> = ({ image }) => {
@@ -29,17 +30,16 @@ export const ProductGallery: React.FC<ProductGalleryProps> = ({ image }) => {
                 <img src={images[activeImage]} alt="Product Main" className="h-full w-auto object-contain max-h-[90%]" />
 
                 {/* Badges on the right inside main image container */}
-                <div className="absolute top-1/2 -translate-y-1/2 right-4 md:right-8 flex flex-col gap-3">
-                    <div className="w-8 h-24 md:w-10 md:h-32 bg-[#00659e] rounded-lg md:rounded-xl flex items-center justify-center text-white shadow-lg">
-                        <span className="-rotate-90 text-xs md:text-sm font-bold whitespace-nowrap tracking-widest">1 L</span>
-                    </div>
-                    <div className="w-8 h-24 md:w-10 md:h-32 bg-[#00659e] rounded-lg md:rounded-xl flex items-center justify-center text-white shadow-lg">
-                        <span className="-rotate-90 text-[10px] md:text-xs font-bold leading-tight text-center">
-                            <span className="block">12</span>
-                            <span className="block mt-1">Bottles</span>
-                        </span>
-                    </div>
-                </div>
+                {/* <div className="absolute top-1/2 -translate-y-1/2 right-4 md:right-8 flex flex-col gap-3">
+                    {badges.map((badge, idx) => (
+                        <div
+                            key={idx}
+                            className="w-8 h-24 md:w-10 md:h-32 bg-[#00659e] rounded-lg md:rounded-xl flex items-center justify-center text-white shadow-lg"
+                        >
+                            <span className="-rotate-90 text-xs text-white md:text-sm font-bold whitespace-nowrap tracking-widest">{badge}</span>
+                        </div>
+                    ))}
+                </div> */}
             </div>
         </div>
     );

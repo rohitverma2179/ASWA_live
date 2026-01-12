@@ -50,8 +50,8 @@ export const ProductFilters: React.FC<ProductFiltersProps> = ({
 
   return (
     <nav className="w-full bg-white py-6">
-      <div className="max-w-[1440px] mx-auto px-4">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3 md:gap-4">
+      <div className="max-w-[900px] mx-auto px-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3 md:gap-2">
           {filters.map((filter) => (
             <button
               key={filter}

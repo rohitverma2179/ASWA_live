@@ -9,6 +9,16 @@ interface ProductInfoProps {
 export const ProductInfo: React.FC<ProductInfoProps> = ({ title, price }) => {
     const [quantity, setQuantity] = useState(1);
 
+    // Extract numeric price and calculate total
+    const getNumericPrice = (p: string) => {
+        const offerPart = p.includes('|') ? p.split('|')[1] : p;
+        return parseFloat(offerPart.replace(/[^\d]/g, '')) || 0;
+    };
+
+    const basePrice = getNumericPrice(price);
+    const totalPrice = basePrice * quantity;
+    const formattedPrice = `₹${totalPrice.toLocaleString('en-IN')}`;
+
     return (
         <div className="flex flex-col pt-0 lg:pt-8 md:pl-8 lg:pl-16">
             <h1 className="text-3xl md:text-5xl font-serif text-black mb-6 leading-tight">
@@ -20,11 +30,13 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ title, price }) => {
                 A household name for decades .
             </p>
 
+
+
             <div className="flex items-start gap-8 mb-4">
                 {/* Price Button */}
                 <div className="flex flex-col items-center gap-2">
-                    <button className=" cursor-pointer px-8 py-3 rounded-full border border-gray-800 text-lg font-medium min-w-[140px]">
-                        {price}
+                    <button className="cursor-pointer px-8 py-3 rounded-full border border-gray-800 text-lg font-medium min-w-[140px]">
+                        {formattedPrice}
                     </button>
                     <span className=" ">
                         <button className=" cursor-pointer px-4 py-3 rounded-full border border-gray-800 text-lg font-medium min-w-[140px]">
