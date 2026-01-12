@@ -12,9 +12,6 @@ export const BlogContent: React.FC<BlogContentProps> = ({ post }) => {
         <div className="w-full max-w-4xl mx-auto px-4 md:px-0">
             {/* Blog Meta Info */}
             <div className="mb-6 flex items-center gap-2">
-                <span className="text-sm font-medium text-gray-500 uppercase tracking-wide">
-                    {post.date}
-                </span>
             </div>
 
             {/* Blog Content Rendered from Blocks */}

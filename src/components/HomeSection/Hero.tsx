@@ -40,10 +40,6 @@ export const Hero: React.FC = () => {
         return () => clearInterval(interval);
     }, []);
 
-    const nextSlide = () => {
-        setActiveSlide((prev) => (prev + 1) % heroSlides.length);
-    };
-    // nextSlide()
 
     return (
         <section className="relative min-h-[90vh] lg:min-h-screen pt-24 pb-12 overflow-hidden">
@@ -82,7 +78,7 @@ export const Hero: React.FC = () => {
                                 <p className="text-lg lg:text-xl max-w-md text-gray-700">
                                     {heroSlides[activeSlide].description}
                                 </p>
-                                
+
                                 {/* <ul className="space-y-2 list-none">
                                     {heroSlides[activeSlide].subDescription.map((item, index) => (
                                         <li key={index} className="flex items-center gap-3 text-gray-700 text-lg lg:text-xl">
@@ -117,7 +113,7 @@ export const Hero: React.FC = () => {
                             </motion.div>
                         </AnimatePresence>
                     </div>
-                    
+
                     {/* <div className="flex justify-center lg:justify-end pt-4 lg:pt-0 z-10">
                         <button
                             onClick={nextSlide}

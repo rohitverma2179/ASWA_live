@@ -38,8 +38,6 @@ export const BlogGrid: React.FC = () => {
                         <div className="flex flex-col gap-2 px-2">
                             <div className="flex items-center gap-2 text-xs font-medium text-gray-500 uppercase tracking-widest">
                                 <span>{post.author}</span>
-                                <span>•</span>
-                                <span>{post.date}</span>
                             </div>
                             <h3 className="text-xl md:text-2xl font-serif text-gray-900 leading-snug group-hover:text-blue-900 transition-colors">
                                 {post.title}
