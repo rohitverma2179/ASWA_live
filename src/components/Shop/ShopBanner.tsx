@@ -19,7 +19,7 @@ export const ShopBanner: React.FC = () => {
 
     return (
         <div className="w-full max-w-[1090px] mx-auto px-4 md:px-8 pt-24 pb-8">
-            <div className="relative w-full bg-white rounded-[0.5rem] border border-zinc-800 p-6  shadow-xs">
+            <div className="relative w-full bg-white rounded-[0.5rem] rounded-b-none border  border-zinc-800 p-10  shadow-xs">
                 {/* Camera/Home Button Dot */}
                 {/* <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-zinc-900 rounded-full z-10"></div> */}
 

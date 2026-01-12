@@ -14,7 +14,12 @@ export const ShopPage: React.FC = () => {
 
     const filteredProducts = PRODUCTS.filter((product) => {
         if (activeFilter === 'All Products') return true;
-        if (activeFilter === 'Asva') return product.type === 'Bottle';
+        if (activeFilter === 'Bottles') return product.type === 'Bottle';
+        if (activeFilter === 'Jars & Cans') return product.type === 'Jar';
+        if (activeFilter === 'Machines') return product.type === 'Machine';
+        if (activeFilter === 'Filters') return product.type === 'Filter';
+        if (activeFilter === 'Accessories') return product.type === 'Accessory';
+        if (activeFilter === 'Corporate') return product.type === 'Corporate';
         return product.type === activeFilter;
     });
 

@@ -66,8 +66,9 @@ export const BlogSection: React.FC = () => {
           <h2 className="font-['Kalnia'] font-medium text-5xl lg:text-6xl mb-2">
             Water Blog
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Explore the world of water with us from your glass to the Arctic
+          <p className="text-[16px] text-gray-600 max-w-2xl mx-auto">
+            Alkaline science, safe drinking practices, subscription guidance and machine care, simple, evidence-based education.
+
           </p>
         </div>
 
@@ -81,7 +82,7 @@ export const BlogSection: React.FC = () => {
             {/* Left Line */}
             <span className="relative mr-3 h-[1px] w-8 bg-[#1a3b5c] scale-x-0 origin-right transition-transform duration-300 group-hover:scale-x-100" />
 
-            <span className="relative z-10">Learn More</span>
+            <span className="relative z-10">Explore More</span>
 
             {/* Right Line */}
             <span className="relative ml-3 h-[1px] w-8 bg-[#1a3b5c] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />

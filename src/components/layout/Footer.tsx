@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import {  Instagram,  Facebook } from 'lucide-react';
+import { Droplets, Instagram, Twitter, Facebook, X } from 'lucide-react';
 // import imgAsva from "../../assets/logo.png";
 import imgAsva from "../../assets/ASVA_Logo.png";
 import { Link } from 'react-router-dom';
@@ -13,6 +13,16 @@ export const Footer: React.FC = () => {
     return (
         <footer className="w-full h-1/2 bg-linear-to-b from-[#cbf1fa] to-white pt-20 pb-10">
             <div className="container mx-auto px-16">
+                <h2 className="text-4xl md:text-6xl font-serif text-black mb-0 leading-tight">
+                    ASVA by Kevvali
+                </h2>
+                <p className="text-xs md:text-sm text-gray-600 mb-10 max-w-md font-medium tracking-wide leading-relaxed">
+                    Pure Water, Better India. 
+
+                </p>
+                
+ 
+
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-start">
 
                     {/* Left: Navigation */}
@@ -43,16 +53,27 @@ export const Footer: React.FC = () => {
                         <div className="mb-8 flex flex-col items-start md:items-end">
                             <p className="uppercase font-bold tracking-widest mb-3 text-[14px] text-black">Office Address</p>
                             <p className="md:text-right text-gray-600">
-                                LONGYEARBYEN, SVALBARD, <br />
-                                London, 9170
+                                Plot No. 2-A, Kh. No. 51/1, Third Floor,
+                                <br />
+                                Jai Vihar, Najafgarh Road,
+                                <br />
+                                Near Sant Haridas School,
+                                <br />
+                                Delhi - 110043
                             </p>
                         </div>
 
-                        <div className="flex gap-6 mt-2">
+                        {/* <div className="flex gap-6 mt-2">
                             <BsTwitterX  size={30} className="text-gray-800 hover:text-black cursor-pointer transition-colors" />
                             <Instagram size={30} className="text-gray-800 hover:text-pink-600 cursor-pointer transition-colors" />
                             <Facebook size={30} className="text-gray-800 hover:text-blue-700 cursor-pointer transition-colors" />
-                        </div>
+                        </div> */}
+
+                        {/* <div className="flex gap-6 mt-2">
+                            <BsTwitterX  size={30} className="text-gray-800 hover:text-black cursor-pointer transition-colors" />
+                            <Instagram size={30} className="text-gray-800 hover:text-pink-600 cursor-pointer transition-colors" />
+                            <Facebook size={30} className="text-gray-800 hover:text-blue-700 cursor-pointer transition-colors" />
+                        </div> */}
                     </div>
                 </div>
             </div>

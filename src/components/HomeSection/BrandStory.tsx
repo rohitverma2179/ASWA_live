@@ -1,75 +1,117 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+const BRAND_DATA = [
+    {
+        tag: "Packaged Alkaline Water",
+        title: "Bottles & jars that fit Indian lifestyles.",
+        description: "From 200ml event bottles to 20L refill jars, ASVA offers safe alkaline hydration formats for every use, home dining, clinics, gym refills, office pantries and hotel guests.",
+        image: "/assets/brand-woman.png",
+        cardLabel: "Alkaline Water Supply",
+        cta: "Shop",
+        link: "#",
+        listOne: "200ml / 500ml / 1L bottles",
+        listTwo: "5L cans + 20L refill jars with deposit/return system"
+    },
+    {
+        tag: "Portable Alkaline Ionizers",
+        title: "Smart alkaline machines for home & business.",
+        description: "Customers can choose ready-to-drink alkaline supply or convert water on demand using ASVA ionizer devices, making alkaline hydration convenient and scalable.",
+        image: "/assets/hero-bottles.png",
+        cardLabel: "Ionizer Technology",
+        cta: "Shop Now",
+        link: "#",
+        listOne: "Home countertop ionizer",
+        listTwo: "Office/Clinic ionizer system",
+        listThree: "Gym/Studio ionizer station"
+    }
+];
+
+
+
+
+
+
 
 export const BrandStory: React.FC = () => {
-    return (
-        <section className="container mx-auto px-6 pb-20">
-            <div className="flex flex-col lg:flex-row gap-8 items-start relative">
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
+    const activeData = BRAND_DATA[activeIndex];
 
-                {/* Left Column (Small Cards) */}
-                <div className="w-full lg:w-[20%] flex flex-col gap-16 items-center lg:items-center pt-20">
-                    {/* Card 1 */}
-                    <div className="flex flex-col items-center">
-                        <img src="/assets/hero-bottles.png" className="h-32 object-contain grayscale opacity-80" alt="Small Bottle" />
-                        <p className="mt-4 text-[10px] font-bold text-gray-800 tracking-wider">PREMIUM GLASS WATER</p>
-                    </div>
-                    {/* Card 2 */}
-                    <div className="flex flex-col items-center">
-                        <div className="w-24 h-24 bg-white rounded-lg flex items-center justify-center shadow-lg border border-gray-100 p-2">
-                            {/* Placeholder for the box image - using a small water splash or bottle part */}
-                            <div className="w-full h-full bg-linear-to-br from-blue-100 to-blue-200 rounded flex items-center justify-center text-blue-800 text-xs text-center font-serif">
-                                ASVA
+    useEffect(() => {
+        if (isPaused) return;
+
+        const interval = setInterval(() => {
+            setActiveIndex((prev) => (prev + 1) % BRAND_DATA.length);
+        }, 2000);
+        return () => clearInterval(interval);
+    }, [isPaused]);
+
+    return (
+        <section
+            className="container mx-auto px-6 pb-20"
+
+        >
+            <div className="flex flex-col lg:flex-row gap-8 items-start relative"
+
+            >
+                {/* Left Column (Selectable Cards) */}
+                <div className="w-full lg:w-[20%] flex flex-col 2xl:gap-28 gap-16 items-center lg:items-center pt-20">
+                    {BRAND_DATA.map((item, index) => (
+                        <button
+                            key={index}
+                            onClick={() => setActiveIndex(index)}
+                            className={`flex flex-col items-center text-center transition-all duration-300 outline-none ${activeIndex === index ? 'opacity-100 scale-105' : 'opacity-40 hover:opacity-70'
+                                }`}
+                        >
+                            <div className={`w-24 h-24 rounded-full mb-4 overflow-hidden border-2 transition-colors ${activeIndex === index ? 'border-blue-400' : 'border-transparent bg-gray-100'
+                                }`}>
+                                <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
                             </div>
-                        </div>
-                        <p className="mt-4 text-[10px] font-bold text-gray-800 text-center uppercase tracking-wider">Sustainable <br /> Glass Bottles</p>
-                    </div>
+                            <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400">{item.cardLabel}</p>
+                        </button>
+                    ))}
                 </div>
 
-                {/* Center Column (Composite Image) */}
-                <div className="w-full lg:w-[50%] relative h-[600px] flex items-center justify-center">
-                    {/* Background Blob/Shape for the image */}
+                {/* Center Column (Dynamic Image) */}
+                <div className="w-full lg:w-[50%] relative h-[600px] flex items-center justify-center"
+                    onMouseEnter={() => setIsPaused(true)}
+                    onMouseLeave={() => setIsPaused(false)}
+                >
                     <div className="absolute inset-0 bg-blue-50/50 rounded-full blur-3xl opacity-50 transform scale-75"></div>
-
-                    {/* Woman Image */}
-                    <div className="relative z-10 ">
+                    <div className="relative z-10">
                         <img
-                            src="/assets/brand-woman.png"
-                            className="h-[500px] w-auto object-cover rounded-2xl shadow-sm"
-                            alt="Woman"
-                            style={{ clipPath: 'inset(0 0 0 0 round 20px)' }}
+                            key={activeData.image}
+                            src={activeData.image}
+                            className="h-[500px] w-auto object-cover rounded-2xl shadow-sm animate-in fade-in duration-700"
+                            alt={activeData.title}
                         />
                     </div>
-                    {/* Big Bottle Overlap */}
-                    {/* <div className="absolute right-10 bottom-10 z-20">
-                        <img src="/assets/hero-bottles.png" className="h-[450px] w-auto drop-shadow-2xl" alt="Big Bottle" />
-                    </div> */}
                 </div>
 
-                {/* Right Column (Text Content) */}
-                <div className="w-full lg:w-[30%] flex flex-col gap-16 pt-10 pl-0">
-
-                    {/* Text Block 1 */}
-                    <div>
-                        <p className="text-[10px] uppercase tracking-widest text-gray-400 mb-4 font-semibold">SUSTAINABLE & PURE</p>
-                        <h3 className="text-3xl font-serif text-black mb-4 leading-tight">Our brands, <br /> your trust</h3>
-                        <p className="text-xs text-gray-500 leading-6 mb-6 font-medium">
-                            A beautiful name for Arctic pure. Bottled at source under the strict environmental laws of Svalbard. A beautiful name for Arctic pure. Bottled at source.
-                            <br /><br />
-                            A beautiful name for Arctic pure. Bottled at source under the strict environmental laws.
+                {/* Right Column (Dynamic Text Content) */}
+                <div className="w-full lg:w-[30%] flex flex-col gap-16 pt-10 pl-0"
+                    onMouseEnter={() => setIsPaused(true)}
+                    onMouseLeave={() => setIsPaused(false)}
+                >
+                    <div key={activeIndex} className="animate-in fade-in slide-in-from-right-4 duration-500">
+                        <p className="text-[10px] uppercase tracking-widest text-gray-400 mb-4 font-semibold">{activeData.tag}</p>
+                        <h3 className="text-[32px] font-serif text-black mb-4 leading-tight">{activeData.title}</h3>
+                        <p className="text-[16px] text-gray-500 leading-6 mb-6 font-medium whitespace-pre-line">
+                            {activeData.description}
                         </p>
-                        <a href="#" className="inline-block text-[10px] font-bold text-black border-b border-gray-300 pb-1 hover:border-black uppercase tracking-widest transition-colors">Learn More</a>
+                        <ul className='list-disc ml-3'>
+                            {activeData.listOne && <li className='mb-2'> {activeData.listOne} </li>}
+                            {activeData.listTwo && <li className='mb-2'>{activeData.listTwo}  </li>}
+                            {activeData.listThree && <li className='mb-2'>{activeData.listThree}  </li>}
+                        </ul>
+                        <a
+                            href={activeData.link}
+                            className="inline-block text-[10px] font-bold text-black border-b border-gray-300 pb-1 hover:border-black uppercase tracking-widest transition-colors"
+                        >
+                            {activeData.cta}
+                        </a>
                     </div>
-
-                    {/* Text Block 2 */}
-                    <div>
-                        <h3 className="text-3xl font-serif text-black mb-4 leading-tight">Our brands, <br /> your trust</h3>
-                        <p className="text-xs text-gray-500 leading-6 mb-6 font-medium">
-                            A beautiful name for Arctic pure. For decades to come, experience the taste of the Arctic. Purest water on earth.
-                        </p>
-                        <a href="#" className="inline-block text-[10px] font-bold text-black border-b border-gray-300 pb-1 hover:border-black uppercase tracking-widest transition-colors">Shop</a>
-                    </div>
-
                 </div>
-
             </div>
         </section>
     );

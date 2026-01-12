@@ -1,8 +1,13 @@
+
+
+
 import React, { useEffect, useState } from 'react';
-import { Menu, Search, X} from 'lucide-react';
+import { Menu, Search, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import imgAsva from "../../assets/ASVA_Logo.png";
 import { LuShoppingCart } from 'react-icons/lu';
+import { AiFillInstagram } from 'react-icons/ai';
+import { FaFacebook } from 'react-icons/fa';
 
 export const Header: React.FC = () => {
     const [open, setOpen] = useState<boolean>(false);
@@ -49,12 +54,12 @@ export const Header: React.FC = () => {
                     </button>
                     {/* Logo */}
                     <div className="absolute left-1/2 -translate-x-1/2">
-                       <Link to='/'>
-                         <img
-                            src={imgAsva}
-                            alt="ASVA"
-                            className="h-[5rem] w-[5rem] object-contain"
-                        />
+                        <Link to='/'>
+                            <img
+                                src={imgAsva}
+                                alt="ASVA"
+                                className="h-[5rem] w-[5rem] object-contain"
+                            />
                         </Link>
                     </div>
 
@@ -122,6 +127,10 @@ export const Header: React.FC = () => {
                     >
                         Subscribe
                     </Link>
+                    <div className="flex gap-6 mt-2 mb-4">
+                        <AiFillInstagram size={34} className="text-gray-800 hover:text-blue-700 cursor-pointer transition-colors" />
+                        <FaFacebook size={30} className="text-gray-800 hover:text-blue-700 cursor-pointer transition-colors" />
+                    </div>
                 </nav>
             </div>
         </>

@@ -8,30 +8,39 @@ export const FAQSection: React.FC = () => {
   const faqData = [
     {
       id: 1,
-      question: "What is Bisleri?",
-      answer: "Bisleri is a brand of packaged drinking water in India."
+      question: "1. What makes ASVA different from other water brands?",
+      answer: "ASVA offers an integrated ecosystem—bottles, refill jars, subscriptions and ionizer machines—under one quality-controlled and accountable system."
     },
     {
       id: 2,
-      question: "What is the difference between Bisleri and other brands?",
-      answer: "Bisleri ensures purity with strict quality checks."
+      question: "2. Is ASVA alkaline water safe for daily use?",
+      answer: "Yes. ASVA products follow quality practices aligned to applicable compliance and safety requirements for packaged drinking water."
     },
     {
       id: 3,
-      question: "Is Bisleri water safe?",
-      answer: "Yes, Bisleri follows international safety standards."
+      question: "3. Do you provide 20L jar subscriptions?",
+      answer: "Yes. We offer scheduled refill jar subscriptions with a deposit-return system in serviceable locations."
     },
     {
       id: 4,
-      question: "Where is Bisleri available?",
-      answer: "Bisleri is available across India."
+      question: "4. Do you sell ionizer machines as well?",
+      answer: "Yes. ASVA ionizer machines help you create alkaline water on demand—suitable for home and institutional usage."
     },
     {
       id: 5,
-      question: "Does Bisleri offer bulk supply?",
-      answer: "Yes, Bisleri provides bulk water solutions."
+      question: "5. Is free shipping available?",
+      answer: "Yes, free shipping is available on selected products and locations. Final availability is shown at checkout."
+    },
+    {
+      id: 6,
+      question: "6. How do I contact support?",
+      answer: "You can reach ASVA support through phone, email, or the contact page for orders, subscription changes, and service."
     }
   ];
+
+
+
+
 
   const toggleFAQ = (id: number) => {
     setActiveFAQ(activeFAQ === id ? null : id);
@@ -70,7 +79,7 @@ export const FAQSection: React.FC = () => {
 
                 {/* ANSWER */}
                 <div
-                  className={`overflow-hidden transition-all duration-300 px-4 ${
+                  className={`overflow-hidden transition-all duration-700 px-4 ${
                     isOpen ? "max-h-40 pb-6 opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >

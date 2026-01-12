@@ -20,7 +20,7 @@ export interface BlogPost {
     title: string;
     image: string;
     author: string;
-    date: string;
+    // date: string;
     // Flexible content blocks
     content: BlogContentBlock[];
 }
@@ -215,16 +215,16 @@ const generateBlogPosts = (): BlogPost[] => {
         // Determine content based on ID
         let content = waterContent;
         let title = `The Best Bottled Water Brands of 2023 - Post ${i}`;
-        let date = "Oct 15, 2021";
+        // let date = "Oct 15, 2021";
 
         if (i === 1) {
             title = "Why Drinking Water is Essential for Your Health?";
-            date = "26th Dec 2024";
+            // date = "26th Dec 2024";
         }
 
         if (i === 2) {
             title = "The Ultimate Social Media Guide for Local Businesses";
-            date = "26th Dec 2024"; // Assuming same date as new content request usually implies fresh
+            // date = "26th Dec 2024"; // Assuming same date as new content request usually implies fresh
             content = socialMediaGuideContent;
         }
 
@@ -233,7 +233,7 @@ const generateBlogPosts = (): BlogPost[] => {
             title: title,
             image: images[(i - 1) % images.length],
             author: "Wpsmasher",
-            date: date,
+            // date: date,
             content: content
         });
     }

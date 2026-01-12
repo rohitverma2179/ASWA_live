@@ -39,7 +39,7 @@ export const ProductFilters: React.FC<ProductFiltersProps> = ({
   activeFilter,
   onFilterChange,
 }) => {
-  const filters = ["All Products", "Asva", "Machine"];
+  const filters = ["All Products", "Bottles", "Jars & Cans", "Machines", "Filters", "Accessories", "Corporate"];
 
   return (
     <div
@@ -48,11 +48,9 @@ export const ProductFilters: React.FC<ProductFiltersProps> = ({
         px-4 py-4
         overflow-x-auto
         scrollbar-hide
-
         sm:justify-center
         sm:px-6
         sm:py-6
-
         md:gap-4
         md:py-8
       "

@@ -34,16 +34,18 @@ export const LeadingChange: React.FC = () => {
         //         <ImpactCard />
         //     </div>
         // </section>
-        
+
         <section className="relative py-6 sm:py-24 px-6 lg:px-12">
             <div className="max-w-[1440px] mx-auto">
                 {/* Section Title */}
                 <div className="text-center mb-16">
                     <h2 className="font-['Kalnia'] font-medium text-5xl lg:text-6xl mb-4">
-                        Leading through Change
+                        Leading through responsibility.
+
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        A household name for decades gone, decades to come.
+                    <p className="text-[16px] text-gray-600 max-w-2xl mx-auto">
+                        ASVA is built for health and sustainability, using recyclable packs, promoting refill jars, and supporting EPR-based recycling with authorised partners to reduce net plastic impact.
+
                     </p>
                 </div>
 
@@ -65,65 +67,69 @@ export const LeadingChange: React.FC = () => {
                             {/* Left - Text Content */}
                             <div className="space-y-6">
                                 <h3 className="font-['Kalnia'] font-medium text-2xl lg:text-4xl leading-tight">
-                                    Bottles for Change aims to create awareness that
+                                    Bottles for Change
                                 </h3>
                                 <div className="space-y-4">
-                                    <p className="text-base lg:text-lg font-medium">
-                                        USED PLASTIC IS NOT WASTE.
+                                    <p className="text-[16px]  font-medium">
+                                        Used plastic is not waste—it has value. We enable collection and responsible recycling through EPR frameworks so customers can choose hydration without guilt.
+
                                     </p>
-                                    <p className="text-base lg:text-lg font-medium">
-                                        IT HAS VALUE. IT IS RECYCLABLE.
-                                    </p>
+
                                 </div>
-                                <button className="font-['Kaisei_Decol'] font-medium text-lg lg:text-xl hover:underline mt-0 sm:mt-4">
+                                <button className="font-['Kaisei_Decol'] font-medium text-lg lg:text-xl hover:underline mt-0 sm:mt-32">
                                     Learn More
                                 </button>
                             </div>
 
+                            <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-px h-3/4 bg-black/20 " />
+
                             {/* Right - Metrics Grid */}
-                            <div className="grid grid-cols-2 gap-4 lg:gap-6">
+                            <div className="grid grid-cols-2 gap-4 lg:gap-6 pl-6">
                                 {/* Metric Cells */}
                                 <div className="space-y-2">
-                                    <p className="font-['Kalnia'] font-medium text-3xl lg:text-4xl">45</p>
-                                    <p className="text-xs lg:text-sm">USED PLASTIC</p>
+                                    <p className="font-['Kalnia'] font-medium text-3xl lg:text-4xl">100%</p>
+                                    <p className="text-xs lg:text-sm">Recyclable Packaging</p>
                                 </div>
                                 <div className="space-y-2">
-                                    <p className="font-['Kalnia'] font-medium text-3xl lg:text-4xl">45</p>
-                                    <p className="text-xs lg:text-sm">Citizens</p>
+                                    <p className="font-['Kalnia'] font-medium text-3xl lg:text-4xl">0%</p>
+                                    <p className="text-xs lg:text-sm">Compromise on Safety</p>
                                 </div>
                                 <div className="space-y-2">
-                                    <p className="font-['Kalnia'] font-medium text-3xl lg:text-4xl">45</p>
-                                    <p className="text-xs lg:text-sm">USED PLASTIC</p>
+                                    <p className="font-['Kalnia'] font-medium text-3xl lg:text-4xl">24×7</p>
+                                    <p className="text-xs lg:text-sm">Purity-Focused Process</p>
                                 </div>
                                 <div className="space-y-2">
-                                    <p className="font-['Kalnia'] font-medium text-3xl lg:text-4xl">45</p>
-                                    <p className="text-xs lg:text-sm">Citizens</p>
+                                    <p className="font-['Kalnia'] font-medium text-3xl lg:text-4xl">1 Goal</p>
+                                    <p className="text-xs lg:text-sm">Healthy Hydration for India</p>
                                 </div>
                                 <div className="space-y-2">
-                                    <p className="font-['Kalnia'] font-medium text-3xl lg:text-4xl">45</p>
-                                    <p className="text-xs lg:text-sm">Citizens</p>
+                                    <p className="font-['Kalnia'] font-medium text-3xl lg:text-4xl">3R</p>
+                                    <p className="text-xs lg:text-sm">Reduce • Reuse • Recycle</p>
                                 </div>
                                 <div className="space-y-2">
-                                    <p className="font-['Kalnia'] font-medium text-3xl lg:text-4xl">45</p>
-                                    <p className="text-xs lg:text-sm">USED PLASTIC</p>
+                                    <p className="font-['Kalnia'] font-medium text-3xl lg:text-4xl">Every Bottle</p>
+                                    <p className="text-xs lg:text-sm">Collected Responsibly</p>
                                 </div>
                                 <div className="space-y-2">
-                                    <p className="font-['Kalnia'] font-medium text-3xl lg:text-4xl">45</p>
-                                    <p className="text-xs lg:text-sm">USED PLASTIC</p>
+                                    <p className="font-['Kalnia'] font-medium text-3xl lg:text-4xl">Pan-India</p>
+                                    <p className="text-xs lg:text-sm">Eco Awareness Drive</p>
                                 </div>
                                 <div className="space-y-2">
-                                    <p className="font-['Kalnia'] font-medium text-3xl lg:text-4xl">45</p>
-                                    <p className="text-xs lg:text-sm">Citizens</p>
+                                    <p className="font-['Kalnia'] font-medium text-3xl lg:text-4xl">Clean Future</p>
+                                    <p className="text-xs lg:text-sm">Powered by You</p>
                                 </div>
                             </div>
                         </div>
 
+                     
+
+
                         {/* Shop Button */}
-                        <div className="text-center mt-8">
+                        {/* <div className="text-center mt-8">
                             <button className="font-['Kaisei_Decol'] font-medium text-lg lg:text-xl hover:underline">
                                 Shop
                             </button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
