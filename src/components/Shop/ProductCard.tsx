@@ -20,7 +20,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                 {/* Badges */}
                 <div className="absolute top-4 right-4 flex flex-col gap-2">
                     {product.badges.map((badge, index) => (
-                        <span key={index} className="w-12 h-20 py-6 bg-sky-200/50 backdrop-blur-sm rounded flex items-center justify-center text-[16px] font-bold text-sky-100 border border-sky-100">
+                        <span key={index} className="w-12 h-20 py-6 bg-sky-200/50  backdrop-blur-sm rounded flex items-center justify-center text-[16px] font-bold text-black border border-sky-100">
                             <div className="flex flex-col items-center leading-none">
                                 {badge.includes('ml') ? (
                                     <>
@@ -48,7 +48,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                 {product.price.includes(' | ') ? <div className="flex items-center gap-2 text-[16px] text-gray-500 font-medium"><s className="opacity-60 text-[13px]">{product.price.split(' | ')[0]}</s>{product.price.split(' | ')[1]}</div> : <span className="text-[12px] text-gray-500 font-medium">{product.price}</span>}
                 <Link
                     to={`/product/${product.id}`}
-                    className="mt-2 text-[11px] font-bold text-black border-b border-gray-200 pb-0.5 hover:border-black uppercase tracking-widest transition-colors"
+                    className="mt-2 text-[16px] font-bold text-black border-b border-white pb-0.5 hover:border-black uppercase tracking-widest transition-colors"
                 >
                     Shop
                 </Link>

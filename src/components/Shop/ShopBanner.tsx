@@ -4,9 +4,9 @@ import shopBanner2 from "../../assets/productimg/crausal_img/shopcrausal_2.png"
 import shopBanner3 from "../../assets/productimg/crausal_img/shopcrausal_3.png"
 
 const BANNER_IMAGES = [
+    shopBanner3,
     shopBanner1,
     shopBanner2,
-    shopBanner3
 ];
 
 export const ShopBanner: React.FC = () => {

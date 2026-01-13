@@ -14,7 +14,7 @@ export const BlogHero: React.FC<BlogHeroProps> = ({ post }) => {
             </h1>
 
             {/* 2. Blog Hero Image */}
-            <div className="w-full aspect-video md:aspect-[16/9] lg:aspect-[21/9] overflow-hidden md:rounded-2xl">
+            <div className="w-full aspect-video md:aspect-video lg:aspect-21/9 overflow-hidden md:rounded-2xl">
                 <img
                     src={post.image}
                     alt={post.title}

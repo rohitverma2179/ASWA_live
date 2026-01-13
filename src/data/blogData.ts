@@ -18,10 +18,11 @@ export interface BlogContentBlock {
 export interface BlogPost {
     id: string | number;
     title: string;
+    metaTitle?: string;
+    metaDesc?: string;
     image: string;
     author: string;
-    // date: string;
-    // Flexible content blocks
+    // content blocks
     content: BlogContentBlock[];
 }
 
@@ -30,213 +31,1888 @@ const generateBlogPosts = (): BlogPost[] => {
     const images = [img1, img2, img3, img4, img5, img6];
     const posts: BlogPost[] = [];
 
-    // Detailed Content for Blog Post 2
-    const socialMediaGuideContent: BlogContentBlock[] = [
+    // Blog 1: Alkaline Water Ionizer Guide
+    const ionizerContent: BlogContentBlock[] = [
         {
             type: 'paragraph',
-            text: "It builds trust before the first transaction. When a potential customer discovers you through a referral or Google search, the first thing they do is check your Instagram or Facebook. An active, professional profile tells them you're legitimate and current."
+            text: "Walk into any modern kitchen, clinic, gym or wellness centre and you will see one appliance slowly becoming as common as the RO purifier—the alkaline water ionizer. The sleek machine next to the sink promises smoother tasting water, adjustable pH levels and on demand alkaline hydration for the whole family or facility. Yet most people who use these devices daily are still unclear about what actually happens inside the machine and how it differs from ordinary purification."
         },
         {
             type: 'paragraph',
-            text: "It keeps you top-of-mind. Most people won't buy the first time they see you. But when they see your posts regularly — helpful tips, customer success stories, behind-the-scenes content — you stay in their mind. When they're ready to buy, they think of you first."
-        },
-        {
-            type: 'paragraph',
-            text: "It's free advertising (if you do it right). Unlike paid ads, organic social media costs nothing but time. A single viral post or shared customer testimonial can bring in more leads than a ₹10,000 ad campaign."
-        },
-        {
-            type: 'paragraph',
-            text: "It humanizes your brand. People buy from people, not logos. Social media lets customers see your team, your values, and your personality. This emotional connection converts better than any sales pitch."
+            text: "This guide breaks down alkaline water ionizers in simple language so that homeowners, doctors, gym owners and office managers can make confident choices about adopting this technology."
         },
         {
             type: 'h2',
-            text: "Step 1 – Choose the Right Platform (Don't Try to Be Everywhere)"
+            text: "What exactly is an alkaline water ionizer?"
         },
         {
             type: 'paragraph',
-            text: "The biggest mistake local businesses make is trying to manage Facebook, Instagram, LinkedIn, YouTube, and Twitter all at once. You end up posting inconsistently on all of them and seeing no results anywhere. Instead, pick one primary platform where your customers actually spend time, and one secondary platform for backup."
+            text: "An alkaline water ionizer is a specialised device that takes in regular tap or RO water, filters it and then uses a process called electrolysis to separate it into alkaline and acidic streams. The alkaline stream—water with a higher pH—is used for drinking and cooking, while the acidic stream may be drained away or used for cleaning, depending on the brand and model."
         },
         {
-            type: 'h3',
-            text: "Platform Selection Guide for Local Businesses"
+            type: 'paragraph',
+            text: "Unlike a basic purifier that only focuses on removing contaminants, an ionizer is designed to adjust the pH of the water and often aims to influence characteristics such as Oxidation Reduction Potential (ORP) as well. In short, it is both a purifier and a water conditioning device."
+        },
+        {
+            type: 'h2',
+            text: "Step 1: Filtration – preparing the water"
+        },
+        {
+            type: 'paragraph',
+            text: "Before any ionization can happen, the water must be cleaned. Most alkaline ionizers have a multi stage filtration system similar to high end purifiers."
         },
         {
             type: 'list',
-            structuredItems: [
-                {
-                    title: "Facebook (Primary for most local businesses)",
-                    desc: "<b>Best for:</b> Home services, retail, restaurants, salons, healthcare, local events. <br/><b>Audience:</b> 25–55 years old, broad demographic reach. <br/><b>Why it works:</b> Strong local discovery features, Facebook Groups, easy sharing, older demographic with buying power. <br/><b>What to post:</b> Educational tips, customer testimonials, offers, business updates, local events"
-                },
-                {
-                    title: "Instagram (Primary for visual businesses)",
-                    desc: "<b>Best for:</b> Food & beverage, fashion, fitness, beauty, interiors, real estate, photography. <br/><b>Audience:</b> 18–45 years old, visually-driven, high engagement. <br/><b>Why it works:</b> Reels, Stories, visual storytelling, younger audience with growing purchasing power. <br/><b>What to post:</b> Behind-the-scenes, before/after transformations, quick tips in Reels format, customer highlights"
-                },
-                {
-                    title: "LinkedIn (Primary for B2B services)",
-                    desc: "<b>Best for:</b> Consulting, professional services, B2B suppliers, corporate training, IT services. <br/><b>Audience:</b> Business owners, decision-makers, professionals. <br/><b>Why it works:</b> High-quality leads, less noise, authority-building content performs well. <br/><b>What to post:</b> Industry insights, case studies, thought leadership, company updates"
-                },
-                {
-                    title: "YouTube (Secondary, if you can create video content)",
-                    desc: "<b>Best for:</b> Any business that can demonstrate expertise through video (how-tos, tutorials, explainers). <br/><b>Why it works:</b> Long-term SEO value, establishes authority, evergreen content. <br/><b>What to post:</b> Educational tutorials, product demos, customer success stories, Q&A videos"
-                }
+            items: [
+                "<b>Sediment filtration</b> to remove dust, sand and visible particles that would otherwise damage internal components.",
+                "<b>Activated carbon filtration</b> to reduce chlorine, certain organic compounds, odour and bad taste.",
+                "<b> Additional media </b> in some models to handle heavy metals or to add beneficial minerals such as calcium and magnesium."
             ]
         },
         {
             type: 'paragraph',
-            text: "Start with one platform. Post consistently for 90 days. Once you have a rhythm, expand to a second platform. For more on choosing content formats across platforms, read our guide on which format works best for your brand story."
+            text: "This pre filtration stage is critical because clean input water helps the electrolysis plates work efficiently and ensures the output water tastes pleasant."
         },
         {
             type: 'h2',
-            text: "Step 2 – Set Up Your Profile for Maximum Conversions"
+            text: "Step 2: Electrolysis – creating alkaline and acidic water"
         },
         {
             type: 'paragraph',
-            text: "Your social media profile is often the first impression potential customers get. A poorly set up profile wastes every follower you earn."
+            text: "Once the water is filtered, it passes into the ionization chamber, the “heart” of the machine. Inside this chamber are plates made of titanium coated with platinum, chosen for their durability and conductivity."
+        },
+        {
+            type: 'paragraph',
+            text: "When the machine is activated, a low voltage current flows through these plates. This process temporarily separates water into positively and negatively charged ions. At one side of the chamber, the water becomes more alkaline (with higher concentration of hydroxyl ions), while at the other side it becomes more acidic (with more hydrogen ions)."
+        },
+        {
+            type: 'paragraph',
+            text: "The machine then directs the alkaline water to the drinking outlet and the acidic water to a separate outlet or drain. Many models allow users to select the desired alkaline level—typically from mild to strong—using buttons on the control panel."
+        },
+        {
+            type: 'h2',
+            text: "Understanding pH, ORP and minerals"
+        },
+        {
+            type: 'paragraph',
+            text: "To understand the claims made by different ionizer brands, three key terms are useful."
         },
         {
             type: 'h3',
-            text: "Profile Optimization Checklist"
+            text: "pH"
+        },
+        {
+            type: 'paragraph',
+            text: "pH is a measure of how acidic or alkaline a liquid is, on a scale from 0 to 14, where 7 is neutral. Regular drinking water usually ranges from pH 6.5 to 8.5, while alkaline water from ionizers can reach pH 9.0–9.5 for short term use."
+        },
+        {
+            type: 'h3',
+            text: "ORP (Oxidation Reduction Potential)"
+        },
+        {
+            type: 'paragraph',
+            text: "ORP is measured in millivolts (mV) and indicates whether a solution is more likely to gain or lose electrons. Negative ORP values are often highlighted in alkaline water marketing, as they suggest a stronger reducing potential compared to neutral or tap water. While ORP is one indicator of water’s properties, it should be interpreted alongside other quality parameters rather than in isolation."
+        },
+        {
+            type: 'h3',
+            text: "Minerals"
+        },
+        {
+            type: 'paragraph',
+            text: "Minerals such as calcium, magnesium and potassium influence taste and help stabilise pH. Good ionizers either preserve naturally present minerals or use cartridges to add a controlled amount, avoiding both excessively low and excessively high Total Dissolved Solids (TDS)."
+        },
+        {
+            type: 'h2',
+            text: "What do people look for in ionized alkaline water?"
+        },
+        {
+            type: 'paragraph',
+            text: "Customers adopt alkaline ionizers for several overlapping reasons."
         },
         {
             type: 'list',
             structuredItems: [
-                { title: "Profile Picture", desc: "Use your logo or a professional photo of your storefront/team. Make sure it's high-resolution and recognizable even at small sizes." },
-                { title: "Bio/About Section", desc: "First line: What you do and who you serve mixed (e.g., 'Home cleaning services for busy families in Mumbai'). Second line: Your unique value (e.g., 'Eco-friendly products, same-day booking available'). Third line: Clear call-to-action with contact method." },
-                { title: "Contact Information", desc: "Add phone number, email, WhatsApp link (clickable). Include your full business address for local SEO benefits. Link to your website (if you don't have one yet, check out our guide on <a href='#' class='text-blue-600 underline'>what high-converting websites look like</a>)." },
-                { title: "Highlights/Featured Posts", desc: "Create highlight categories: Services, Reviews, FAQs, Offers, Behind-the-Scenes. Pin your best-performing post or most important announcement at the top." },
-                { title: "Call-to-Action Buttons", desc: "Facebook: Use 'Call Now', 'Send Message', or 'Book Now' buttons. Instagram: Use 'Contact' button linking to WhatsApp or your booking page." }
+                { title: "1. Taste and mouthfeel", desc: "Alkaline water is often described as smoother and lighter on the palate compared to very acidic or very low TDS water. When water tastes good, people naturally sip more, supporting better hydration throughout the day." },
+                { title: "2. Lifestyle and wellness alignment", desc: "People experimenting with pH balanced diets, plant forward eating and overall wellness routines see ionized water as a way to align hydration with other conscious choices. While some sources promote strong health claims, responsible brands emphasise that alkaline water is one part of a broader healthy lifestyle rather than a medical treatment." },
+                { title: "3. Convenience and control", desc: "Ionizers provide on demand alkaline water directly from the tap, which is handy for homes, clinics and gyms where large volumes are consumed daily. Users also appreciate the ability to adjust pH levels for different purposes—milder alkaline water for everyday drinking, higher levels for occasional use such as certain dietary regimes, and neutral purified water for medication." }
+            ]
+        },
+        {
+            type: 'h2',
+            text: "Where do alkaline ionizers fit: home, clinic, gym and office"
+        },
+        {
+            type: 'paragraph',
+            text: "The same core technology works across different settings, but use cases vary."
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Homes:</b> Families use alkaline water for drinking, cooking, tea and coffee, preferring the convenience of not carrying heavy jars or crates.",
+                "<b>Clinics and wellness centres:</b> Waiting areas and recovery rooms often feature alkaline water dispensers as part of a holistic approach to patient comfort.",
+                "<b>Gyms and yoga studios:</b> Members refill their own bottles with alkaline water after workouts, which aligns with the facility’s fitness and wellness narrative.",
+                "<b>Offices and co working spaces:</b> Pantry ionizers support healthier hydration for employees and visitors, sometimes combined with branded bottled alkaline water for meetings and events."
             ]
         },
         {
             type: 'paragraph',
-            text: "This setup takes 30 minutes and dramatically increases the chances that a profile visitor becomes a customer."
+            text: "In all these environments, partnering with a reliable brand for machines, filters and periodic maintenance is as important as choosing the right model."
         },
         {
             type: 'h2',
-            text: "Step 3 – Create a Simple Content Strategy (The 70-20-10 Rule)"
+            text: "How to choose the right alkaline water ionizer"
         },
         {
             type: 'paragraph',
-            text: "Most local businesses fail at social media because they either post randomly or only post promotions. Both approaches kill engagement. The solution is a proven content framework that balances value, engagement, and sales."
-        },
-        {
-            type: 'h3',
-            text: "The 70-20-10 Content Framework"
+            text: "With many options available, a structured checklist helps buyers avoid confusion."
         },
         {
             type: 'list',
             structuredItems: [
-                { title: "70% Educational/Helpful Content", desc: "Answer common customer questions. Share tips, how-tos, and quick wins. Industry news or trends explained simply. <br/><i>Examples: '5 signs your AC needs servicing', 'How to choose the right interior paint color'</i>" },
-                { title: "20% Engagement/Brand Content", desc: "Behind-the-scenes of your business. Team introductions and culture. Customer success stories and testimonials. Community involvement, local events. <br/><i>Examples: 'Meet our team member of the month', 'Before/after: Customer kitchen transformation'</i>" },
-                { title: "10% Promotional Content", desc: "Direct offers, discounts, and CTAs. New product/service launches. Limited-time deals. <br/><i>Examples: '20% off this weekend only', 'Book now for summer packages'</i>" }
+                { title: "1. Water source compatibility", desc: "Check whether your primary source is municipal tap water, borewell or pre treated RO water, as this affects the type and number of filters you need. Hard water regions may benefit from stronger scale control features and more frequent cleaning cycles." },
+                { title: "2. Plate material and design", desc: "Look for ionizers using quality titanium plates with platinum coating, as these materials support stable performance over time. Some manufacturers highlight plate shape (flat, mesh, slotted) to improve contact surface area and efficiency." },
+                { title: "3. pH range and flow rate", desc: "Check the advertised pH range and actual flow rate at different settings to ensure the machine can keep up with your household or business demand. For high traffic locations like gyms and clinics, consistent output at higher volumes is crucial." },
+                { title: "4. Certification, warranty and service network", desc: "Choose brands that clearly state testing standards, offer transparent warranties and maintain responsive service coverage in your city. Ionizers are long term investments, so filter availability and service turnaround time should heavily influence the decision." }
             ]
-        },
-        {
-            type: 'paragraph',
-            text: "This mix keeps your audience engaged without overwhelming them with sales pitches. People follow brands that add value, not brands that constantly sell. For a step-by-step system to plan a full month of content in advance, check out our guide on <a href='#' class='text-blue-600 underline'>content calendar planning</a>."
         },
         {
             type: 'h2',
-            text: "Step 4 – Plan Your Posting Schedule (Consistency Beats Perfection)"
+            text: "Maintenance: keeping your ionizer healthy"
         },
         {
             type: 'paragraph',
-            text: "The biggest reason local businesses quit social media is they start strong, burn out, and stop posting. The algorithm punishes inconsistency, so sporadic posting is worse than not posting at all."
-        },
-        {
-            type: 'h3',
-            text: "Realistic Posting Frequency by Platform"
-        },
-        {
-            type: 'list',
-            structuredItems: [
-                { title: "Facebook", desc: "<b>Minimum:</b> 3 posts per week. <b>Ideal:</b> 5–7 posts per week. <b>Best times:</b> 9–11 AM, 1–3 PM, 7–9 PM (when people check during breaks)." },
-                { title: "Instagram", desc: "<b>Minimum:</b> 3 posts + 5 Stories per week. <b>Ideal:</b> 5 posts + 7 Stories per week + 3 Reels per week. <b>Best times:</b> 10 AM–12 PM, 5–7 PM (commute hours)." },
-                { title: "LinkedIn", desc: "<b>Minimum:</b> 2 posts per week. <b>Ideal:</b> 3–4 posts per week. <b>Best times:</b> Tuesday–Thursday, 8–10 AM, 12–1 PM." },
-                { title: "YouTube", desc: "<b>Minimum:</b> 1 video per week. <b>Ideal:</b> 2 videos per week. <b>Upload schedule:</b> Consistent day/time each week." }
-            ]
+            text: "Like any water appliance, an ionizer needs periodic care to maintain performance and hygiene."
         },
         {
             type: 'paragraph',
-            text: "<b>How to Stay Consistent Without Burning Out:</b><br/>Batch Content Creation: Set aside 2–3 hours once a week to create all your content at once.<br/>Reuse and Repurpose: One piece of content can be used multiple ways.<br/>Keep a Content Bank: Store customer results, reviews, and team moments to pull from."
+            text: "Experts recommend regular electrode cleaning, timely filter replacement and occasional deep flushing of the machine to manage mineral buildup and keep pH output consistent. Many units now include automatic cleaning modes, alerts for low flow or filter change, and easy access panels for technicians."
+        },
+        {
+            type: 'paragraph',
+            text: "In hard water regions, using manufacturer approved descaling solutions and following their schedule can significantly extend the life of the plates and internal tubing. Monitoring water taste, odour and flow rate is a simple way for users to spot early signs that maintenance is due."
         },
         {
             type: 'h2',
-            text: "Step 5 – Write Captions That Actually Get Engagement"
+            text: "Setting realistic expectations"
         },
         {
             type: 'paragraph',
-            text: "A great photo with a boring caption gets ignored. A simple photo with a compelling caption gets shares, comments, and leads."
-        },
-        {
-            type: 'h3',
-            text: "Caption Formula That Works"
-        },
-        {
-            type: 'list',
-            structuredItems: [
-                { title: "Hook (First Line)", desc: "Grab attention immediately. The first 1–2 lines show up before '...more', so make them count. <br/>❌ Bad: 'We are happy to announce our new service...'<br/>✅ Good: 'Most people make this expensive mistake when hiring a plumber.'" },
-                { title: "Value (Middle)", desc: "Deliver on the promise of your hook. Educate, entertain, or inspire. Share a quick tip, tell a short story, or explain a common problem and solution." },
-                { title: "Call-to-Action (Last Line)", desc: "Tell people exactly what to do next. <br/>Examples: 'Save this post for later', 'DM us QUOTE to get started', 'What is your biggest challenge with [topic]? Comment below.'" }
-            ]
+            text: "Alkaline ionizers can upgrade everyday hydration by combining purification, taste and convenient pH control in a single device. At the same time, it is important to view alkaline water as part of a balanced lifestyle that also includes wholesome food, sleep, exercise and appropriate medical care where needed."
         },
         {
             type: 'paragraph',
-            text: "<b>Pro Tips:</b> Use line breaks to make captions easy to read. Ask questions to encourage comments. Include 3–5 relevant hashtags. Tag your location on every post for local visibility."
+            text: "By understanding how these machines work from the inside out, households and businesses can move past buzzwords and marketing hype to select systems that are safe, reliable and genuinely aligned with their wellness and sustainability goals."
         }
     ];
 
-    // Dummy Content for other posts
+    const phTdsOrpContent: BlogContentBlock[] = [
+        {
+            type: 'paragraph',
+            text: "When people think about “good” drinking water, they usually talk about taste, purity and brand, but water scientists talk about pH, TDS and ORP. These three terms appear on lab reports, purifier brochures and alkaline water ads, yet most consumers are never given a clear, simple explanation of what they actually mean. Understanding the basics helps families, offices and wellness spaces choose water solutions that are safe, comfortable to drink and aligned with long term wellbeing rather than just chasing buzzwords."
+        },
+        {
+            type: 'h2',
+            text: "What is pH in drinking water?"
+        },
+        {
+            type: 'paragraph',
+            text: "pH is a measure of how acidic, neutral or alkaline a liquid is on a scale from 0 to 14, where 7 is neutral. Values below 7 indicate acidity, while values above 7 indicate alkalinity; each step on the scale represents a ten fold change in acidity, so it is a logarithmic scale rather than a simple linear one."
+        },
+        {
+            type: 'paragraph',
+            text: "For drinking water, guidelines and studies often suggest that a pH between about 6.5 and 8.5 is generally suitable, balancing corrosion control with taste and comfort. Regular packaged water tends to sit near neutral, while alkaline water often has a pH between 8 and 9 or slightly higher, whether it is naturally mineral rich or produced through ionization."
+        },
+        {
+            type: 'paragraph',
+            text: "From a user’s point of view, water that is too acidic can taste sharp or metallic and may be more corrosive to pipes and fixtures, while water that is too alkaline can taste bitter or soapy. This is why “pH balanced” hydration focuses on staying within a moderate band that feels pleasant and supports the body’s own finely tuned pH regulation."
+        },
+        {
+            type: 'h2',
+            text: "What is TDS and why is it important?"
+        },
+        {
+            type: 'paragraph',
+            text: "TDS stands for Total Dissolved Solids and refers to the total amount of inorganic salts and small amounts of organic matter dissolved in water, measured in parts per million (ppm). Calcium, magnesium, sodium, bicarbonates, chlorides and sulphates all contribute to TDS, along with trace elements."
+        },
+        {
+            type: 'paragraph',
+            text: "Water with very low TDS (for example, after aggressive reverse osmosis) can taste flat and may lack essential minerals that contribute to mouthfeel and perceived freshness. Very high TDS, on the other hand, can make water taste salty or metallic and may be linked with scale buildup in kettles, geysers and plumbing lines over time."
+        },
+        {
+            type: 'paragraph',
+            text: "Some assessments suggest that TDS levels around a few hundred ppm, with a balanced mineral profile, can provide good taste and acceptability for many consumers, as long as contaminants are controlled. This is why “low but not zero” TDS often works better from a flavour and comfort perspective than either extreme."
+        },
+        {
+            type: 'h2',
+            text: "What is ORP and how is it different?"
+        },
+        {
+            type: 'paragraph',
+            text: "ORP stands for Oxidation Reduction Potential, an electrochemical measurement that indicates water’s tendency to gain or lose electrons. It is measured in millivolts (mV): higher positive values generally reflect stronger oxidising potential, while lower or negative values reflect reducing conditions."
+        },
+        {
+            type: 'paragraph',
+            text: "In water treatment, positive ORP values are often used as a quick check on disinfection—properly chlorinated or ozonated water is expected to show a sufficiently high positive ORP, indicating good sanitising strength. In contrast, some alkaline water and ionizer brands highlight negative ORP values as a sign of “antioxidant” water intended for direct consumption."
+        },
+        {
+            type: 'paragraph',
+            text: "It is important to remember that ORP is influenced by many factors, including pH, dissolved oxygen, chlorine, metal ions and overall TDS, so it should be interpreted with care. A specific ORP number alone is not a complete guarantee of safety or health benefit; it needs to be considered alongside microbial tests and other physical chemical parameters."
+        },
+        {
+            type: 'h2',
+            text: "How pH, TDS and ORP interact"
+        },
+        {
+            type: 'list',
+            items: [
+                "As pH increases (water becomes more alkaline), ORP often decreases because oxidising agents such as chlorine become less effective.",
+                "TDS, especially from minerals and salts, can influence both pH and ORP by changing the overall ionic balance of the water.",
+                "Very low TDS water may show unusual pH behaviour and is more sensitive to small additions of acids or bases, which is why its taste can feel unstable or “empty”."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "This interplay explains why professionals look at the full set of parameters, not just one number, when they assess water quality for a treatment plant, bottled water line or alkaline machine."
+        },
+        {
+            type: 'h2',
+            text: "What is “pH balanced hydration”?"
+        },
+        {
+            type: 'paragraph',
+            text: "The phrase “pH balanced hydration” simply means drinking water that is neither too acidic nor too alkaline, so that it complements the body’s natural, tightly controlled pH range. Some wellness experts and brands suggest that slightly alkaline water around pH 7.5–8.5 can help neutralise excess dietary acid load and support overall comfort, especially when combined with a diet rich in fruits and vegetables."
+        },
+        {
+            type: 'paragraph',
+            text: "Scientific discussions continue around the extent of long term health effects, but there is broad agreement that moderate, pH balanced water with appropriate mineral content is a reasonable and often pleasant choice for everyday drinking. Anyone with specific medical conditions should, of course, follow medical advice rather than relying on water pH alone."
+        },
+        {
+            type: 'h2',
+            text: "How to read your water report or brand label"
+        },
+        {
+            type: 'paragraph',
+            text: "Whether you are evaluating a packaged water brand, a jar supplier or an alkaline ionizer, a few quick checks can make the decision clearer."
+        },
+        {
+            type: 'list',
+            structuredItems: [
+                { title: "1. pH range", desc: "Look for a pH value within roughly 6.5–8.5 for regular drinking water, or slightly higher if it is clearly labelled as alkaline drinking water. Extremely high or low values should prompt deeper questions about suitability and intended use." },
+                { title: "2. TDS value and mineral profile", desc: "Check whether TDS is extremely low (which may taste flat) or very high (which may cause scaling or off tastes). Where possible, see if the label indicates key minerals such as calcium and magnesium that contribute to balanced flavour and mouthfeel." },
+                { title: "3. ORP claims", desc: "If a brand heavily advertises ORP numbers, treat them as one part of the picture, not the entire story, and ensure the supplier also talks about microbiological safety and compliance with relevant standards." },
+                { title: "4. Testing and certification", desc: "Reliable suppliers—whether bottled water plants or ionizer manufacturers—usually share information on quality checks, certifications and testing frequency to build trust." }
+            ]
+        },
+        {
+            type: 'h2',
+            text: "Choosing water that fits your lifestyle"
+        },
+        {
+            type: 'paragraph',
+            text: "For most households and businesses, the goal is simple: water should be safe, pleasant to drink and convenient to access throughout the day. pH, TDS and ORP are tools that help brands design and monitor water that meets these expectations; understanding them lets you make choices based on facts rather than fear or hype."
+        },
+        {
+            type: 'paragraph',
+            text: "Whether you prefer naturally mineral rich alkaline water, ionized water from a machine or carefully treated neutral water, paying attention to these parameters ensures your hydration choice is grounded in both comfort and quality."
+        }
+    ];
+
+    const packagedVsIonizerContent: BlogContentBlock[] = [
+        {
+            type: 'paragraph',
+            text: "Alkaline water has moved from niche wellness circles into homes, gyms, offices and hotels across India. As demand grows, people are faced with a practical question: is it better to buy packaged alkaline water or install an ionizer machine that produces alkaline water on demand? Both options can deliver smoother tasting, pH balanced hydration, but they suit very different situations."
+        },
+        {
+            type: 'h2',
+            text: "What is packaged alkaline water?"
+        },
+        {
+            type: 'paragraph',
+            text: "Packaged alkaline water is purified, mineral balanced water with a higher pH that is filled into sealed bottles or jars at a central plant. The process usually involves multi stage filtration, pH adjustment through mineralisation or ionization, and rigorous quality testing before bottling and dispatch."
+        },
+        {
+            type: 'list',
+            items: [
+                "Ready to drink bottles in convenient sizes such as 200 ml, 500 ml and 1 L for individual use, plus larger jars for pantry supply.",
+                "Hygienic, tamper evident packaging ideal for hospitality, events and travel.",
+                "Consistent taste and pH because everything is controlled in one facility."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "Packaged alkaline water is particularly useful when portability and visible branding are important, such as hotel rooms, conferences, gift hampers and outdoor events."
+        },
+        {
+            type: 'h2',
+            text: "What is an alkaline ionizer machine?"
+        },
+        {
+            type: 'paragraph',
+            text: "An alkaline water ionizer is a device installed in homes or commercial spaces that filters incoming water and then uses electrolysis to produce alkaline water instantly. Countertop or under sink models connect to a tap or RO outlet, and users can choose different pH levels for drinking, cooking or special uses."
+        },
+        {
+            type: 'list',
+            items: [
+                "Continuous supply without storing crates or jars.",
+                "Adjustable pH levels to suit family members, patients or fitness routines.",
+                "Potential reduction in long term packaging waste when paired with reusable bottles."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "Ionizers work especially well in places with steady daily demand such as homes, clinics, gyms and office pantries."
+        },
+        {
+            type: 'h2',
+            text: "Comparing convenience and flexibility"
+        },
+        {
+            type: 'paragraph',
+            text: "For instant convenience, packaged bottles win: there is no installation, and they can be stocked anywhere, from car boots to hotel minibars. They are also the simplest option for events where you need thousands of sealed units over a short period."
+        },
+        {
+            type: 'paragraph',
+            text: "Ionizers require one time installation and ongoing filter maintenance, but once set up, they deliver alkaline water directly from the tap at the press of a button. For everyday use in a fixed location, this reduces the effort of ordering, receiving and storing large volumes of bottles or jars."
+        },
+        {
+            type: 'h2',
+            text: "Cost and scalability over time"
+        },
+        {
+            type: 'paragraph',
+            text: "With packaged alkaline water, you pay per bottle or jar, which makes sense for occasional use or when volumes are unpredictable. However, if a family or organisation consumes many litres daily, recurring purchases and logistics can add up."
+        },
+        {
+            type: 'paragraph',
+            text: "Ionizers have higher upfront cost but lower running cost per litre, especially when usage is high and filters are changed on schedule. Over a multi year period, many heavy use settings find that the machine pays for itself through lower per litre cost and reduced storage requirements."
+        },
+        {
+            type: 'h2',
+            text: "Sustainability and waste considerations"
+        },
+        {
+            type: 'paragraph',
+            text: "Plastic bottles are highly visible in any discussion about waste, but they can be part of a responsible system when collected and recycled properly. Premium water brands increasingly use lightweight, 100% recyclable PET and participate in Extended Producer Responsibility (EPR) frameworks to ensure post consumer collection and recycling."
+        },
+        {
+            type: 'paragraph',
+            text: "Alkaline ionizers, on the other hand, reduce dependence on single use bottles by encouraging refills in glass or reusable containers. When a business combines on site machines with limited packaged supply only for guests or outdoor events, it can significantly lower plastic usage per litre of water served."
+        },
+        {
+            type: 'h2',
+            text: "Typical use case scenarios"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Homes:</b> For small families, a combination of one ionizer plus a few bottled alkaline packs for travel often works best.",
+                "<b>Offices and co working spaces:</b> Pantry ionizers serve staff, while branded packaged alkaline water is kept for meeting rooms and visitor gifting.",
+                "<b>Gyms and wellness centres:</b> Ionizers supply refill stations; smaller packaged bottles support retail counters and outdoor events.",
+                "<b>Hotels and event venues:</b> Kitchens and staff areas may use machines, while rooms and banquets rely on packaged water for aesthetics and portion control."
+            ]
+        },
+        {
+            type: 'h2',
+            text: "When both formats work together"
+        },
+        {
+            type: 'paragraph',
+            text: "In practice, the strongest approach is not “either/or” but “and”. Machines handle everyday, high volume requirements; packaged alkaline water covers mobility, branding and special occasions. Managing both through a single brand or service partner keeps quality, pH and taste consistent across every glass and bottle your guests or family members receive."
+        },
+        {
+            type: 'paragraph',
+            text: "By understanding the strengths of each format, decision makers can design a hydration ecosystem that balances convenience, cost and sustainability instead of compromising on any one factor."
+        }
+    ];
+
+    const officeHydrationContent: BlogContentBlock[] = [
+        {
+            type: 'paragraph',
+            text: "Workplaces have changed dramatically in the last decade, with organisations rethinking everything from seating layouts to mental health programmes. Hydration, once an afterthought handled by a single water cooler, is now part of a broader corporate wellness and sustainability strategy—and alkaline water is increasingly at the centre of that shift."
+        },
+        {
+            type: 'h2',
+            text: "Why hydration quality matters at work"
+        },
+        {
+            type: 'paragraph',
+            text: "Long hours in air conditioned, screen heavy environments can lead to mild dehydration, which may contribute to fatigue, headaches and reduced concentration. When water tastes flat or is difficult to access, employees tend to drink less, relying instead on tea, coffee or sugary drinks."
+        },
+        {
+            type: 'paragraph',
+            text: "Offering smooth, pleasant tasting alkaline water in convenient locations encourages more frequent sipping through the day, supporting comfort and alertness. For companies investing in wellness programmes, upgrading water quality is a simple but visible step that reinforces the message that employee health is valued."
+        },
+        {
+            type: 'h2',
+            text: "Packaged alkaline water in offices"
+        },
+        {
+            type: 'paragraph',
+            text: "Packaged alkaline water plays a valuable role in formal and client facing areas."
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Boardrooms and meeting rooms:</b> Branded bottles on the table look professional and signal premium hospitality.",
+                "<b>Reception and guest lounges:</b> Serving sealed alkaline bottles reassures visitors about hygiene and attention to detail.",
+                "<b>Events and town halls:</b> Packaged units make it easy to serve large groups without queues at a single dispenser."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "Because the water is bottled under controlled conditions with defined pH and TDS, management can be confident about consistent quality at each touchpoint."
+        },
+        {
+            type: 'h2',
+            text: "Ionizer machines for daily staff use"
+        },
+        {
+            type: 'paragraph',
+            text: "For employees, the real action happens in pantries, cafeterias and breakout zones where they refill glasses and bottles multiple times per day. This is where alkaline ionizer machines shine."
+        },
+        {
+            type: 'paragraph',
+            text: "Modern dispensers and ionizers can integrate filtration, chilling and pH adjustment in one unit, offering alkaline water at the push of a button. Benefits include:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Continuous supply</b> without frequent bottle deliveries or jar changes.",
+                "<b>Refills into reusable bottles and glasses</b>, significantly cutting single use plastic.",
+                "<b>Options to choose mild or moderate alkaline levels</b> depending on preference."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "Co working spaces, where multiple companies share infrastructure, also find that premium hydration helps differentiate their offering and command better occupancy rates."
+        },
+        {
+            type: 'h2',
+            text: "Linking hydration with productivity and culture"
+        },
+        {
+            type: 'paragraph',
+            text: "Several workplace wellness articles connect proper hydration with better cognitive performance, mood and energy levels, especially for desk based workers. While alkaline water alone is not a magic bullet, making hydration more enjoyable and accessible helps staff naturally move towards healthier routines."
+        },
+        {
+            type: 'paragraph',
+            text: "Employers can reinforce this by:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Placing refill stations</b> within easy walking distance of work zones.",
+                "<b>Running internal nudges</b>—such as simple challenges or reminders—to “sip every hour”.",
+                "<b>Training admin staff</b> to maintain machines and report any issues quickly so trust is never broken."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "These small practices build a culture where water breaks are normalised and seen as part of staying sharp, not as time wasted."
+        },
+        {
+            type: 'h2',
+            text: "Sustainability and EPR expectations"
+        },
+        {
+            type: 'paragraph',
+            text: "Corporate clients increasingly ask suppliers about packaging impact, recycling and Extended Producer Responsibility (EPR) compliance. Choosing an alkaline water partner that offers both ionizers and responsibly packaged bottles can help offices align with ESG commitments."
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Machines reduce dependency</b> on single use plastics by promoting refills.",
+                "<b>Bottles that use lightweight, recyclable PET</b> and are linked to formal collection and recycling programmes minimise environmental footprint per litre served.",
+                "<b>Transparent reporting on collection volumes or recycled content</b> strengthens ESG disclosures."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "By treating hydration as both a wellness and sustainability lever, offices can create spaces where teams feel looked after while also reducing their environmental impact."
+        }
+    ];
+
+    const gymWellnessContent: BlogContentBlock[] = [
+        {
+            type: 'paragraph',
+            text: "The modern fitness customer no longer evaluates a gym or yoga studio only by equipment or instructors. Atmosphere, cleanliness, recovery tools and even the quality of drinking water now influence membership decisions. As a result, more fitness and wellness facilities are replacing basic water coolers with alkaline water stations and premium packaged options."
+        },
+        {
+            type: 'h2',
+            text: "Hydration challenges in active environments"
+        },
+        {
+            type: 'paragraph',
+            text: "Workout sessions, hot yoga classes and long therapy appointments increase sweat loss, making proper hydration essential. When members rely solely on sugary drinks or energy beverages, they may get quick calories but not the balanced hydration needed for sustained performance."
+        },
+        {
+            type: 'paragraph',
+            text: "Alkaline water, with its slightly higher pH and mineral content, offers a smoother mouthfeel that can be easier to drink before, during and after intense activity. Encouraging small, frequent sips of clean, pleasant tasting water helps support recovery, reduces perceived fatigue and fits neatly into broader wellness routines."
+        },
+        {
+            type: 'h2',
+            text: "Why ionizer stations work well in gyms and studios"
+        },
+        {
+            type: 'paragraph',
+            text: "Ionizer machines installed near training zones or reception counters provide continuous alkaline water for members and staff."
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Members can refill personal bottles:</b> This reduces the facility’s plastic footprint while still enjoying premium water.",
+                "<b>Trainers can quickly demonstrate the pH setting:</b> Instructors can encourage clients to hydrate at specific points in their workout plan.",
+                "<b>Machines can be integrated with coolers:</b> This provides chilled options in warm climates for maximum refreshment."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "For boutique studios and clinics that emphasise holistic wellness, on site alkaline water aligns naturally with offerings like nutrition counselling, meditation or physiotherapy."
+        },
+        {
+            type: 'h2',
+            text: "Role of packaged alkaline water"
+        },
+        {
+            type: 'paragraph',
+            text: "Despite the popularity of refill culture, packaged alkaline water still has a strong role to play in fitness and wellness settings."
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Retail counters:</b> Small bottles can be sold to walk in visitors or members who forget their reusable bottles.",
+                "<b>Outdoor bootcamps and events:</b> Sealed bottles are more practical when training in parks, at races or on beaches.",
+                "<b>Premium programmes:</b> Higher tier membership plans can include dedicated bottled hydration or personalised labels."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "When the same brand supplies both the bottles and machines, facilities can maintain consistent taste and pH while presenting a unified wellness story."
+        },
+        {
+            type: 'h2',
+            text: "Educating members without over promising"
+        },
+        {
+            type: 'paragraph',
+            text: "Members increasingly research pH and alkaline diets online, but information quality is mixed. Facilities can add value by communicating clearly and responsibly:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Use short posters or digital signboards:</b> Explain that alkaline water is filtered, pH balanced and designed to complement an active lifestyle.",
+                "<b>Encourage members towards proper hydration:</b> Remind them that water works best alongside warm ups, cool downs, sleep and nutrition.",
+                "<b>Train staff to answer basic questions:</b> Ensure the team can explain pH levels and refill etiquette accurately."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "This balanced messaging builds trust and positions the gym or studio as a knowledgeable partner rather than just another trend follower."
+        },
+        {
+            type: 'h2',
+            text: "Branding and member experience"
+        },
+        {
+            type: 'paragraph',
+            text: "Details like the taste of water and the design of refill stations create subtle but powerful brand impressions. When members see clean, modern alkaline water dispensers and attractive bottled options, they perceive the facility as more premium and wellness focused."
+        },
+        {
+            type: 'paragraph',
+            text: "Coupled with small rituals—such as offering a chilled alkaline drink after a tough class or including water in welcome kits—these touches increase perceived value and encourage renewals. For wellness centres that rely heavily on referrals, this difference can be decisive."
+        }
+    ];
+
+    const sustainablePackagingContent: BlogContentBlock[] = [
+        {
+            type: 'paragraph',
+            text: "Premium alkaline water is closely associated with wellness, purity and long term health, but customers increasingly want that promise to extend to the planet as well. The challenge is balancing the undeniable convenience and safety of packaged water with the urgent need to reduce plastic waste in cities and ecosystems."
+        },
+        {
+            type: 'h2',
+            text: "Why packaging still matters in drinking water"
+        },
+        {
+            type: 'paragraph',
+            text: "Sealed bottles and jars remain essential in many scenarios: travel, hospitality, hospitals, events and locations where tap infrastructure cannot guarantee quality. Packaged water ensures tamper evident hygiene, traceable batch numbers and consistent pH and TDS levels across millions of units."
+        },
+        {
+            type: 'paragraph',
+            text: "The problem begins when bottles are not collected and recycled, turning a health solution into an environmental burden. India generates massive volumes of plastic waste daily, with PET bottles making up a visible share of litter in rivers, drains and landfills."
+        },
+        {
+            type: 'h2',
+            text: "From linear to circular: recycling and rPET"
+        },
+        {
+            type: 'paragraph',
+            text: "A circular approach aims to keep plastics in use for as long as possible, turning used bottles into new products instead of discarding them after a single life. When properly collected and processed, PET bottles can be converted into recycled PET (rPET), which can then be used for new packaging or textiles, significantly cutting demand for virgin plastic."
+        },
+        {
+            type: 'paragraph',
+            text: "Global and Indian premium water brands are increasingly adopting lightweight designs and rPET content to reduce the overall environmental footprint per bottle while maintaining safety and performance."
+        },
+        {
+            type: 'h2',
+            text: "EPR: what responsible brands must do"
+        },
+        {
+            type: 'paragraph',
+            text: "Extended Producer Responsibility (EPR) regulations in India require producers, importers and brand owners to take formal responsibility for plastic packaging across its life cycle. This includes registering on central portals, setting up or funding collection systems, meeting annual recycling targets and reporting outcomes transparently."
+        },
+        {
+            type: 'paragraph',
+            text: "For alkaline water brands, this often translates into:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Partnerships with authorised recyclers:</b> Working with waste management companies to ensure proper processing of used bottles.",
+                "<b>Deposit refund or take back schemes:</b> Implementing systems for large jars and institutional clients to encourage returns.",
+                "<b>Public disclosure of collection volumes:</b> Transparent reporting on how much plastic is collected and recycled each year."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "Customers increasingly ask about these measures, especially corporate and institutional buyers who track ESG performance."
+        },
+        {
+            type: 'h2',
+            text: "Role of refill and return models"
+        },
+        {
+            type: 'paragraph',
+            text: "Refill and return models complement packaged products by reducing the number of single use units. Examples include:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Refillable jars and subscription services</b> for offices and homes to minimize daily throughput.",
+                "<b>Event setups with glass bottles</b> that are filled, sealed and recollected using specialised machines.",
+                "<b>On site alkaline ionizer stations</b> that encourage refilling personal bottles, drastically cutting packaging per litre consumed."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "When designed well, these systems can achieve cost parity with traditional bottled water while preventing significant volumes of plastic waste and associated emissions."
+        },
+        {
+            type: 'h2',
+            text: "How customers can support responsible hydration"
+        },
+        {
+            type: 'paragraph',
+            text: "Sustainable hydration is not only the brand’s job; consumers and corporate buyers also play a role. Simple actions include:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Choosing transparent brands:</b> Opt for companies that openly share information about recyclability, EPR registration and use of recycled content.",
+                "<b>Ensuring proper disposal:</b> Bottles should be emptied, caps kept on and sent into formal recycling channels rather than mixed waste.",
+                "<b>Preferring refill options:</b> Use ionizer machines and reusable bottles for everyday use, reserving single use bottles for situations where they are truly needed."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "By combining responsible packaging, robust recycling systems and refill friendly technology, the alkaline water category can offer wellness that respects both human health and planetary boundaries."
+        }
+    ];
+
+    const safetyContent: BlogContentBlock[] = [
+        {
+            type: 'paragraph',
+            text: "As alkaline water becomes more popular in Indian homes, gyms and clinics, many families ask the same question: is it safe for everyone in the house, from children to grandparents? The short answer is that moderate consumption of alkaline water in a reasonable pH range is generally considered safe for most healthy people, but there are sensible limits and special situations where caution is wise."
+        },
+        {
+            type: 'h2',
+            text: "What science says about alkaline water safety"
+        },
+        {
+            type: 'paragraph',
+            text: "Several health resources note that alkaline drinking water with a pH between about 8 and 9 appears safe for most healthy adults. The body tightly regulates its internal pH through breathing, kidney function and other mechanisms, so small changes in the pH of what you drink do not dramatically alter blood pH."
+        },
+        {
+            type: 'paragraph',
+            text: "Concerns arise mainly when water has a very high pH—above around 9.8—or when people with kidney disease or certain medical conditions consume large amounts of mineral rich alkaline water without medical guidance. In such cases, there is a risk of electrolyte imbalance, including high potassium levels in the blood."
+        },
+        {
+            type: 'h2',
+            text: "Alkaline water for healthy adults"
+        },
+        {
+            type: 'paragraph',
+            text: "For healthy adults, alkaline water can simply be one way to make hydration more enjoyable. Many people find water with a pH around 8–9 smoother and less acidic, which can encourage them to drink more regularly through the day."
+        },
+        {
+            type: 'paragraph',
+            text: "Practical guidelines often suggest:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Choosing products clearly labelled:</b> Ensure labels state pH and mineral content for transparency.",
+                "<b>Keeping most daily hydration:</b> Stay within a moderate pH range rather than extreme levels for everyday use.",
+                "<b>Treating alkaline water:</b> View it as part of an overall healthy lifestyle that includes balanced food, sleep and movement."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "Adults with kidney issues, heart conditions or those on medication that affects electrolyte balance should consult a doctor before making major changes to water type or volume."
+        },
+        {
+            type: 'h2',
+            text: "Alkaline water for children"
+        },
+        {
+            type: 'paragraph',
+            text: "Parents are understandably careful about new products for children, especially younger ones. Guidance from paediatric and wellness sources suggests that children can drink alkaline water in moderation, but it should not entirely replace regular drinking water and breast milk in the early years."
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Infants under one year:</b> They should rely primarily on breast milk or formula. Any water—alkaline or otherwise—should only be given as advised by a paediatrician.",
+                "<b>For toddlers and younger children:</b> Low to mildly alkaline water is generally preferred over very high pH levels.",
+                "<b>As children grow older:</b> Limiting alkaline water to a few glasses a day and mixing it with regular water is a balanced approach."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "Because children are smaller and still developing, rapid or excessive intake of highly alkaline water could theoretically upset electrolyte balance or cause digestive discomfort. Keeping pH moderate and quantities sensible is a safe approach."
+        },
+        {
+            type: 'h2',
+            text: "Alkaline water for seniors"
+        },
+        {
+            type: 'paragraph',
+            text: "For older adults, hydration is critical because thirst signals can weaken with age and many seniors take multiple medications. Some seniors appreciate alkaline water’s smoother taste, especially if they experience acidity or find regular water unappealing."
+        },
+        {
+            type: 'paragraph',
+            text: "However, seniors are also more likely to have kidney concerns, blood pressure issues or heart disease. Doctors often advise them to monitor total fluid intake, sodium, potassium and other electrolytes. If a senior chooses alkaline water, it helps to:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Stick to moderate pH:</b> Maintain a pH around 8–9 rather than very high levels for better tolerance.",
+                "<b>Share full information:</b> Inform your physician about the brand, pH, minerals and daily quantity of water consumed.",
+                "<b>Watch for unusual symptoms:</b> Seek medical advice promptly for symptoms like nausea, confusion, swelling or muscle weakness."
+            ]
+        },
+        {
+            type: 'h2',
+            text: "How much alkaline water is reasonable?"
+        },
+        {
+            type: 'paragraph',
+            text: "Most experts agree that the total amount of water people drink in a day matters more than the exact pH, as long as water is safe and within a sensible range. General hydration guidelines commonly suggest around 2–3 litres of fluid per day for adults, adjusted for age, activity level and climate."
+        },
+        {
+            type: 'paragraph',
+            text: "Within that total, individuals may choose to drink part of it as alkaline water and part as regular water or other healthy beverages. A practical approach is to start gradually—perhaps one or two bottles or glasses of alkaline water daily—and adjust based on comfort, taste and any medical advice."
+        },
+        {
+            type: 'h2',
+            text: "Choosing safer alkaline products"
+        },
+        {
+            type: 'paragraph',
+            text: "Regardless of age group, a few checks improve safety:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Prefer transparent brands:</b> Choose brands that declare pH, TDS and mineral content, and follow relevant standards.",
+                "<b>Avoid untested mixtures:</b> Stay away from homemade mixtures or products with extremely high pH that lack quality control.",
+                "<b>Maintain ionizer machines:</b> Follow manufacturer guidelines on pH settings, cleansing and filter replacement for consistent safety."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "Alkaline water can be a pleasant, lifestyle oriented choice when used mindfully. Families that understand safe ranges, reasonable quantities and when to seek medical input can enjoy its taste and convenience with confidence."
+        }
+    ];
+
+    const urbanFamiliesContent: BlogContentBlock[] = [
+        {
+            type: 'paragraph',
+            text: "From apartment complexes in Delhi NCR to gated communities in Bengaluru and Mumbai, alkaline water dispensers and bottles are becoming a common sight. What started as a niche wellness trend is now a mainstream conversation among parents, professionals and seniors who want more from their daily glass of water."
+        },
+        {
+            type: 'h2',
+            text: "Rising awareness about water quality"
+        },
+        {
+            type: 'paragraph',
+            text: "Several factors drive this shift. Rapid urbanisation has put pressure on municipal supply, leading families to juggle between tap, borewell, tanker and RO treated water at different times of the year. News about contamination, changing TDS levels and inconsistent taste keeps water quality high on the worry list."
+        },
+        {
+            type: 'paragraph',
+            text: "At the same time, younger families are more informed about health than ever before, reading articles and medical blogs about hydration, acidity and mineral balance. When they encounter the concept of slightly alkaline, mineral balanced water that tastes smoother and feels gentler on the stomach, many are curious to try it."
+        },
+        {
+            type: 'h2',
+            text: "Taste, comfort and “drinkability”"
+        },
+        {
+            type: 'paragraph',
+            text: "One of the biggest, often underrated reasons families stick with alkaline water is taste. Studies and user surveys frequently note that water with moderate alkalinity and balanced mineral content is perceived as smoother and more refreshing than very acidic or very low TDS water."
+        },
+        {
+            type: 'paragraph',
+            text: "Parents find that children and teenagers are more willing to sip water regularly when it tastes pleasant and is served chilled in attractive bottles. Over time, this improves overall fluid intake, which is especially important in hot climates and for active, sports oriented kids."
+        },
+        {
+            type: 'h2',
+            text: "Aligning with a broader wellness lifestyle"
+        },
+        {
+            type: 'paragraph',
+            text: "Urban families increasingly follow routines that include yoga, walking, gym sessions, mindful eating and periodic health check ups. In that context, water choice becomes a simple way to align daily habits with long term wellness goals."
+        },
+        {
+            type: 'paragraph',
+            text: "Blogs and health articles mention that alkaline water may help neutralise excess dietary acid load, support digestion and enhance hydration, while stressing that it is not a replacement for medical treatment. Families view it as a small but meaningful upgrade—similar to shifting from refined to whole grains or from deep fried snacks to grilled options."
+        },
+        {
+            type: 'h2',
+            text: "Convenience: machines, subscriptions and bottles"
+        },
+        {
+            type: 'paragraph',
+            text: "Technology and service models have made adoption easier than ever."
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Home ionizer machines:</b> These connect to existing taps or RO outlets and deliver alkaline water on demand, often with digital control of pH levels.",
+                "<b>Packaged alkaline water:</b> Available in familiar sizes for school tiffins, office bags, road trips and home entertaining.",
+                "<b>Subscription services:</b> These deliver jars or bottles on fixed schedules so families do not have to remember to reorder."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "These options let households mix and match formats according to lifestyle: machines for daily drinking and cooking, bottles for travel and guests."
+        },
+        {
+            type: 'h2',
+            text: "Sustainability and plastic concerns"
+        },
+        {
+            type: 'paragraph',
+            text: "Awareness of plastic pollution is high among urban consumers, especially parents and young professionals. Many initially worry that switching to packaged alkaline water might increase their plastic footprint."
+        },
+        {
+            type: 'paragraph',
+            text: "Responsible brands respond by using recyclable PET, exploring recycled content, improving bottle light weighting and participating in EPR linked collection and recycling programmes. Families further reduce impact by using ionizer machines at home, refilling glass or steel bottles and reserving single use bottles for situations where they are truly necessary."
+        },
+        {
+            type: 'h2',
+            text: "Making the switch thoughtfully"
+        },
+        {
+            type: 'paragraph',
+            text: "For families considering alkaline water, a few simple steps make the transition smoother:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Start gradually:</b> Replace one or two glasses or bottles per day with alkaline water and evaluate comfort and taste.",
+                "<b>Choose transparent products:</b> Select brands with labels that mention pH range, TDS and treatment process.",
+                "<b>Scale your setup:</b> If installing a machine, match its capacity and filtration stages to your source water and household size."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "With these basics in place, alkaline water becomes an easy, everyday upgrade that fits naturally into the rhythm of urban family life—supporting hydration, taste and wellness without demanding drastic change."
+        }
+    ];
+
+    const vsRegularWaterContent: BlogContentBlock[] = [
+        {
+            type: 'paragraph',
+            text: "Walk down the water aisle today and you no longer see just “mineral water” or “RO water”. You will spot bottles labelled with pH numbers, “alkaline”, “natural mineral” and “purified drinking water”. For many people, the big question now is: should you drink regular packaged water or switch to alkaline water for everyday use?"
+        },
+        {
+            type: 'h2',
+            text: "What is regular packaged drinking water?"
+        },
+        {
+            type: 'paragraph',
+            text: "Regular packaged drinking water is treated water that meets basic safety and quality standards for human consumption. It usually goes through several steps such as filtration, disinfection and sometimes reverse osmosis. The goal is to remove physical, chemical and microbial impurities so that the water is safe, clear and neutral tasting."
+        },
+        {
+            type: 'paragraph',
+            text: "Most regular packaged waters are close to neutral on the pH scale, typically around 7. Their mineral content varies depending on source and treatment: some retain or add a modest amount of minerals; others, especially aggressively filtered RO variants, can have very low mineral levels and therefore very low TDS. This often gives a “light” or sometimes slightly flat taste."
+        },
+        {
+            type: 'h2',
+            text: "What is alkaline water?"
+        },
+        {
+            type: 'paragraph',
+            text: "Alkaline water is drinking water with a higher pH than regular water, usually somewhere between 8 and 9.5 for typical consumer products. This can be achieved naturally (when water flows through mineral rich rock) or through technology such as ionization and mineral cartridges."
+        },
+        {
+            type: 'paragraph',
+            text: "Apart from a higher pH, alkaline water is generally designed to contain a balanced level of minerals like calcium, magnesium and potassium. Many people experience the taste as smoother and less sharp than very low TDS neutral water. Because it is positioned as a lifestyle and wellness product, alkaline water is often presented in more premium packaging and brand storytelling."
+        },
+        {
+            type: 'h2',
+            text: "Comparing pH and taste"
+        },
+        {
+            type: 'paragraph',
+            text: "The easiest difference to understand is pH. Regular packaged water hovers around neutral, while alkaline water sits slightly higher on the scale. That difference may sound small, but it can be noticeable on the palate."
+        },
+        {
+            type: 'paragraph',
+            text: "Neutral or slightly acidic water can sometimes taste sharp, especially if it has very low mineral content. Slightly alkaline water tends to feel softer and rounder in the mouth. Many people who do not enjoy drinking plain water find that they naturally drink more when offered a smoother, mildly alkaline option. In hot climates or during busy workdays, this improvement in “drinkability” can make a real difference to overall hydration."
+        },
+        {
+            type: 'h2',
+            text: "Minerals and mouthfeel"
+        },
+        {
+            type: 'paragraph',
+            text: "Another key difference is mineral profile. With regular bottled water, some variants retain natural minerals, some add a controlled mix, and some remove almost everything through RO. Alkaline brands typically highlight mineral content because those minerals help hold the pH and contribute to mouthfeel."
+        },
+        {
+            type: 'paragraph',
+            text: "Calcium and magnesium, for example, are associated with a slightly “heavier” but pleasant feel to water. When balanced, they support both taste and perceived refreshment. If you are moving from very low TDS RO water to mineral rich alkaline water, you will almost certainly notice the change in taste and how “satisfying” each sip feels."
+        },
+        {
+            type: 'h2',
+            text: "Everyday health and comfort"
+        },
+        {
+            type: 'paragraph',
+            text: "From a safety point of view, both regular packaged drinking water and properly produced alkaline water are suitable for everyday drinking when they meet relevant standards and are bottled hygienically. The main difference lies in how they fit into your lifestyle and preferences."
+        },
+        {
+            type: 'paragraph',
+            text: "People often choose alkaline water because:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>They experience acidity or heartburn:</b> Some feel more comfortable with less acidic drinks for better digestive comfort.",
+                "<b>They want a mindful routine:</b> It aligns with a more health-conscious and wellness-oriented daily lifestyle.",
+                "<b>They prefer the smoother taste:</b> The improved mouthfeel helps them stay hydrated more easily through the day."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "Regular packaged water remains a reliable baseline choice, especially when you are travelling or when alkaline options are not available. It is better to drink enough regular water than to drink too little while waiting for a “perfect” option."
+        },
+        {
+            type: 'h2',
+            text: "Cost, convenience and access"
+        },
+        {
+            type: 'paragraph',
+            text: "Regular bottled water is widely available at almost every shop, restaurant, petrol station and event. It is usually priced lower and comes in many familiar sizes."
+        },
+        {
+            type: 'paragraph',
+            text: "Alkaline water is still more of a premium niche, though availability is increasing quickly in metros and tier 2 cities. It may cost more per bottle but offers a different experience and positioning. For daily home use, many families balance cost and comfort by combining packaged alkaline water with an ionizer machine or by using alkaline water mainly at key points of the day, such as morning and post workout."
+        },
+        {
+            type: 'h2',
+            text: "Which one should you choose?"
+        },
+        {
+            type: 'paragraph',
+            text: "Instead of thinking in terms of “good” versus “bad”, it helps to consider context:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>For travel and emergencies:</b> Regular packaged drinking water from a trusted label is perfectly fine and safe.",
+                "<b>For home and wellness settings:</b> Alkaline water adds value and can gently encourage better hydration habits through taste.",
+                "<b>For specific health conditions:</b> Consult a doctor and choose the water type that fits medical guidance over marketing claims."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "Ultimately, the best choice is the one that keeps you and your family drinking safe, pleasant tasting water consistently throughout the day. Many brands, including alkaline specialists, now offer both types so you can mix and match according to situation."
+        }
+    ];
+
+    const acidityHeartburnContent: BlogContentBlock[] = [
+        {
+            type: 'paragraph',
+            text: "Acidity and heartburn are among the most common complaints in today’s fast paced lifestyle. Long gaps between meals, spicy food, late night snacking and stress can all trigger that familiar burning in the chest or throat. Many people now turn to alkaline water as a gentler, everyday way to manage acidity, but how does it actually fit into the picture?"
+        },
+        {
+            type: 'h2',
+            text: "Understanding acidity and heartburn"
+        },
+        {
+            type: 'paragraph',
+            text: "Heartburn happens when stomach acid flows back up into the food pipe (oesophagus). The stomach is naturally very acidic; it needs strong acid to break down food. The oesophagus, however, is not designed to handle repeated exposure to that acid, so even small amounts moving upward can cause discomfort."
+        },
+        {
+            type: 'paragraph',
+            text: "Occasional heartburn after heavy or late meals is common. When it becomes frequent, doctors may refer to it as acid reflux or GERD (gastro oesophageal reflux disease). Treatment usually includes diet changes, lifestyle adjustments and, when needed, medication."
+        },
+        {
+            type: 'h2',
+            text: "Where does alkaline water come in?"
+        },
+        {
+            type: 'paragraph',
+            text: "Because alkaline water has a higher pH than regular water, it can temporarily neutralise some acid it comes into contact with. For some people, sipping slightly alkaline water provides mild, short term comfort when they feel a burning sensation."
+        },
+        {
+            type: 'paragraph',
+            text: "The idea is simple: if the liquid you are drinking is less acidic than your stomach contents, it may help dilute and buffer some of the acid that has moved into the oesophagus. Certain lab studies and clinical observations suggest that alkaline water with a pH in the high eights can help deactivate specific enzymes involved in reflux, which is why you may have seen pH 8.8 mentioned in articles and videos."
+        },
+        {
+            type: 'h2',
+            text: "What alkaline water can and cannot do"
+        },
+        {
+            type: 'paragraph',
+            text: "It is important to keep expectations realistic. Alkaline water is not a cure for chronic acidity or GERD. It does not “fix” the valve between the stomach and oesophagus, nor does it address all triggers such as obesity, smoking, particular foods or stress."
+        },
+        {
+            type: 'paragraph',
+            text: "What it can potentially offer is:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>A more comfortable option:</b> Less acidic than soft drinks, citrus juices and highly caffeinated beverages during phases of discomfort.",
+                "<b>Reduced acid load:</b> A way to avoid adding extra acid load when you are already prone to heartburn.",
+                "<b>Gentle everyday support:</b> Useful when combined with larger lifestyle changes for holistic long-term management."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "In other words, alkaline water can be a supportive player but it is rarely the entire solution."
+        },
+        {
+            type: 'h2',
+            text: "Everyday tips if you are prone to heartburn"
+        },
+        {
+            type: 'paragraph',
+            text: "If you experience acidity often and want to experiment with alkaline water, consider combining it with these simple habits:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Eat smaller meals:</b> Have frequent, smaller portions instead of heavy, late-night dinners to reduce stomach pressure.",
+                "<b>Wait after eating:</b> Avoid lying down immediately after meals; wait at least two to three hours for digestion.",
+                "<b>Cut down triggers:</b> Reduce intake of spicy dishes, deep-fried snacks, excessive coffee, alcohol and aerated drinks.",
+                "<b>Active lifestyle:</b> Maintain a healthy weight and add gentle movement like walking or yoga to your routine.",
+                "<b>Sleep elevation:</b> Elevate the head of your bed slightly if night-time reflux is a recurring issue."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "Replacing some of your acidic beverages with neutral or slightly alkaline water fits naturally into this overall approach."
+        },
+        {
+            type: 'h2',
+            text: "Choosing the right pH and format"
+        },
+        {
+            type: 'paragraph',
+            text: "For acidity management, there is no need to chase extremely high pH values. Most people do well with water that is gently alkaline—typically pH 8 to 9—rather than very strong alkalinity. Very high pH water can taste unnatural and is not meant for continuous, long term, high volume consumption."
+        },
+        {
+            type: 'paragraph',
+            text: "You can choose between:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Bottled alkaline water:</b> Convenient for when you are on the go, with clearly labelled pH levels.",
+                "<b>Home ionizer machines:</b> Select mild alkaline settings for daily drinking and a neutral setting for taking medication."
+            ]
+        },
+        {
+            type: 'h2',
+            text: "When you should see a doctor"
+        },
+        {
+            type: 'paragraph',
+            text: "While it is fine to experiment with alkaline water for mild, occasional discomfort, there are clear situations where professional medical advice is essential:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Persistent heartburn:</b> If discomfort persists several times a week for weeks together.",
+                "<b>Severe pain:</b> Pain is severe, or you feel tightness in the chest (especially if it is hard to distinguish from heart issues).",
+                "<b>Difficulty swallowing:</b> Or if you experience persistent cough, voice changes or unexplained weight loss.",
+                "<b>Pre-existing conditions:</b> If you already have kidney problems or are on multiple medications."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "In such cases, alkaline water can at best be an add on to the plan your doctor prescribes, not a substitute for evaluation and treatment."
+        },
+        {
+            type: 'paragraph',
+            text: "Used thoughtfully, alkaline water can be a comfortable everyday choice that fits into a heartburn friendly routine. The key is to see it as one helpful habit among many, not as a magic fix."
+        }
+    ];
+
+    const machineMaintenanceContent: BlogContentBlock[] = [
+        {
+            type: 'paragraph',
+            text: "Installing an alkaline water machine at home or in the office is a smart way to enjoy pH balanced, great tasting water every day. But like any appliance that deals with water and minerals, your ionizer needs regular care. Good maintenance protects your family’s health, keeps taste consistent and extends the life of the machine."
+        },
+        {
+            type: 'h2',
+            text: "Why maintenance matters"
+        },
+        {
+            type: 'paragraph',
+            text: "Over time, minerals in the water can deposit on the internal plates and tubing of the machine. Dust and moisture can also affect external parts. If filters are not replaced on time, they lose the ability to remove impurities effectively."
+        },
+        {
+            type: 'paragraph',
+            text: "Neglecting basic maintenance can lead to:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Fluctuating pH levels:</b> Inconsistent water quality and pH adjustment.",
+                "<b>Performance issues:</b> Slower flow, strange noises or leaks.",
+                "<b>Sensory changes:</b> Unpleasant taste or odour in the output.",
+                "<b>Reduced lifespan:</b> Shorter life of plates, filters and internal electronics."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "The good news is that most everyday care is simple and can be handled by the household with occasional support from authorised technicians."
+        },
+        {
+            type: 'h2',
+            text: "1. Follow the installation and startup instructions"
+        },
+        {
+            type: 'paragraph',
+            text: "Maintenance actually starts on day one. Make sure your ionizer is installed by someone trained or authorised by the brand. A proper installation ensures the right water pressure, correct connections and the correct orientation of inlet and outlet pipes."
+        },
+        {
+            type: 'paragraph',
+            text: "During the first run:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Flush the system:</b> Clear out any manufacturing residues as recommended.",
+                "<b>Check for faults:</b> Monitor for leaks and unusual sounds.",
+                "<b>Validate output:</b> Confirm realistic pH levels and smooth flow."
+            ]
+        },
+        {
+            type: 'h2',
+            text: "2. Clean the exterior regularly"
+        },
+        {
+            type: 'paragraph',
+            text: "The outside of your machine collects kitchen grease, dust and fingerprints just like any other appliance. Wipe it gently every few days with a soft, damp cloth and, if needed, a mild, non abrasive cleaner. Avoid harsh chemicals or scrubbing pads that could damage the finish or labels."
+        },
+        {
+            type: 'h2',
+            text: "3. Replace filters on schedule"
+        },
+        {
+            type: 'paragraph',
+            text: "Each machine comes with recommended filter life measured in litres or months. The control panel often shows filter status or alerts when replacement is due."
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Stay proactive:</b> Mark expected replacement dates on a calendar or phone.",
+                "<b>Use genuine parts:</b> Only use filters from the brand or authorised partners.",
+                "<b>Flush after replacement:</b> Run water for a few minutes to purge air and particles."
+            ]
+        },
+        {
+            type: 'h2',
+            text: "4. Manage scale and clean the electrolysis chamber"
+        },
+        {
+            type: 'paragraph',
+            text: "In areas with hard water, limescale can build up on the ionizer’s plates and internal pathways. Many modern machines have an auto clean function that periodically reverses polarity or flushes water to reduce scale. Make sure this feature is activated and run manual cleaning cycles if recommended."
+        },
+        {
+            type: 'h2',
+            text: "5. Flush the machine after long breaks"
+        },
+        {
+            type: 'paragraph',
+            text: "If you are away from home for more than a few days and the machine is not used, water remains standing inside the filters and chamber."
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Initial clearance:</b> Run water for a few minutes on a neutral setting.",
+                "<b>Discard first batch:</b> Do not use the initial flushed water for drinking.",
+                "<b>Assess quality:</b> If the break was very long, consider a filter check."
+            ]
+        },
+        {
+            type: 'h2',
+            text: "6. Watch for warning signs"
+        },
+        {
+            type: 'paragraph',
+            text: "Your ionizer speaks to you through small changes. Pay attention if you notice:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Flow changes:</b> Noticeably lower or uneven water flow.",
+                "<b>Acoustic alerts:</b> Unusual noises such as gurgling or sputtering.",
+                "<b>Odour/Taste:</b> Sudden metallic or sour smells/tastes.",
+                "<b>System alerts:</b> Error codes or flashing alerts on the display."
+            ]
+        },
+        {
+            type: 'h2',
+            text: "7. Schedule periodic professional servicing"
+        },
+        {
+            type: 'paragraph',
+            text: "Even with good home care, an annual or semi annual visit from an authorised technician is a wise investment, especially in high use homes and offices. Technicians can test actual pH output, inspect internal seals, and perform deep cleaning if required."
+        },
+        {
+            type: 'paragraph',
+            text: "With a little routine attention, your alkaline water machine can deliver reliable, great tasting water for many years. Treat it like a key member of the kitchen or pantry, and it will quietly take care of your family’s hydration day after day."
+        }
+    ];
+
+    const mythsVsFactsContent: BlogContentBlock[] = [
+        {
+            type: 'paragraph',
+            text: "Alkaline water has gone from a niche product to a full blown wellness trend. Along the way, it has attracted plenty of bold claims and equally strong criticism. Some people believe it can fix almost any health issue, while others dismiss it as pure marketing. The truth, as usual, sits somewhere in the middle."
+        },
+        {
+            type: 'h2',
+            text: "Common Myths and Real Facts"
+        },
+        {
+            type: 'paragraph',
+            text: "<b>Myth 1: Alkaline water cures diseases.</b> One of the most common myths is that alkaline water can “cure” serious conditions simply by changing the body’s pH. This idea is appealing but misleading."
+        },
+        {
+            type: 'paragraph',
+            text: "<b>Fact:</b> The human body tightly regulates its internal pH through complex systems. Drinking alkaline water does not override all of that. It can be part of a health conscious lifestyle and may offer comfort for occasional acidity, but it is not a replacement for medical treatment."
+        },
+        {
+            type: 'paragraph',
+            text: "<b>Myth 2: Alkaline water is just a gimmick.</b> Some say there is no reason to choose it over ordinary options, ignoring differences in taste and drinkability."
+        },
+        {
+            type: 'paragraph',
+            text: "<b>Fact:</b> Slight differences in pH and mineral balance do change how water tastes and feels. Many find mildly alkaline water smoother. If that encourages better hydration, it is a meaningful benefit."
+        },
+        {
+            type: 'paragraph',
+            text: "<b>Myth 3: More alkaline is always better.</b> advertisements imply that the higher the pH, the better the water."
+        },
+        {
+            type: 'paragraph',
+            text: "<b>Fact:</b> Most people do best with water that is only gently alkaline—usually in the pH 8 to 9 range. Extremely high pH levels can taste odd and are not meant for all day, everyday drinking. Balance matters more than extremes."
+        },
+        {
+            type: 'paragraph',
+            text: "<b>Myth 4: You can drink unlimited alkaline water without thinking.</b> Many think you can drink endless amounts without any concern."
+        },
+        {
+            type: 'paragraph',
+            text: "<b>Fact:</b> Your kidneys, heart and digestive system still have limits. Like all water, alkaline water should be consumed in sensible quantities matching your age, activity level and climate."
+        },
+        {
+            type: 'paragraph',
+            text: "<b>Myth 5: If you drink alkaline water, diet no longer matters.</b> Believing that drinking it makes junk food, lack of sleep or no exercise okay."
+        },
+        {
+            type: 'paragraph',
+            text: "<b>Fact:</b> Hydration is just one pillar of health. Real results come from a combination of whole foods, physical activity, adequate rest and stress management. Water supports these efforts but cannot replace them."
+        },
+        {
+            type: 'paragraph',
+            text: "<b>Myth 6: You must choose between alkaline and regular water.</b> It is easy to fall into “either/or” thinking."
+        },
+        {
+            type: 'paragraph',
+            text: "<b>Fact:</b> Many comfortably use both. They drink alkaline water where available and regular water when travelling. What matters is consistency in safe, clean hydration, not rigid rules."
+        },
+        {
+            type: 'h2',
+            text: "Making a balanced choice"
+        },
+        {
+            type: 'paragraph',
+            text: "When you strip away hype and fear, alkaline water is simply one more option in the hydration toolkit. It offers a different taste profile, slightly higher pH and, when produced responsibly, good everyday comfort. Use it because it fits your lifestyle and helps you drink enough water—not because of miracle promises or pressure."
+        }
+    ];
+
+    const athleteHydrationContent: BlogContentBlock[] = [
+        {
+            type: 'paragraph',
+            text: "Walk into any modern gym or sports academy and you will see people carrying sleek bottles, hydration packs and shaker cups. Alongside protein shakes and electrolytes, alkaline water has entered the conversation about performance and recovery. So what role can it realistically play for athletes and active people?"
+        },
+        {
+            type: 'h2',
+            text: "Hydration basics for performance"
+        },
+        {
+            type: 'paragraph',
+            text: "Before talking about types of water, it helps to revisit why hydration matters so much in sport. Even mild dehydration can affect endurance, reaction time, focus and perceived effort. When you lose fluid through sweat and do not replace it, your body struggles to keep temperature and circulation in balance. For athletes, the first goal is simple: avoid getting significantly dehydrated during training and competition."
+        },
+        {
+            type: 'h2',
+            text: "Where alkaline water fits"
+        },
+        {
+            type: 'paragraph',
+            text: "Alkaline water is essentially water with a higher pH and a particular mineral profile. For an athlete, this can offer a few potential advantages:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Smooth taste:</b> Makes it more pleasant to drink in large quantities without feeling 'heavy'.",
+                "<b>Mineral content:</b> Contributes to overall electrolyte intake alongside formal sports drinks.",
+                "<b>Buffered feel:</b> Some athletes find it helpful during sessions that create a lot of lactic acid."
+            ]
+        },
+        {
+            type: 'h2',
+            text: "Alkaline water vs sports drinks"
+        },
+        {
+            type: 'paragraph',
+            text: "Sports drinks deliver carbohydrates and electrolytes. Alkaline water, by contrast, contains little or no sugar. It works best:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Pre-workout:</b> Helps you arrive at the session well hydrated and primed.",
+                "<b>Moderate intensity:</b> Ideal when you sweat but do not need heavy carbohydrate replacement.",
+                "<b>Recovery:</b> Supports rehydration throughout the rest of the day post-exercise."
+            ]
+        },
+        {
+            type: 'h2',
+            text: "Practical tips for athletes"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Test in training:</b> Start using it on training days first, not on race day, to judge comfort.",
+                "<b>Balanced pH:</b> Aim for a moderate pH in the 8–9 range for regular daily athletic use.",
+                "<b>Holistic plan:</b> Combine it with a solid nutrition and electrolyte strategy for long sessions.",
+                "<b>Track feelings:</b> Monitor energy, digestion, and recovery patterns over several weeks."
+            ]
+        },
+        {
+            type: 'h2',
+            text: "Benefits beyond the workout window"
+        },
+        {
+            type: 'paragraph',
+            text: "Serious athletes know that what they do outside the gym matters as much as what they do inside. Sleep, everyday diet and general hydration all shape performance. Drinking clean, appealing water during work, travel and rest days helps maintain a stable baseline. For many, having an alkaline water dispenser at home encourages steady sipping, meaning they arrive at training already better hydrated."
+        },
+        {
+            type: 'h2',
+            text: "A tool, not a shortcut"
+        },
+        {
+            type: 'paragraph',
+            text: "Used wisely, alkaline water can be a useful part of a broader sports hydration strategy. It can support comfort, encourage higher fluid intake and contribute minerals. But it does not replace structured training, smart nutrition, deliberate recovery or medical advice. Treat it like any other tool: test it, observe realistic benefits and keep using it if it clearly helps you stay hydrated and feel your best."
+        }
+    ];
+
+    const cookingIndianContent: BlogContentBlock[] = [
+        {
+            type: 'paragraph',
+            text: "Most people think about alkaline water only as a drink. But if you already have an alkaline water supply at home, a natural question follows: should you also cook with it? In Indian kitchens, where we boil, simmer, steam and brew for hours, the water we use can subtly influence taste, texture and even cooking time."
+        },
+        {
+            type: 'h2',
+            text: "How water quality affects cooking"
+        },
+        {
+            type: 'paragraph',
+            text: "Water is the invisible ingredient in almost every dish, performing several critical roles:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Hydration:</b> It allows rice and grains to swell and soften properly.",
+                "<b>Texture:</b> It softens dals, beans and legumes during the boiling process.",
+                "<b>Extraction:</b> It forms the base for tea and coffee, extracting delicate oils and flavours.",
+                "<b>Aroma:</b> It helps spices release their aromatic compounds more effectively."
+            ]
+        },
+        {
+            type: 'h2',
+            text: "Cooking rice and grains"
+        },
+        {
+            type: 'paragraph',
+            text: "Many home cooks notice that rice cooked with balanced, mineral rich water looks fluffier and separates better. Slightly alkaline water can help starch gel differently, leading to a softer, more even texture and reduced stickiness."
+        },
+        {
+            type: 'paragraph',
+            text: "To test this, cook your regular rice recipe using alkaline water at a moderate pH and compare the texture, aroma and grain separation to your usual result. If you like the difference, you can reserve alkaline water for pulao, biryani and other grain-heavy dishes."
+        },
+        {
+            type: 'h2',
+            text: "Dals, beans and slow cooked dishes"
+        },
+        {
+            type: 'paragraph',
+            text: "Indian dals and legumes benefit from softening during cooking. Slightly alkaline water can help break down the pectin in seed coats more efficiently, leading to a creamier final texture, especially with chana, rajma and whole dals."
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Optimized soaking:</b> Soak beans in regular water, then switch to alkaline water for the actual cooking.",
+                "<b>Faster softening:</b> Monitor cooking time; you may find legumes reach desired softness slightly faster.",
+                "<b>Enhanced digestion:</b> Soft, evenly cooked legumes are often perceived as easier on the digestive system."
+            ]
+        },
+        {
+            type: 'h2',
+            text: "Tea, coffee and hot beverages"
+        },
+        {
+            type: 'paragraph',
+            text: "Tea and coffee are extremely sensitive to water chemistry. Using moderately alkaline, balanced water can help tea leaves and coffee grounds release their flavour more fully, reduce bitterness and produce a cleaner, brighter appearance in the cup."
+        },
+        {
+            type: 'h2',
+            text: "Soups, gravies and curries"
+        },
+        {
+            type: 'paragraph',
+            text: "Alkaline water’s mineral content can enhance mouthfeel, giving a sauce a slightly richer body without extra fat. It may also help balance sharpness in tomato-heavy dishes. However, remember to always taste and adjust your usual souring agents like tamarind or lime to maintain the right tang."
+        },
+        {
+            type: 'h2',
+            text: "Practical considerations"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Use moderate pH:</b> Extremely high pH settings are unnecessary for cooking and may alter delicate flavours too much.",
+                "<b>Prioritize water-heavy dishes:</b> Focus on soups, lentils, gravies and beverages where water quantity is high.",
+                "<b>Ingredients first:</b> Remember that quality water supports but does not replace fresh vegetables and high-grade spices."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "If you already invest in alkaline water for drinking, extending its use to your cooking can be a natural next step. Over time, you may discovered that it gives your everyday Indian meals a quietly noticeable upgrade without changing the soul of the dishes you love."
+        }
+    ];
+
+    // const weightManagementContent: BlogContentBlock[] = [
+    //     {
+    //         type: 'paragraph',
+    //         text: "Weight management is a complex journey that involves diet, physical activity, sleep and stress management. In recent years, alkaline water has become a popular addition to weight loss conversations. While it is not a 'magic' solution, understanding how it supports hydration and metabolism can help you use it effectively as part of your wellness plan."
+    //     },
+    //     {
+    //         type: 'h2',
+    //         text: "Hydration and metabolism"
+    //     },
+    //     {
+    //         type: 'paragraph',
+    //         text: "Every metabolic process in your body—from breaking down fats to converting food into energy—requires water. Even mild dehydration can slow down your metabolism and make you feel sluggish. Drinking clean, pleasant tasting water encourages you to stay hydrated, which keeps your metabolic engine running smoothly."
+    //     },
+    //     {
+    //         type: 'h2',
+    //         text: "Alkaline water vs sugary drinks"
+    //     },
+    //     {
+    //         type: 'paragraph',
+    //         text: "One of the simplest ways alkaline water supports weight management is by replacing high calorie beverages. Many people reach for sodas, sweetened teas or energy drinks when they are thirsty or tired. Making the switch to alkaline water offers several benefits:"
+    //     },
+    //     {
+    //         type: 'list',
+    //         items: [
+    //             "<b>Zero calories:</b> You can hydrate as much as you need without adding to your daily calorie count.",
+    //             "<b>Better taste:</b> Many find the smoother taste of alkaline water more satisfying than regular water, reducing the craving for flavoured drinks.",
+    //             "<b>No sugar spikes:</b> Unlike sodas, water does not cause insulin spikes that can lead to fat storage and energy crashes."
+    //         ]
+    //     },
+    //     {
+    //         type: 'h2',
+    //         text: "The role of detoxification"
+    //     },
+    //     {
+    //         type: 'paragraph',
+    //         text: "The kidneys and liver are your body's primary detox organs, and they need plenty of fluid to flush out waste products effectively. By supporting consistent hydration, alkaline water helps these organs function at their best. Some wellness practitioners suggest that alkaline water's specific mineral profile and pH may further support the body's natural waste removal processes."
+    //     },
+    //     {
+    //         type: 'h2',
+    //         text: "Managing appetite and 'False Hunger'"
+    //     },
+    //     {
+    //         type: 'paragraph',
+    //         text: "The brain often confuses thirst signals with hunger signals. When you are mildly dehydrated, you might feel the urge to snack when your body actually needs water. Drinking a glass of alkaline water before meals or when you feel an 'afternoon slump' can help you determine if you are truly hungry or just need hydration."
+    //     },
+    //     {
+    //         type: 'h2',
+    //         text: "Practical tips for weight management"
+    //     },
+    //     {
+    //         type: 'list',
+    //         items: [
+    //             "<b>Start your day right:</b> Drink a glass of room temperature alkaline water as soon as you wake up to jumpstart your hydration.",
+    //             "<b>Hydrate before meals:</b> Have a glass 20–30 minutes before eating to support portion control.",
+    //             "<b>Carry a reusable bottle:</b> Keep alkaline water with you at work, in the car and at the gym to avoid reaching for sugary alternatives.",
+    //             "<b>Listen to your body:</b> Pay attention to how you feel—proper hydration often leads to more stable energy levels throughout the day."
+    //         ]
+    //     },
+    //     {
+    //         type: 'h2',
+    //         text: "A supportive tool in a larger plan"
+    //     },
+    //     {
+    //         type: 'paragraph',
+    //         text: "It is important to remember that no single beverage can cause weight loss on its own. Real results come from a balanced diet rich in whole foods and regular physical movement. View alkaline water as a high quality tool in your hydration kit—one that makes staying hydrated more enjoyable and supports your body's natural functions as you work toward your health goals."
+    //     }
+    // ];
+
+    const dailyRoutineContent: BlogContentBlock[] = [
+        {
+            type: 'paragraph',
+            text: "Buying alkaline water or installing a machine is only half the story. The real benefits show up when it becomes part of a simple, repeatable routine that suits your lifestyle. You do not need complex schedules or strict rules. A few smart habits, spaced across the day, are enough to keep you comfortably hydrated without turning water into a chore."
+        },
+        {
+            type: 'h2',
+            text: "Start your morning with a glass of alkaline water"
+        },
+        {
+            type: 'paragraph',
+            text: "After six to eight hours of sleep, your body is naturally slightly dehydrated. A lot of people reach straight for tea or coffee, which can be mildly dehydrating and acidic on an empty stomach. Swapping the sequence—water first, then your favourite beverage—can make mornings gentler."
+        },
+        {
+            type: 'paragraph',
+            text: "Keep a bottle or carafe of alkaline water by your bedside or on the kitchen counter. As soon as you wake up, drink a medium sized glass at a comfortable temperature. This helps:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Rehydrate:</b> Help your body recover after the night.",
+                "<b>Prepare:</b> Get your digestive system ready for breakfast.",
+                "<b>Set the tone:</b> Establish mindful drinking from the very start of the day."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "If you like, you can add a slice of cucumber or a sprig of mint for a spa style feel. There is no need to overdo it; one glass is a great start."
+        },
+        {
+            type: 'h2',
+            text: "Pair water with anchor moments, not alarms"
+        },
+        {
+            type: 'paragraph',
+            text: "Many people try to set hourly alarms to drink water, only to switch them off in irritation. A smoother approach is to link alkaline water to existing routines—so you drink without thinking."
+        },
+        {
+            type: 'paragraph',
+            text: "For example:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>A glass after brushing your teeth.</b>",
+                "<b>A bottle refill just before starting focused work blocks.</b>",
+                "<b>A few sips each time you return from a meeting, call or chore.</b>",
+                "<b>A small glass before every meal.</b>"
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "Because alkaline water often tastes smoother than regular water, these micro habits become easy to maintain. Over the day, the total intake adds up without feeling forced."
+        },
+        {
+            type: 'h2',
+            text: "Use alkaline water strategically around meals"
+        },
+        {
+            type: 'paragraph',
+            text: "There is no need to follow extreme rules like 'never drink with food'. Instead, focus on comfort. Many people feel good drinking:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Before meals:</b> A glass 15–20 minutes before eating to take the edge off hunger and support portion control.",
+                "<b>During the meal:</b> Small sips if the food is very spicy or salty.",
+                "<b>After the meal:</b> Another glass an hour or so later, especially after heavy or fried foods."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "If you are prone to acidity, slightly alkaline water can be a more comfortable choice than fizzy drinks or very acidic juices around meal times. Just remember that water is not a substitute for portion control or balanced nutrition."
+        },
+        {
+            type: 'h2',
+            text: "Make your workday bottle your best friend"
+        },
+        {
+            type: 'paragraph',
+            text: "At work—whether at a desk, clinic, studio or shop—it is easy to forget water entirely. Keeping a designated alkaline water bottle on your table is a simple visual reminder. Tips that help:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Choose the right bottle:</b> Pick a comfortable size (750 ml to 1 litre) and shape so you will actually carry it.",
+                "<b>Mark time goals:</b> For example, half finished by lunch, fully finished by mid afternoon.",
+                "<b>Stay refilled:</b> Refill from your home ionizer or office dispenser whenever it is empty."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "If your workplace offers alkaline water only in the pantry, plan short 'hydration walks' every couple of hours. These mini breaks freshen your mind as much as your body."
+        },
+        {
+            type: 'h2',
+            text: "Support workouts and movement"
+        },
+        {
+            type: 'paragraph',
+            text: "If you exercise, alkaline water can slip naturally into your routine:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Pre-workout:</b> Drink a glass 20–30 minutes before so you start hydrated.",
+                "<b>Intra-workout:</b> Take small sips during training, especially in hot weather or intense sessions.",
+                "<b>Post-workout:</b> Continue drinking afterwards over the next hour or two instead of gulping huge amounts at once."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "You do not have to abandon sports drinks or coconut water if they are part of your plan. Think of alkaline water as your base fluid, with other drinks added strategically if you train hard or long."
+        },
+        {
+            type: 'h2',
+            text: "Travel smart with alkaline water"
+        },
+        {
+            type: 'paragraph',
+            text: "Travelling—by car, plane or train—often disrupts hydration. Air conditioning, long sitting periods and irregular meals all work against you. Having alkaline water on hand makes it more likely you will sip instead of grabbing sugary alternatives. A simple strategy:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Pack your own:</b> Fill a reusable bottle from your home machine before leaving.",
+                "<b>Backups:</b> For longer trips, carry a couple of sealed alkaline bottles as backup.",
+                "<b>Sip markers:</b> Take a few sips every time you check your phone, boarding pass or navigation."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "If you cross areas with uncertain water quality, sticking to trusted packaged alkaline water can protect both your health and your routine."
+        },
+        {
+            type: 'h2',
+            text: "Wind down gently in the evening"
+        },
+        {
+            type: 'paragraph',
+            text: "Towards evening, shift from 'catching up' on water to gentle maintenance. Too much liquid right before bed can disturb sleep. Instead:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Transition time:</b> Drink a glass or two of alkaline water between finishing work and dinner.",
+                "<b>Post-dinner:</b> Take small sips after dinner if you feel heavy or bloated, rather than chugging a lot at once.",
+                "<b>Slow down:</b> Reduce intake closer to bedtime, adjusting based on how your body responds."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "If you enjoy herbal teas at night, making them with alkaline water can produce a softer taste and smoother mouthfeel."
+        },
+        {
+            type: 'h2',
+            text: "Keep it flexible and enjoyable"
+        },
+        {
+            type: 'paragraph',
+            text: "The most effective routine is the one you can actually live with. Do not worry about hitting an exact number of glasses at specific minutes. Focus on:"
+        },
+        {
+            type: 'list',
+            items: [
+                "<b>Accessibility:</b> Keeping alkaline water easily accessible wherever you spend time.",
+                "<b>Listening:</b> Pay attention to your thirst signals and climate conditions.",
+                "<b>First choice:</b> Make water your first choice over sugary or very acidic drinks most of the time."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "Over a few weeks, you will likely notice that drinking enough becomes automatic. Alkaline water is simply the medium that makes those habits easier—clean, smooth and ready whenever you reach for it."
+        }
+    ];
+
     const waterContent: BlogContentBlock[] = [
         {
             type: 'paragraph',
             text: "Water is the essence of life, making up about 60% of the human body. Staying hydrated is crucial for maintaining bodily functions, regulating temperature, and keeping your energy levels up throughout the day."
-        },
-        {
-            type: 'h2',
-            text: "The Role of Water in the Human Body"
-        },
-        {
-            type: 'list',
-            structuredItems: [
-                { title: "Regulating Body Temperature", desc: "Water helps release heat from the body when sweat stimulates cooling." },
-                { title: "Nutrient Transportation", desc: "Blood is largely composed of water, which carries essential nutrients and oxygen to cells throughout your body." },
-                { title: "Waste Removal", desc: "Water is vital for sweating, urination, and bowel movements." }
-            ]
-        },
-        {
-            type: 'paragraph',
-            text: "Appropriate fluid intake is vital for maintaining health and optimal physical performance."
         }
     ];
 
-
-    for (let i = 1; i <= 40; i++) {
-        // Determine content based on ID
-        let content = waterContent;
+    for (let i = 1; i <= 15; i++) {
+        let content: BlogContentBlock[] = waterContent;
         let title = `The Best Bottled Water Brands of 2023 - Post ${i}`;
-        // let date = "Oct 15, 2021";
+        let id: string | number = i;
+        let metaTitle = "";
+        let metaDesc = "";
 
         if (i === 1) {
-            title = "Why Drinking Water is Essential for Your Health?";
-            // date = "26th Dec 2024";
+            id = "alkaline-water-ionizer-how-it-works";
+            title = "How Alkaline Water Ionizers Work | Alkaline Machine Guide for Homes & Clinics";
+            metaTitle = "How Alkaline Water Ionizers Work | Alkaline Machine Guide for Homes & Clinics";
+            metaDesc = "Learn how alkaline water ionizer machines work, what pH and ORP mean, and how to choose the right alkaline water system for your home, clinic, gym or office.";
+            content = ionizerContent;
         }
 
         if (i === 2) {
-            title = "The Ultimate Social Media Guide for Local Businesses";
-            // date = "26th Dec 2024"; // Assuming same date as new content request usually implies fresh
-            content = socialMediaGuideContent;
+            id = "ph-vs-tds-vs-orp-drinking-water-guide";
+            title = "pH vs TDS vs ORP in Drinking Water | Simple Guide for Better Hydration";
+            metaTitle = "pH vs TDS vs ORP in Drinking Water | Simple Guide for Better Hydration";
+            metaDesc = "Confused by pH, TDS and ORP on water reports and purifier ads? Learn what each term means, ideal ranges, and how to choose safer, better tasting drinking water for your home or business.";
+            content = phTdsOrpContent;
+        }
+
+        if (i === 3) {
+            id = "packaged-alkaline-water-vs-ionizer-machine";
+            title = "Packaged Alkaline Water vs Ionizer Machines | Best Hydration Option for Home & Business";
+            metaTitle = "Packaged Alkaline Water vs Ionizer Machines | Best Hydration Option for Home & Business";
+            metaDesc = "Should you buy packaged alkaline water or invest in an ionizer machine? Compare convenience, cost, sustainability and ideal use cases to pick the right hydration solution.";
+            content = packagedVsIonizerContent;
+        }
+
+        if (i === 4) {
+            id = "alkaline-water-for-offices-and-coworking-spaces";
+            title = "Alkaline Water for Offices & Co Working Spaces | Hydration for Teams & Guests";
+            metaTitle = "Alkaline Water for Offices & Co Working Spaces | Hydration for Teams & Guests";
+            metaDesc = "Discover how alkaline water bottles and ionizer machines improve office hydration, employee wellbeing and client hospitality while reducing plastic waste in co working spaces.";
+            content = officeHydrationContent;
+        }
+
+        if (i === 5) {
+            id = "alkaline-water-for-gyms-yoga-and-wellness-centres";
+            title = "Why Gyms and Yoga Studios Are Switching to Alkaline Water";
+            metaTitle = "Alkaline Water for Gyms, Yoga Studios & Wellness Centres | Hydration for Active Lifestyles";
+            metaDesc = "See how alkaline water stations and bottles support hydration for gyms, yoga studios and wellness centres, enhancing member experience and strengthening your wellness brand.";
+            content = gymWellnessContent;
+        }
+
+        if (i === 6) {
+            id = "responsible-packaging-and-recycling-in-alkaline-water";
+            title = "Responsible Alkaline Water Packaging & Recycling | Sustainable Hydration";
+            metaTitle = "Responsible Alkaline Water Packaging & Recycling | Sustainable Hydration";
+            metaDesc = "Learn how responsible packaging, EPR compliance and refill models can reduce plastic impact in the alkaline water industry while keeping convenience and hygiene intact.";
+            content = sustainablePackagingContent;
+        }
+
+        if (i === 7) {
+            id = "alkaline-water-safety-for-kids-adults-and-seniors";
+            title = "Alkaline Water Safety for Kids, Adults & Seniors | How Much Is Okay?";
+            metaTitle = "Alkaline Water Safety for Kids, Adults & Seniors | How Much Is Okay?";
+            metaDesc = "Wondering if alkaline water is safe for children, adults and seniors? Learn recommended pH ranges, how much to drink and when to be cautious.";
+            content = safetyContent;
+        }
+
+        if (i === 8) {
+            id = "why-urban-families-are-switching-to-alkaline-water";
+            title = "Why Urban Families Choose Alkaline Water | Modern Hydration Trend in India";
+            metaTitle = "Why Urban Families Choose Alkaline Water | Modern Hydration Trend in India";
+            metaDesc = "Discover why health conscious families in Indian cities are moving to alkaline water—covering taste, lifestyle, convenience and how to adopt it safely at home.";
+            content = urbanFamiliesContent;
+        }
+
+        if (i === 9) {
+            id = "alkaline-water-vs-regular-packaged-drinking-water";
+            title = "Alkaline Water vs Regular Water | Which Is Better for Daily Drinking?";
+            metaTitle = "Alkaline Water vs Regular Water | Which Is Better for Daily Drinking?";
+            metaDesc = "Confused between alkaline water and regular packaged drinking water? Understand the difference in pH, minerals, taste, cost and lifestyle so you can choose what suits you best.";
+            content = vsRegularWaterContent;
+        }
+
+        if (i === 10) {
+            id = "alkaline-water-for-acidity-and-heartburn";
+            title = "Alkaline Water for Acidity & Heartburn | What You Should Know";
+            metaTitle = "Alkaline Water for Acidity & Heartburn | What You Should Know";
+            metaDesc = "Heard that alkaline water can reduce acidity or heartburn? Learn how it interacts with stomach acid, where it may help, and why it is not a replacement for medical treatment.";
+            content = acidityHeartburnContent;
+        }
+
+        if (i === 11) {
+            id = "alkaline-water-machine-maintenance-guide";
+            title = "Alkaline Water Machine Maintenance Guide | Keep Your Ionizer Healthy";
+            metaTitle = "Alkaline Water Machine Maintenance Guide | Keep Your Ionizer Healthy";
+            metaDesc = "Keep your alkaline water ionizer running smoothly with this simple home maintenance guide. Learn when to clean, how often to change filters and what signs to watch for.";
+            content = machineMaintenanceContent;
+        }
+
+        if (i === 12) {
+            id = "alkaline-water-myths-vs-facts";
+            title = "Alkaline Water Myths vs Facts | Honest Guide for Everyday Drinkers";
+            metaTitle = "Alkaline Water Myths vs Facts | Honest Guide for Everyday Drinkers";
+            metaDesc = "Is alkaline water a miracle cure or just marketing hype? Get a balanced view of common myths and real facts so you can make informed hydration choices.";
+            content = mythsVsFactsContent;
+        }
+
+        if (i === 13) {
+            id = "alkaline-water-for-sports-and-athletes";
+            title = "Alkaline Water for Athletes | Hydration for Sports, Gyms & Runners";
+            metaTitle = "Alkaline Water for Athletes | Hydration for Sports, Gyms & Runners";
+            metaDesc = "Find out how alkaline water fits into sports hydration. Learn when it may help, how it compares to regular water and sports drinks, and how athletes can use it safely.";
+            content = athleteHydrationContent;
+        }
+
+        if (i === 14) {
+            id = "alkaline-water-in-everyday-indian-cooking";
+            title = "Cooking with Alkaline Water | Indian Dals, Rice, Tea & More";
+            metaTitle = "Cooking with Alkaline Water | Indian Dals, Rice, Tea & More";
+            metaDesc = "Can alkaline water make a difference to Indian dishes like dal, rice, chai and curries? Explore how pH and minerals affect taste, texture and cooking time in your kitchen.";
+            content = cookingIndianContent;
+        }
+
+        // if (i === 15) {
+        //     id = "alkaline-water-and-weight-management";
+        //     title = "Alkaline Water for Weight Management | Metabolism, Detox & Hydration";
+        //     metaTitle = "Alkaline Water for Weight Management | Metabolism, Detox & Hydration";
+        //     metaDesc = "Curious if alkaline water can help with weight management? Learn how it supports metabolism, detoxification and healthy hydration as part of a balanced wellness routine.";
+        //     content = weightManagementContent;
+        // }
+
+        if (i === 15) {
+            id = "daily-routine-with-alkaline-water";
+            title = "Daily Routine with Alkaline Water | Easy Habits for Better Hydration";
+            metaTitle = "Daily Routine with Alkaline Water | Easy Habits for Better Hydration";
+            metaDesc = "Want to use alkaline water effectively without overthinking? Learn how to fit it into a realistic daily routine—from morning to night—at home, work and on the go.";
+            content = dailyRoutineContent;
         }
 
         posts.push({
-            id: i,
+            id: id,
             title: title,
             image: images[(i - 1) % images.length],
-            author: "Wpsmasher",
-            // date: date,
+            author: "ASVA Team",
+            metaTitle: metaTitle,
+            metaDesc: metaDesc,
             content: content
         });
     }
+
     return posts;
 };
 

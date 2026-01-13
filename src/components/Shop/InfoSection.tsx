@@ -2,7 +2,7 @@ import React from 'react';
 
 export const InfoSection: React.FC = () => {
     return (
-        <section className=" bg-linear-to-b from-white from-50% to-[#ACE3F1] py-6 sm:py-20 px-6 mt-10 rounded-3xl mx-4 md:mx-8">
+        <section className="bg-linear-to-b from-[hsl(192,71%,81%)] from-50% to-white py-6 sm:py-20 px-6 mt-10 rounded-3xl mx-4 md:mx-8">
             <div className="max-w-4xl mx-auto text-center md:text-left">
                 <h2 className="text-2xl md:text-4xl font-serif text-black mb-8 leading-tight text-center">
                     Explore the complete ASVA Alkaline Ecosystem

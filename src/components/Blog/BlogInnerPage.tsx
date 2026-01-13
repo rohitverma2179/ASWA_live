@@ -11,12 +11,23 @@ export const BlogInnerPage: React.FC = () => {
     const [post, setPost] = useState<BlogPost | null>(null);
 
     useEffect(() => {
-        // Basic finding logic
         const foundPost = blogPosts.find((p) => String(p.id) === id);
+
         if (foundPost) {
             setPost(foundPost);
+            // Set dynamic title
+            if (foundPost.metaTitle) {
+                document.title = foundPost.metaTitle;
+            } else {
+                document.title = `${foundPost.title} | ASVA Blog`;
+            }
+
+            // Set meta description if it exists
+            const metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription && foundPost.metaDesc) {
+                metaDescription.setAttribute('content', foundPost.metaDesc);
+            }
         } else {
-            // Fallback to first post if not found or just for demo purposes if ID is missing/invalid
             setPost(blogPosts[0]);
         }
     }, [id]);

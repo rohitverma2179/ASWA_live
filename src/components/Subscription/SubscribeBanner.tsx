@@ -49,6 +49,7 @@ export const SubscribeBanner: React.FC = () => {
                         </div>
 
                         <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif text-black mb-6 leading-[1.1]">
+                            {/* Subscribe <br className="hidden lg:block" /> & Save */}
                             Subscribe <br className="hidden lg:block" /> & Save
                         </h1>
 
@@ -59,12 +60,12 @@ export const SubscribeBanner: React.FC = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-6">
-                            <Link
+                            {/* <Link
                                 to="/subscription"
                                 className="bg-[#00659e] text-white px-10 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] hover:bg-[#005280] transition-all shadow-lg shadow-blue-200"
                             >
                                 Choose a Plan
-                            </Link>
+                            </Link> */}
                             <Link
                                 to="/shop"
                                 className="text-xs font-bold text-gray-500 uppercase tracking-[0.2em] border-b border-gray-200 pb-1 hover:text-black hover:border-black transition-all"

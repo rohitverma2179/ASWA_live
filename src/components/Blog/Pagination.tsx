@@ -15,7 +15,7 @@ export const Pagination: React.FC<PaginationProps> = ({ postsPerPage, totalPosts
     }
 
     return (
-        <div className="flex justify-center gap-2 py-12 md:py-20 flex-wrap">
+        <div className="flex justify-center gap-2 py-12 md:pb-8 md:pt-20 flex-wrap">
             {pageNumbers.map(number => (
                 <button
                     key={number}

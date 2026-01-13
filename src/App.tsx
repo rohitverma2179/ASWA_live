@@ -17,7 +17,7 @@ function App() {
         <Route path="/product/:id" element={<ProductPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:id" element={<BlogInnerPage />} />
-        <Route path="/subscription" element={<SubscriptionPage />} /> 
+        <Route path="/subscription" element={<SubscriptionPage />} />
       </Routes>
     </BrowserRouter>
   );

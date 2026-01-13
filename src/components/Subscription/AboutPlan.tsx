@@ -42,7 +42,7 @@ export const AboutAboutPlan: React.FC = () => {
                             className="h-full w-auto object-contain"
                         />
                         {/* Badges */}
-                        <div className="absolute top-1/2 -translate-y-1/2 -right-8 flex flex-col gap-4">
+                        {/* <div className="absolute top-1/2 -translate-y-1/2 -right-8 flex flex-col gap-4">
                             <div className="w-8 h-24 bg-[#00659e] rounded-lg flex items-center justify-center text-white shadow-lg">
                                 <span className="-rotate-90 text-xs font-bold whitespace-nowrap tracking-widest">20 L</span>
                             </div>
@@ -52,7 +52,7 @@ export const AboutAboutPlan: React.FC = () => {
                                     <span className="block mt-1">Water</span>
                                 </span>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

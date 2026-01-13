@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import brandWoman from "../../assets/home/bottle_png_.png"
-import brandmash from "../../assets/home/mashine_1.jpg"
+import brandmash from "../../assets/home/mashine_1.png"
+import { Link } from 'react-router-dom';
 
 const BRAND_DATA = [
     {
@@ -20,7 +21,7 @@ const BRAND_DATA = [
         description: "Customers can choose ready-to-drink alkaline supply or convert water on demand using ASVA ionizer devices, making alkaline hydration convenient and scalable.",
         image: brandmash,
         cardLabel: "Ionizer Technology",
-        cta: "Shop Now",
+        cta: "Shop",
         link: "#",
         listOne: "Home countertop ionizer",
         listTwo: "Office/Clinic ionizer system",
@@ -67,12 +68,13 @@ export const BrandStory: React.FC = () => {
                         >
                             <div className={`w-24 h-24 rounded-full mb-4 overflow-hidden border-2 transition-colors ${activeIndex === index ? 'border-blue-400' : 'border-transparent bg-gray-100'
                                 }`}>
-                                <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                                <img src={item.image} alt={item.title} className="w-full h-full object-contain" />
                             </div>
                             <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400">{item.cardLabel}</p>
                         </button>
                     ))}
                 </div>
+
 
                 {/* Center Column (Dynamic Image) */}
                 <div className="w-full lg:w-[50%] relative h-[600px] flex items-center justify-center"
@@ -84,11 +86,12 @@ export const BrandStory: React.FC = () => {
                         <img
                             key={activeData.image}
                             src={activeData.image}
-                            className="h-[500px] w-auto object-contain rounded-2xl shadow-sm animate-in fade-in duration-700"
+                            className="h-[600px] w-auto object-contain rounded-2xl  animate-in fade-in duration-700"
                             alt={activeData.title}
                         />
                     </div>
                 </div>
+
 
                 {/* Right Column (Dynamic Text Content) */}
                 <div className="w-full lg:w-[30%] flex flex-col gap-16 pt-10 pl-0"
@@ -106,12 +109,12 @@ export const BrandStory: React.FC = () => {
                             {activeData.listTwo && <li className='mb-2'>{activeData.listTwo}  </li>}
                             {activeData.listThree && <li className='mb-2'>{activeData.listThree}  </li>}
                         </ul>
-                        <a
-                            href={activeData.link}
-                            className="inline-block text-[10px] font-bold text-black border-b border-gray-300 pb-1 hover:border-black uppercase tracking-widest transition-colors"
+                        <Link
+                            to={"/shop"}
+                            className="inline-block text-[16px] mt-10  font-bold text-black border-b border-gray-300 pb-1 hover:border-black uppercase tracking-widest transition-colors"
                         >
                             {activeData.cta}
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

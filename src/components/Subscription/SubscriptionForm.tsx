@@ -59,12 +59,12 @@ export const SubscriptionForm: React.FC = () => {
             <div className="container mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center justify-center gap-16 max-w-6xl">
 
                 {/* Left: Bottles */}
-                <div className="flex justify-center relative lg:w-1/3">
+                <div className="flex justify-center relative lg:w-1/2">
                     <div className="flex gap-4">
-                        <img src={BottleImage} alt="Bottle 1" className="h-64 md:h-96 w-auto object-contain" />
+                        <img src={BottleImage} alt="Bottle 1" className="h-64 md:h-full w-auto object-cover" />
                     </div>
                     {/* Badges */}
-                    <div className="absolute top-1/2 -translate-y-1/2 -right-8 flex flex-col gap-4">
+                    {/* <div className="absolute top-1/2 -translate-y-1/2 -right-8 flex flex-col gap-4">
                         <div className="w-8 h-24 bg-[#00659e] rounded-lg flex items-center justify-center text-white shadow-lg">
                             <span className="-rotate-90 text-xs font-bold whitespace-nowrap tracking-widest">20 L</span>
                         </div>
@@ -74,7 +74,7 @@ export const SubscriptionForm: React.FC = () => {
                                 <span className="block mt-1">Water</span>
                             </span>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Right: Form Card */}

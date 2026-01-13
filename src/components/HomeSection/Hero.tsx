@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 // import imgBottle from "../../assets/HomeImg/hero_1.png";
 import imgBottle from "../../assets/bottle_png_.png";
-import shape from "../../assets/HomeImg/shap.png";
+import mashine from "../../assets/home/mashine_1.png";
 import { motion, AnimatePresence } from "framer-motion";
 // import { image } from 'framer-motion/client';
 
@@ -24,7 +24,7 @@ const heroSlides: HeroSlide[] = [
     {
         title: "Pure Hydration. Premium Living.",
         description: "Smart alkaline purification machines that deliver clean, safe and great-tasting water, built for modern Indian kitchens and workplaces.",
-        image: imgBottle,
+        image: mashine,
     },
 ];
 // subDescription: ["", "", "", ""],
@@ -45,12 +45,12 @@ export const Hero: React.FC = () => {
         <section className="relative min-h-[90vh] lg:min-h-screen pt-24 pb-12 overflow-hidden">
             <div
                 className="absolute inset-0 overflow-hidden lg:mt-14 "
-                style={{
-                    background: `url(${shape})`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                }}
+                // style={{
+                //     background: `url(${shape})`,
+                //     backgroundRepeat: "no-repeat",
+                //     backgroundSize: "cover",
+                //     backgroundPosition: "center",
+                // }}
             />
 
             <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-12 lg:py-16">
@@ -105,11 +105,11 @@ export const Hero: React.FC = () => {
                                     alt="ASVA Water Bottle"
                                     className="w-64 lg:w-[400px] h-auto object-contain "
                                 />
-                                <img
+                                {/* <img
                                     src={heroSlides[activeSlide].image}
                                     alt="ASVA Water Bottle Small"
                                     className="absolute bottom-0 -left-4 lg:-left-8 w-32 lg:w-44 h-auto object-contain drop-shadow-xl"
-                                />
+                                /> */}
                             </motion.div>
                         </AnimatePresence>
                     </div>

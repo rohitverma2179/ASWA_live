@@ -66,7 +66,7 @@ export const BlogSection: React.FC = () => {
           <h2 className="font-['Kalnia'] font-medium text-5xl lg:text-6xl mb-2">
             Water Blog
           </h2>
-          <p className="text-[16px] text-gray-600 max-w-2xl mx-auto">
+          <p className="text-[16px] text-gray-600 max-w-120 mx-auto">
             Alkaline science, safe drinking practices, subscription guidance and machine care, simple, evidence-based education.
           </p>
         </div>

@@ -16,7 +16,7 @@ export const FeaturedBanner: React.FC = () => {
                 <div className="absolute inset-0"></div>
             </div>
 
-            <div className="container mx-auto px-6 h-full flex items-center relative z-10">
+            <div className="container mx-auto px-6 h-full flex items-start pt-20 relative z-10">
                 <div className="max-w-4xl text-white pl-0 md:pl-10">
                     <h2 className="text-4xl  md:text-6xl font-serif text-white mb-6 leading-tight">
                         Bottles for Change. Built for India.

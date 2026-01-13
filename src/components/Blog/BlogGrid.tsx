@@ -18,7 +18,7 @@ export const BlogGrid: React.FC = () => {
 
     return (
         <section className="container mx-auto px-6 md:px-12 py-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-32">
                 {currentPosts.map((post) => (
                     <article
                         key={post.id}
