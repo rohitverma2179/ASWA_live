@@ -1,9 +1,26 @@
-import img1 from "../assets/HomeImg/blog_1.png";
-import img2 from "../assets/HomeImg/blog_2.png";
-import img3 from "../assets/HomeImg/blog_3.png";
-import img4 from "../assets/HomeImg/blog_4.png";
-import img5 from "../assets/HomeImg/blog_5.png";
-import img6 from "../assets/HomeImg/blog_6.png";
+// import img1 from "../assets/HomeImg/blog_1.png";
+// import img2 from "../assets/HomeImg/blog_2.png";
+// import img3 from "../assets/HomeImg/blog_3.png";
+// import img4 from "../assets/HomeImg/blog_4.png";
+// import img5 from "../assets/HomeImg/blog_5.png";
+// import img6 from "../assets/HomeImg/blog_6.png";
+
+import blog_1 from "../assets/blog/blog_1.jpg";
+import blog_2 from "../assets/blog/blog_2.jpg";
+import blog_3 from "../assets/blog/blog_3.png";
+import blog_4 from "../assets/blog/blog_4.png";
+import blog_5 from "../assets/blog/blog_5.jpg";
+import blog_6 from "../assets/blog/blog_6.jpg";
+import blog_7 from "../assets/blog/blog_7.jpg";
+import blog_8 from "../assets/blog/blog_8.png";
+import blog_9 from "../assets/blog/blog_9.png";
+import blog_10 from "../assets/blog/blog_10.jpg";
+import blog_11 from "../assets/blog/blog_11.png";
+import blog_12 from "../assets/blog/blog_12.png";
+import blog_13 from "../assets/blog/blog_13.jpg";
+import blog_14 from "../assets/blog/blog_14.jpg";
+import blog_15 from "../assets/blog/blog_15.png";
+// import blog_16 from "../assets/blog/blog_16.png";
 
 export interface BlogContentBlock {
     type: 'paragraph' | 'h2' | 'h3' | 'list' | 'image';
@@ -28,7 +45,7 @@ export interface BlogPost {
 
 // Helper to generate 40 posts
 const generateBlogPosts = (): BlogPost[] => {
-    const images = [img1, img2, img3, img4, img5, img6];
+    const images = [blog_1, blog_2, blog_3, blog_4, blog_5, blog_6, blog_7, blog_8, blog_9, blog_10, blog_11, blog_12, blog_13, blog_14, blog_15];
     const posts: BlogPost[] = [];
 
     // Blog 1: Alkaline Water Ionizer Guide
@@ -204,7 +221,7 @@ const generateBlogPosts = (): BlogPost[] => {
             text: "By understanding how these machines work from the inside out, households and businesses can move past buzzwords and marketing hype to select systems that are safe, reliable and genuinely aligned with their wellness and sustainability goals."
         }
     ];
-
+    // Blog 2:
     const phTdsOrpContent: BlogContentBlock[] = [
         {
             type: 'paragraph',
@@ -316,7 +333,7 @@ const generateBlogPosts = (): BlogPost[] => {
             text: "Whether you prefer naturally mineral rich alkaline water, ionized water from a machine or carefully treated neutral water, paying attention to these parameters ensures your hydration choice is grounded in both comfort and quality."
         }
     ];
-
+    // Blog 3
     const packagedVsIonizerContent: BlogContentBlock[] = [
         {
             type: 'paragraph',
@@ -424,7 +441,7 @@ const generateBlogPosts = (): BlogPost[] => {
             text: "By understanding the strengths of each format, decision makers can design a hydration ecosystem that balances convenience, cost and sustainability instead of compromising on any one factor."
         }
     ];
-
+    // Blog 4
     const officeHydrationContent: BlogContentBlock[] = [
         {
             type: 'paragraph',
@@ -531,7 +548,7 @@ const generateBlogPosts = (): BlogPost[] => {
             text: "By treating hydration as both a wellness and sustainability lever, offices can create spaces where teams feel looked after while also reducing their environmental impact."
         }
     ];
-
+    // Blog 5
     const gymWellnessContent: BlogContentBlock[] = [
         {
             type: 'paragraph',
@@ -622,7 +639,7 @@ const generateBlogPosts = (): BlogPost[] => {
             text: "Coupled with small rituals—such as offering a chilled alkaline drink after a tough class or including water in welcome kits—these touches increase perceived value and encourage renewals. For wellness centres that rely heavily on referrals, this difference can be decisive."
         }
     ];
-
+    // Blog 6
     const sustainablePackagingContent: BlogContentBlock[] = [
         {
             type: 'paragraph',
@@ -717,7 +734,7 @@ const generateBlogPosts = (): BlogPost[] => {
             text: "By combining responsible packaging, robust recycling systems and refill friendly technology, the alkaline water category can offer wellness that respects both human health and planetary boundaries."
         }
     ];
-
+    // Blog 7
     const safetyContent: BlogContentBlock[] = [
         {
             type: 'paragraph',
@@ -794,9 +811,9 @@ const generateBlogPosts = (): BlogPost[] => {
         {
             type: 'list',
             items: [
-                "<b>Stick to moderate pH:</b> Maintain a pH around 8–9 rather than very high levels for better tolerance.",
-                "<b>Share full information:</b> Inform your physician about the brand, pH, minerals and daily quantity of water consumed.",
-                "<b>Watch for unusual symptoms:</b> Seek medical advice promptly for symptoms like nausea, confusion, swelling or muscle weakness."
+                "<b>Stick to moderate pH </b> (around 8–9) rather than very high levels.",
+                "<b>Share full information</b> with their physician, including brand, pH, minerals and daily quantity.",
+                "<b>Watch for unusual symptoms</b> such as nausea, confusion, swelling or muscle weakness and seek medical advice promptly."
             ]
         },
         {
@@ -832,7 +849,7 @@ const generateBlogPosts = (): BlogPost[] => {
             text: "Alkaline water can be a pleasant, lifestyle oriented choice when used mindfully. Families that understand safe ranges, reasonable quantities and when to seek medical input can enjoy its taste and convenience with confidence."
         }
     ];
-
+    // Blog 8
     const urbanFamiliesContent: BlogContentBlock[] = [
         {
             type: 'paragraph',
@@ -927,7 +944,7 @@ const generateBlogPosts = (): BlogPost[] => {
             text: "With these basics in place, alkaline water becomes an easy, everyday upgrade that fits naturally into the rhythm of urban family life—supporting hydration, taste and wellness without demanding drastic change."
         }
     ];
-
+    // Blog 9
     const vsRegularWaterContent: BlogContentBlock[] = [
         {
             type: 'paragraph',
@@ -1038,7 +1055,7 @@ const generateBlogPosts = (): BlogPost[] => {
             text: "Ultimately, the best choice is the one that keeps you and your family drinking safe, pleasant tasting water consistently throughout the day. Many brands, including alkaline specialists, now offer both types so you can mix and match according to situation."
         }
     ];
-
+    // Blog 10
     const acidityHeartburnContent: BlogContentBlock[] = [
         {
             type: 'paragraph',
@@ -1159,7 +1176,6 @@ const generateBlogPosts = (): BlogPost[] => {
             text: "Used thoughtfully, alkaline water can be a comfortable everyday choice that fits into a heartburn friendly routine. The key is to see it as one helpful habit among many, not as a magic fix."
         }
     ];
-
     const machineMaintenanceContent: BlogContentBlock[] = [
         {
             type: 'paragraph',
@@ -1180,10 +1196,10 @@ const generateBlogPosts = (): BlogPost[] => {
         {
             type: 'list',
             items: [
-                "<b>Fluctuating pH levels:</b> Inconsistent water quality and pH adjustment.",
-                "<b>Performance issues:</b> Slower flow, strange noises or leaks.",
-                "<b>Sensory changes:</b> Unpleasant taste or odour in the output.",
-                "<b>Reduced lifespan:</b> Shorter life of plates, filters and internal electronics."
+                "Fluctuating pH levels and inconsistent water quality.",
+                "Slower flow, strange noises or leaks.",
+                "Unpleasant taste or odour.",
+                "Shorter lifespan of plates, filters and electronics."
             ]
         },
         {
@@ -1205,10 +1221,14 @@ const generateBlogPosts = (): BlogPost[] => {
         {
             type: 'list',
             items: [
-                "<b>Flush the system:</b> Clear out any manufacturing residues as recommended.",
-                "<b>Check for faults:</b> Monitor for leaks and unusual sounds.",
-                "<b>Validate output:</b> Confirm realistic pH levels and smooth flow."
+                "Flush the system as recommended to clear out any manufacturing residues.",
+                "Check for leaks and unusual sounds.",
+                "Confirm that the display shows realistic pH levels and that flow is smooth."
             ]
+        },
+        {
+            type: 'paragraph',
+            text: "Starting correctly reduces future headaches."
         },
         {
             type: 'h2',
@@ -1217,6 +1237,10 @@ const generateBlogPosts = (): BlogPost[] => {
         {
             type: 'paragraph',
             text: "The outside of your machine collects kitchen grease, dust and fingerprints just like any other appliance. Wipe it gently every few days with a soft, damp cloth and, if needed, a mild, non abrasive cleaner. Avoid harsh chemicals or scrubbing pads that could damage the finish or labels."
+        },
+        {
+            type: 'paragraph',
+            text: "Keeping the exterior clean is not just about looks—it also prevents vents from getting blocked and buttons from becoming sticky."
         },
         {
             type: 'h2',
@@ -1229,10 +1253,14 @@ const generateBlogPosts = (): BlogPost[] => {
         {
             type: 'list',
             items: [
-                "<b>Stay proactive:</b> Mark expected replacement dates on a calendar or phone.",
-                "<b>Use genuine parts:</b> Only use filters from the brand or authorised partners.",
-                "<b>Flush after replacement:</b> Run water for a few minutes to purge air and particles."
+                "Mark expected replacement dates on a calendar or in your phone.",
+                "Always use genuine filters from the brand or authorised partners.",
+                "After changing filters, run water for a few minutes to purge air and loose particles."
             ]
+        },
+        {
+            type: 'paragraph',
+            text: "If you notice changes in taste, smell or colour before the suggested interval, do not wait; it may be time for an earlier change."
         },
         {
             type: 'h2',
@@ -1243,6 +1271,22 @@ const generateBlogPosts = (): BlogPost[] => {
             text: "In areas with hard water, limescale can build up on the ionizer’s plates and internal pathways. Many modern machines have an auto clean function that periodically reverses polarity or flushes water to reduce scale. Make sure this feature is activated and run manual cleaning cycles if recommended."
         },
         {
+            type: 'paragraph',
+            text: "For deeper cleaning:"
+        },
+        {
+            type: 'list',
+            items: [
+                "Use any cleaning cartridge or solution provided by the brand.",
+                "Follow instructions carefully regarding contact time and rinsing.",
+                "Never improvise with strong acids or household descalers unless they are specifically approved for your model."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "Regular descaling keeps pH output stable and reduces strain on the device."
+        },
+        {
             type: 'h2',
             text: "5. Flush the machine after long breaks"
         },
@@ -1251,12 +1295,20 @@ const generateBlogPosts = (): BlogPost[] => {
             text: "If you are away from home for more than a few days and the machine is not used, water remains standing inside the filters and chamber."
         },
         {
+            type: 'paragraph',
+            text: "On returning:"
+        },
+        {
             type: 'list',
             items: [
-                "<b>Initial clearance:</b> Run water for a few minutes on a neutral setting.",
-                "<b>Discard first batch:</b> Do not use the initial flushed water for drinking.",
-                "<b>Assess quality:</b> If the break was very long, consider a filter check."
+                "Run water through the machine for a few minutes on a neutral setting.",
+                "Discard this initial water before filling bottles.",
+                "If the break was very long (weeks or months), consider a filter check or replacement."
             ]
+        },
+        {
+            type: 'paragraph',
+            text: "For seasonal homes, it may be worth draining and storing the machine according to the manufacturer’s instructions."
         },
         {
             type: 'h2',
@@ -1269,11 +1321,15 @@ const generateBlogPosts = (): BlogPost[] => {
         {
             type: 'list',
             items: [
-                "<b>Flow changes:</b> Noticeably lower or uneven water flow.",
-                "<b>Acoustic alerts:</b> Unusual noises such as gurgling or sputtering.",
-                "<b>Odour/Taste:</b> Sudden metallic or sour smells/tastes.",
-                "<b>System alerts:</b> Error codes or flashing alerts on the display."
+                "Noticeably lower or uneven water flow.",
+                "Unusual noises such as gurgling or sputtering.",
+                "Sudden changes in taste or a metallic/sour smell.",
+                "Error codes or flashing alerts on the display."
             ]
+        },
+        {
+            type: 'paragraph',
+            text: "These may signal a clogged filter, scale buildup, incorrect pressure or an internal fault. Addressing the issue early usually prevents bigger failures."
         },
         {
             type: 'h2',
@@ -1281,7 +1337,20 @@ const generateBlogPosts = (): BlogPost[] => {
         },
         {
             type: 'paragraph',
-            text: "Even with good home care, an annual or semi annual visit from an authorised technician is a wise investment, especially in high use homes and offices. Technicians can test actual pH output, inspect internal seals, and perform deep cleaning if required."
+            text: "Even with good home care, an annual or semi annual visit from an authorised technician is a wise investment, especially in high use homes and offices. Technicians can:"
+        },
+        {
+            type: 'list',
+            items: [
+                "Test actual pH output and flow rates.",
+                "Inspect hoses, seals and internal components.",
+                "Perform deep cleaning and firmware updates if required.",
+                "Confirm that the machine is still configured correctly for your water source."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "Keeping a simple record of service dates and filter changes also helps if you need warranty support."
         },
         {
             type: 'paragraph',
@@ -1289,6 +1358,7 @@ const generateBlogPosts = (): BlogPost[] => {
         }
     ];
 
+    // blog 12
     const mythsVsFactsContent: BlogContentBlock[] = [
         {
             type: 'paragraph',
@@ -1296,55 +1366,75 @@ const generateBlogPosts = (): BlogPost[] => {
         },
         {
             type: 'h2',
-            text: "Common Myths and Real Facts"
+            text: "Myth 1: Alkaline water cures diseases"
         },
         {
             type: 'paragraph',
-            text: "<b>Myth 1: Alkaline water cures diseases.</b> One of the most common myths is that alkaline water can “cure” serious conditions simply by changing the body’s pH. This idea is appealing but misleading."
+            text: "One of the most common myths is that alkaline water can “cure” serious conditions simply by changing the body’s pH. This idea is appealing but misleading. Total pH regulation in the body is complex and involves the lungs, kidneys and blood buffers. Drinking alkaline water does not magically override those systems."
         },
         {
             type: 'paragraph',
-            text: "<b>Fact:</b> The human body tightly regulates its internal pH through complex systems. Drinking alkaline water does not override all of that. It can be part of a health conscious lifestyle and may offer comfort for occasional acidity, but it is not a replacement for medical treatment."
+            text: "<b>Fact:</b> Alkaline water can be part of a health conscious lifestyle and may offer comfort in certain situations, such as occasional acidity, but it is not a replacement for medical diagnosis, medication or professional treatment. It is a beverage, not a drug."
+        },
+        {
+            type: 'h2',
+            text: "Myth 2: Alkaline water is just a gimmick"
         },
         {
             type: 'paragraph',
-            text: "<b>Myth 2: Alkaline water is just a gimmick.</b> Some say there is no reason to choose it over ordinary options, ignoring differences in taste and drinkability."
+            text: "On the other side of the debate is the claim that alkaline water is “nothing special” and that there is no reason to choose it over ordinary options. This ignores something simple but important: real people often find differences in taste, comfort and drinkability between various types of water."
         },
         {
             type: 'paragraph',
-            text: "<b>Fact:</b> Slight differences in pH and mineral balance do change how water tastes and feels. Many find mildly alkaline water smoother. If that encourages better hydration, it is a meaningful benefit."
+            text: "<b>Fact:</b> Slight differences in pH and mineral balance do change how water tastes and feels. Many people find mildly alkaline water smoother and easier to sip throughout the day. If that encourages better hydration, it is a meaningful benefit, even if it is not dramatic or medical."
+        },
+        {
+            type: 'h2',
+            text: "Myth 3: More alkaline is always better"
         },
         {
             type: 'paragraph',
-            text: "<b>Myth 3: More alkaline is always better.</b> advertisements imply that the higher the pH, the better the water."
+            text: "Some advertisements imply that the higher the pH, the better the water. That can push consumers toward products with very high pH values that are not intended for regular, long term use."
         },
         {
             type: 'paragraph',
             text: "<b>Fact:</b> Most people do best with water that is only gently alkaline—usually in the pH 8 to 9 range. Extremely high pH levels can taste odd and are not meant for all day, everyday drinking. Balance matters more than extremes."
         },
         {
-            type: 'paragraph',
-            text: "<b>Myth 4: You can drink unlimited alkaline water without thinking.</b> Many think you can drink endless amounts without any concern."
+            type: 'h2',
+            text: "Myth 4: You can drink unlimited alkaline water without thinking"
         },
         {
             type: 'paragraph',
-            text: "<b>Fact:</b> Your kidneys, heart and digestive system still have limits. Like all water, alkaline water should be consumed in sensible quantities matching your age, activity level and climate."
+            text: "Another misconception is that alkaline water is so beneficial you can drink endless amounts without any concern. But your kidneys, heart and digestive system still have limits."
         },
         {
             type: 'paragraph',
-            text: "<b>Myth 5: If you drink alkaline water, diet no longer matters.</b> Believing that drinking it makes junk food, lack of sleep or no exercise okay."
+            text: "<b>Fact:</b> Like all water, alkaline water should be consumed in sensible quantities. Total intake should match your age, activity level, climate and any medical guidance you have. People with kidney issues or on certain medications should talk to their doctor before making major changes."
+        },
+        {
+            type: 'h2',
+            text: "Myth 5: If you drink alkaline water, diet no longer matters"
         },
         {
             type: 'paragraph',
-            text: "<b>Fact:</b> Hydration is just one pillar of health. Real results come from a combination of whole foods, physical activity, adequate rest and stress management. Water supports these efforts but cannot replace them."
+            text: "Some people treat alkaline water as a shortcut—believing that as long as they drink it, they do not need to worry about junk food, sleep or exercise. This gives a single product too much power."
         },
         {
             type: 'paragraph',
-            text: "<b>Myth 6: You must choose between alkaline and regular water.</b> It is easy to fall into “either/or” thinking."
+            text: "<b>Fact:</b> Hydration is just one pillar of health. Real results come from a combination of factors: a diet rich in fruits, vegetables and whole foods, regular physical activity, adequate rest and stress management. Alkaline water can support these efforts but cannot replace them."
+        },
+        {
+            type: 'h2',
+            text: "Myth 6: You must choose between alkaline and regular water"
         },
         {
             type: 'paragraph',
-            text: "<b>Fact:</b> Many comfortably use both. They drink alkaline water where available and regular water when travelling. What matters is consistency in safe, clean hydration, not rigid rules."
+            text: "It is easy to fall into “either/or” thinking—either you fully switch to alkaline water, or you avoid it completely."
+        },
+        {
+            type: 'paragraph',
+            text: "<b>Fact:</b> Many people comfortably use both. They drink alkaline water at home, the gym or office where it is easily available and drink regular packaged or tap treated water when travelling. What matters is consistency in safe, clean hydration, not rigid rules."
         },
         {
             type: 'h2',
@@ -1370,6 +1460,10 @@ const generateBlogPosts = (): BlogPost[] => {
             text: "Before talking about types of water, it helps to revisit why hydration matters so much in sport. Even mild dehydration can affect endurance, reaction time, focus and perceived effort. When you lose fluid through sweat and do not replace it, your body struggles to keep temperature and circulation in balance. For athletes, the first goal is simple: avoid getting significantly dehydrated during training and competition."
         },
         {
+            type: 'paragraph',
+            text: "This means drinking regularly before, during and after activity, matching intake to sweat rate, heat and intensity."
+        },
+        {
             type: 'h2',
             text: "Where alkaline water fits"
         },
@@ -1380,10 +1474,14 @@ const generateBlogPosts = (): BlogPost[] => {
         {
             type: 'list',
             items: [
-                "<b>Smooth taste:</b> Makes it more pleasant to drink in large quantities without feeling 'heavy'.",
-                "<b>Mineral content:</b> Contributes to overall electrolyte intake alongside formal sports drinks.",
-                "<b>Buffered feel:</b> Some athletes find it helpful during sessions that create a lot of lactic acid."
+                "Smooth taste that makes it more pleasant to drink in large quantities.",
+                "Mineral content that contributes to overall electrolyte intake, alongside formal sports drinks.",
+                "A slightly more “buffered” feel that some athletes find helpful, especially in sessions that create a lot of lactic acid."
             ]
+        },
+        {
+            type: 'paragraph',
+            text: "Some studies suggest that alkaline mineral water may improve certain markers of hydration and acid base balance during intense exercise. While research is still evolving, it is reasonable to see alkaline water as a supportive option rather than a magic performance booster."
         },
         {
             type: 'h2',
@@ -1391,28 +1489,40 @@ const generateBlogPosts = (): BlogPost[] => {
         },
         {
             type: 'paragraph',
-            text: "Sports drinks deliver carbohydrates and electrolytes. Alkaline water, by contrast, contains little or no sugar. It works best:"
+            text: "Sports drinks are designed to deliver carbohydrates and electrolytes along with fluid. They have a clear role during long, intense sessions where energy and sodium losses are significant. Alkaline water, by contrast, contains little or no sugar. It works best:"
         },
         {
             type: 'list',
             items: [
-                "<b>Pre-workout:</b> Helps you arrive at the session well hydrated and primed.",
-                "<b>Moderate intensity:</b> Ideal when you sweat but do not need heavy carbohydrate replacement.",
-                "<b>Recovery:</b> Supports rehydration throughout the rest of the day post-exercise."
+                "Before exercise, to arrive at the session well hydrated.",
+                "During moderate intensity sessions where you sweat but do not need heavy carbohydrate intake.",
+                "After exercise, to help you continue rehydrating throughout the day."
             ]
+        },
+        {
+            type: 'paragraph',
+            text: "For long races or very intense training, many athletes use a combination: plain or alkaline water for baseline fluids and sports drinks or gels for targeted carbohydrate and sodium."
         },
         {
             type: 'h2',
             text: "Practical tips for athletes"
         },
         {
+            type: 'paragraph',
+            text: "If you want to experiment with alkaline water as part of your training routine, consider these guidelines:"
+        },
+        {
             type: 'list',
             items: [
-                "<b>Test in training:</b> Start using it on training days first, not on race day, to judge comfort.",
-                "<b>Balanced pH:</b> Aim for a moderate pH in the 8–9 range for regular daily athletic use.",
-                "<b>Holistic plan:</b> Combine it with a solid nutrition and electrolyte strategy for long sessions.",
-                "<b>Track feelings:</b> Monitor energy, digestion, and recovery patterns over several weeks."
+                "Start using it on training days first, not on race day. Give your body time to respond and judge comfort.",
+                "Aim for a moderate pH in the 8–9 range unless a professional specifically advises otherwise.",
+                "Combine it with a solid nutrition and electrolyte plan instead of relying on water alone for long sessions.",
+                "Track how you feel: energy, digestion, recovery, muscle soreness and cramping. Hydration is only one variable, but patterns over a few weeks can teach you a lot."
             ]
+        },
+        {
+            type: 'paragraph',
+            text: "Remember that every athlete is different. Body size, sweat rate, climate, sport and session length all affect how much and what type of fluid is ideal."
         },
         {
             type: 'h2',
@@ -1420,7 +1530,11 @@ const generateBlogPosts = (): BlogPost[] => {
         },
         {
             type: 'paragraph',
-            text: "Serious athletes know that what they do outside the gym matters as much as what they do inside. Sleep, everyday diet and general hydration all shape performance. Drinking clean, appealing water during work, travel and rest days helps maintain a stable baseline. For many, having an alkaline water dispenser at home encourages steady sipping, meaning they arrive at training already better hydrated."
+            text: "Serious athletes know that what they do outside the gym matters as much as what they do inside. Sleep, everyday diet and general hydration all shape performance. Drinking clean, appealing water during work, travel and rest days helps maintain a stable baseline."
+        },
+        {
+            type: 'paragraph',
+            text: "For many, having an alkaline water dispenser at home or at the training facility encourages steady sipping throughout the day. This means they arrive at training already better hydrated, reducing the “catch up” load once the workout starts."
         },
         {
             type: 'h2',
@@ -1428,7 +1542,11 @@ const generateBlogPosts = (): BlogPost[] => {
         },
         {
             type: 'paragraph',
-            text: "Used wisely, alkaline water can be a useful part of a broader sports hydration strategy. It can support comfort, encourage higher fluid intake and contribute minerals. But it does not replace structured training, smart nutrition, deliberate recovery or medical advice. Treat it like any other tool: test it, observe realistic benefits and keep using it if it clearly helps you stay hydrated and feel your best."
+            text: "Used wisely, alkaline water can be a useful part of a broader sports hydration strategy. It can support comfort, encourage higher fluid intake and contribute minerals alongside other sources. But it does not replace structured training, smart nutrition, deliberate recovery or, when needed, coaching and medical advice."
+        },
+        {
+            type: 'paragraph',
+            text: "For athletes and fitness enthusiasts, the best approach is to treat alkaline water like any other tool: test it, observe realistic benefits and keep using it if it clearly helps you stay hydrated and feel your best."
         }
     ];
 
@@ -1448,11 +1566,15 @@ const generateBlogPosts = (): BlogPost[] => {
         {
             type: 'list',
             items: [
-                "<b>Hydration:</b> It allows rice and grains to swell and soften properly.",
-                "<b>Texture:</b> It softens dals, beans and legumes during the boiling process.",
-                "<b>Extraction:</b> It forms the base for tea and coffee, extracting delicate oils and flavours.",
-                "<b>Aroma:</b> It helps spices release their aromatic compounds more effectively."
+                "It hydrates rice and grains as they swell.",
+                "It softens dals and beans.",
+                "It forms the base for tea, coffee and soups.",
+                "It helps spices release their aroma and flavour."
             ]
+        },
+        {
+            type: 'paragraph',
+            text: "The mineral content and pH of water can change how these processes unfold. Hard water, rich in calcium and magnesium, can make certain foods tougher to soften. Very soft, low TDS water can sometimes make dishes taste slightly flat, even if spices are generous."
         },
         {
             type: 'h2',
@@ -1460,11 +1582,23 @@ const generateBlogPosts = (): BlogPost[] => {
         },
         {
             type: 'paragraph',
-            text: "Many home cooks notice that rice cooked with balanced, mineral rich water looks fluffier and separates better. Slightly alkaline water can help starch gel differently, leading to a softer, more even texture and reduced stickiness."
+            text: "Many home cooks notice that rice cooked with balanced, mineral rich water looks fluffier and separates better. Slightly alkaline water can help starch gel differently, leading to a softer, more even texture. It may also reduce stickiness in some varieties."
         },
         {
             type: 'paragraph',
-            text: "To test this, cook your regular rice recipe using alkaline water at a moderate pH and compare the texture, aroma and grain separation to your usual result. If you like the difference, you can reserve alkaline water for pulao, biryani and other grain-heavy dishes."
+            text: "To test this in your kitchen:"
+        },
+        {
+            type: 'list',
+            items: [
+                "Cook your regular rice recipe, once with normal tap or RO water and once with alkaline water at a moderate pH.",
+                "Keep all other variables the same—rice type, soak time, pot size and heat.",
+                "Compare texture, aroma and how the grains hold shape."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "If you like the difference, you can reserve alkaline water for rice, pulao, biryani and other grain heavy dishes."
         },
         {
             type: 'h2',
@@ -1472,15 +1606,23 @@ const generateBlogPosts = (): BlogPost[] => {
         },
         {
             type: 'paragraph',
-            text: "Indian dals and legumes benefit from softening during cooking. Slightly alkaline water can help break down the pectin in seed coats more efficiently, leading to a creamier final texture, especially with chana, rajma and whole dals."
+            text: "Indian dals and legumes benefit from softening during cooking. Slightly alkaline water can help break down the pectin in the seed coats more efficiently, leading to a creamier, smoother final texture. This is particularly noticeable with chana, rajma and whole dals that otherwise take a long time to soften."
+        },
+        {
+            type: 'paragraph',
+            text: "A practical approach:"
         },
         {
             type: 'list',
             items: [
-                "<b>Optimized soaking:</b> Soak beans in regular water, then switch to alkaline water for the actual cooking.",
-                "<b>Faster softening:</b> Monitor cooking time; you may find legumes reach desired softness slightly faster.",
-                "<b>Enhanced digestion:</b> Soft, evenly cooked legumes are often perceived as easier on the digestive system."
+                "Soak beans and dals in regular or filtered water, then cook them in alkaline water.",
+                "Monitor cooking time; you may find they reach the desired softness a little faster.",
+                "Adjust salt and spices at the end as usual."
             ]
+        },
+        {
+            type: 'paragraph',
+            text: "Soft, evenly cooked legumes not only taste better but can also be easier to digest."
         },
         {
             type: 'h2',
@@ -1488,7 +1630,23 @@ const generateBlogPosts = (): BlogPost[] => {
         },
         {
             type: 'paragraph',
-            text: "Tea and coffee are extremely sensitive to water chemistry. Using moderately alkaline, balanced water can help tea leaves and coffee grounds release their flavour more fully, reduce bitterness and produce a cleaner, brighter appearance in the cup."
+            text: "Tea and coffee are extremely sensitive to water chemistry. Very hard water can cause scum on the surface and mute delicate flavours. Excessively soft water can make brews taste thin."
+        },
+        {
+            type: 'paragraph',
+            text: "Using moderately alkaline, balanced water can:"
+        },
+        {
+            type: 'list',
+            items: [
+                "Help tea leaves and coffee grounds release their flavour more fully.",
+                "Reduce bitterness or sourness.",
+                "Produce a cleaner, brighter appearance in the cup."
+            ]
+        },
+        {
+            type: 'paragraph',
+            text: "Experiment with your morning chai or filter coffee using both types of water on different days. Many people find that beverages taste smoother and more consistent with good quality alkaline water."
         },
         {
             type: 'h2',
@@ -1496,94 +1654,54 @@ const generateBlogPosts = (): BlogPost[] => {
         },
         {
             type: 'paragraph',
-            text: "Alkaline water’s mineral content can enhance mouthfeel, giving a sauce a slightly richer body without extra fat. It may also help balance sharpness in tomato-heavy dishes. However, remember to always taste and adjust your usual souring agents like tamarind or lime to maintain the right tang."
+            text: "Curries and gravies involve a complex interplay of spices, onions, tomatoes, yoghurt and cream. The water you use decides how well these elements emulsify and how sauces coat ingredients."
+        },
+        {
+            type: 'paragraph',
+            text: "Alkaline water’s mineral content can enhance mouthfeel, giving a sauce a slightly richer body without extra fat. It may also help balance sharpness in tomato heavy dishes. However, because it is less acidic, it is important to:"
+        },
+        {
+            type: 'list',
+            items: [
+                "Taste and adjust tang using tomatoes, yoghurt, lime or tamarind as needed.",
+                "Not rely on water alone to carry acidity; your usual souring agents still lead the flavour game."
+            ]
         },
         {
             type: 'h2',
             text: "Practical considerations"
         },
         {
+            type: 'paragraph',
+            text: "If you decide to cook with alkaline water, keep these tips in mind:"
+        },
+        {
             type: 'list',
             items: [
-                "<b>Use moderate pH:</b> Extremely high pH settings are unnecessary for cooking and may alter delicate flavours too much.",
-                "<b>Prioritize water-heavy dishes:</b> Focus on soups, lentils, gravies and beverages where water quantity is high.",
-                "<b>Ingredients first:</b> Remember that quality water supports but does not replace fresh vegetables and high-grade spices."
+                "Use moderate pH settings. Extremely high pH is unnecessary and may alter flavours too much.",
+                "Prioritise dishes where water quantity is high and end result is not drained away—soups, lentils, gravies, beverages and one pot meals.",
+                "For boiled items where water is discarded (like pasta), the effect will be smaller, though you may still see texture benefits."
             ]
         },
         {
             type: 'paragraph',
-            text: "If you already invest in alkaline water for drinking, extending its use to your cooking can be a natural next step. Over time, you may discovered that it gives your everyday Indian meals a quietly noticeable upgrade without changing the soul of the dishes you love."
+            text: "Also remember that alkaline water is not a replacement for quality ingredients. Fresh vegetables, good spices and careful technique will always matter more than the exact pH of your water."
+        },
+        {
+            type: 'h2',
+            text: "Making the most of your alkaline supply"
+        },
+        {
+            type: 'paragraph',
+            text: "If you already invest in alkaline water for drinking, extending its use to key parts of cooking can be a natural next step. Start with one or two categories—rice and dal, or chai and coffee—and see how your family responds to the change in taste and texture."
+        },
+        {
+            type: 'paragraph',
+            text: "Over time, you may discover that a combination of good ingredients, thoughtful recipes and high quality water gives your everyday Indian meals a quietly noticeable upgrade, without changing the soul of the dishes you love."
         }
     ];
 
-    // const weightManagementContent: BlogContentBlock[] = [
-    //     {
-    //         type: 'paragraph',
-    //         text: "Weight management is a complex journey that involves diet, physical activity, sleep and stress management. In recent years, alkaline water has become a popular addition to weight loss conversations. While it is not a 'magic' solution, understanding how it supports hydration and metabolism can help you use it effectively as part of your wellness plan."
-    //     },
-    //     {
-    //         type: 'h2',
-    //         text: "Hydration and metabolism"
-    //     },
-    //     {
-    //         type: 'paragraph',
-    //         text: "Every metabolic process in your body—from breaking down fats to converting food into energy—requires water. Even mild dehydration can slow down your metabolism and make you feel sluggish. Drinking clean, pleasant tasting water encourages you to stay hydrated, which keeps your metabolic engine running smoothly."
-    //     },
-    //     {
-    //         type: 'h2',
-    //         text: "Alkaline water vs sugary drinks"
-    //     },
-    //     {
-    //         type: 'paragraph',
-    //         text: "One of the simplest ways alkaline water supports weight management is by replacing high calorie beverages. Many people reach for sodas, sweetened teas or energy drinks when they are thirsty or tired. Making the switch to alkaline water offers several benefits:"
-    //     },
-    //     {
-    //         type: 'list',
-    //         items: [
-    //             "<b>Zero calories:</b> You can hydrate as much as you need without adding to your daily calorie count.",
-    //             "<b>Better taste:</b> Many find the smoother taste of alkaline water more satisfying than regular water, reducing the craving for flavoured drinks.",
-    //             "<b>No sugar spikes:</b> Unlike sodas, water does not cause insulin spikes that can lead to fat storage and energy crashes."
-    //         ]
-    //     },
-    //     {
-    //         type: 'h2',
-    //         text: "The role of detoxification"
-    //     },
-    //     {
-    //         type: 'paragraph',
-    //         text: "The kidneys and liver are your body's primary detox organs, and they need plenty of fluid to flush out waste products effectively. By supporting consistent hydration, alkaline water helps these organs function at their best. Some wellness practitioners suggest that alkaline water's specific mineral profile and pH may further support the body's natural waste removal processes."
-    //     },
-    //     {
-    //         type: 'h2',
-    //         text: "Managing appetite and 'False Hunger'"
-    //     },
-    //     {
-    //         type: 'paragraph',
-    //         text: "The brain often confuses thirst signals with hunger signals. When you are mildly dehydrated, you might feel the urge to snack when your body actually needs water. Drinking a glass of alkaline water before meals or when you feel an 'afternoon slump' can help you determine if you are truly hungry or just need hydration."
-    //     },
-    //     {
-    //         type: 'h2',
-    //         text: "Practical tips for weight management"
-    //     },
-    //     {
-    //         type: 'list',
-    //         items: [
-    //             "<b>Start your day right:</b> Drink a glass of room temperature alkaline water as soon as you wake up to jumpstart your hydration.",
-    //             "<b>Hydrate before meals:</b> Have a glass 20–30 minutes before eating to support portion control.",
-    //             "<b>Carry a reusable bottle:</b> Keep alkaline water with you at work, in the car and at the gym to avoid reaching for sugary alternatives.",
-    //             "<b>Listen to your body:</b> Pay attention to how you feel—proper hydration often leads to more stable energy levels throughout the day."
-    //         ]
-    //     },
-    //     {
-    //         type: 'h2',
-    //         text: "A supportive tool in a larger plan"
-    //     },
-    //     {
-    //         type: 'paragraph',
-    //         text: "It is important to remember that no single beverage can cause weight loss on its own. Real results come from a balanced diet rich in whole foods and regular physical movement. View alkaline water as a high quality tool in your hydration kit—one that makes staying hydrated more enjoyable and supports your body's natural functions as you work toward your health goals."
-    //     }
-    // ];
-
+    // Blog 15
     const dailyRoutineContent: BlogContentBlock[] = [
         {
             type: 'paragraph',
@@ -1604,9 +1722,9 @@ const generateBlogPosts = (): BlogPost[] => {
         {
             type: 'list',
             items: [
-                "<b>Rehydrate:</b> Help your body recover after the night.",
-                "<b>Prepare:</b> Get your digestive system ready for breakfast.",
-                "<b>Set the tone:</b> Establish mindful drinking from the very start of the day."
+                "Rehydrate your body after the night.",
+                "Prepare your digestive system for breakfast.",
+                "Set the tone for mindful drinking through the day."
             ]
         },
         {
@@ -1628,10 +1746,10 @@ const generateBlogPosts = (): BlogPost[] => {
         {
             type: 'list',
             items: [
-                "<b>A glass after brushing your teeth.</b>",
-                "<b>A bottle refill just before starting focused work blocks.</b>",
-                "<b>A few sips each time you return from a meeting, call or chore.</b>",
-                "<b>A small glass before every meal.</b>"
+                "A glass after brushing your teeth.",
+                "A bottle refill just before starting focused work blocks.",
+                "A few sips each time you return from a meeting, call or chore.",
+                "A small glass before every meal."
             ]
         },
         {
@@ -1644,14 +1762,14 @@ const generateBlogPosts = (): BlogPost[] => {
         },
         {
             type: 'paragraph',
-            text: "There is no need to follow extreme rules like 'never drink with food'. Instead, focus on comfort. Many people feel good drinking:"
+            text: "There is no need to follow extreme rules like “never drink with food”. Instead, focus on comfort. Many people feel good drinking:"
         },
         {
             type: 'list',
             items: [
-                "<b>Before meals:</b> A glass 15–20 minutes before eating to take the edge off hunger and support portion control.",
-                "<b>During the meal:</b> Small sips if the food is very spicy or salty.",
-                "<b>After the meal:</b> Another glass an hour or so later, especially after heavy or fried foods."
+                "A glass 15–20 minutes before meals to take the edge off hunger and support portion control.",
+                "Small sips during the meal if the food is very spicy or salty.",
+                "Another glass an hour or so later, especially after heavy or fried foods."
             ]
         },
         {
@@ -1664,19 +1782,23 @@ const generateBlogPosts = (): BlogPost[] => {
         },
         {
             type: 'paragraph',
-            text: "At work—whether at a desk, clinic, studio or shop—it is easy to forget water entirely. Keeping a designated alkaline water bottle on your table is a simple visual reminder. Tips that help:"
+            text: "At work—whether at a desk, clinic, studio or shop—it is easy to forget water entirely. Keeping a designated alkaline water bottle on your table is a simple visual reminder."
+        },
+        {
+            type: 'paragraph',
+            text: "Tips that help:"
         },
         {
             type: 'list',
             items: [
-                "<b>Choose the right bottle:</b> Pick a comfortable size (750 ml to 1 litre) and shape so you will actually carry it.",
-                "<b>Mark time goals:</b> For example, half finished by lunch, fully finished by mid afternoon.",
-                "<b>Stay refilled:</b> Refill from your home ionizer or office dispenser whenever it is empty."
+                "Choose a bottle with a comfortable size (750 ml to 1 litre) and shape so you will actually carry it.",
+                "Mark subtle time goals on the bottle (for example, half finished by lunch, fully finished by mid afternoon).",
+                "Refill from your home ionizer or office dispenser whenever it is empty."
             ]
         },
         {
             type: 'paragraph',
-            text: "If your workplace offers alkaline water only in the pantry, plan short 'hydration walks' every couple of hours. These mini breaks freshen your mind as much as your body."
+            text: "If your workplace offers alkaline water only in the pantry, plan short “hydration walks” every couple of hours. These mini breaks freshen your mind as much as your body."
         },
         {
             type: 'h2',
@@ -1689,9 +1811,9 @@ const generateBlogPosts = (): BlogPost[] => {
         {
             type: 'list',
             items: [
-                "<b>Pre-workout:</b> Drink a glass 20–30 minutes before so you start hydrated.",
-                "<b>Intra-workout:</b> Take small sips during training, especially in hot weather or intense sessions.",
-                "<b>Post-workout:</b> Continue drinking afterwards over the next hour or two instead of gulping huge amounts at once."
+                "Drink a glass 20–30 minutes before workouts so you start hydrated.",
+                "Take small sips during training, especially in hot weather or intense sessions.",
+                "Continue drinking afterwards over the next hour or two instead of gulping huge amounts at once."
             ]
         },
         {
@@ -1704,14 +1826,18 @@ const generateBlogPosts = (): BlogPost[] => {
         },
         {
             type: 'paragraph',
-            text: "Travelling—by car, plane or train—often disrupts hydration. Air conditioning, long sitting periods and irregular meals all work against you. Having alkaline water on hand makes it more likely you will sip instead of grabbing sugary alternatives. A simple strategy:"
+            text: "Travelling—by car, plane or train—often disrupts hydration. Air conditioning, long sitting periods and irregular meals all work against you. Having alkaline water on hand makes it more likely you will sip instead of grabbing sugary alternatives."
+        },
+        {
+            type: 'paragraph',
+            text: "A simple strategy:"
         },
         {
             type: 'list',
             items: [
-                "<b>Pack your own:</b> Fill a reusable bottle from your home machine before leaving.",
-                "<b>Backups:</b> For longer trips, carry a couple of sealed alkaline bottles as backup.",
-                "<b>Sip markers:</b> Take a few sips every time you check your phone, boarding pass or navigation."
+                "Fill a reusable bottle from your home machine before leaving.",
+                "For longer trips, carry a couple of sealed alkaline bottles as backup.",
+                "Take a few sips every time you check your phone, boarding pass or navigation."
             ]
         },
         {
@@ -1724,14 +1850,14 @@ const generateBlogPosts = (): BlogPost[] => {
         },
         {
             type: 'paragraph',
-            text: "Towards evening, shift from 'catching up' on water to gentle maintenance. Too much liquid right before bed can disturb sleep. Instead:"
+            text: "Towards evening, shift from “catching up” on water to gentle maintenance. Too much liquid right before bed can disturb sleep. Instead:"
         },
         {
             type: 'list',
             items: [
-                "<b>Transition time:</b> Drink a glass or two of alkaline water between finishing work and dinner.",
-                "<b>Post-dinner:</b> Take small sips after dinner if you feel heavy or bloated, rather than chugging a lot at once.",
-                "<b>Slow down:</b> Reduce intake closer to bedtime, adjusting based on how your body responds."
+                "Drink a glass or two of alkaline water between finishing work and dinner.",
+                "Take small sips after dinner if you feel heavy or bloated, rather than chugging a lot at once.",
+                "Slow down closer to bedtime, adjusting based on how your body responds."
             ]
         },
         {
@@ -1749,9 +1875,9 @@ const generateBlogPosts = (): BlogPost[] => {
         {
             type: 'list',
             items: [
-                "<b>Accessibility:</b> Keeping alkaline water easily accessible wherever you spend time.",
-                "<b>Listening:</b> Pay attention to your thirst signals and climate conditions.",
-                "<b>First choice:</b> Make water your first choice over sugary or very acidic drinks most of the time."
+                "Keeping alkaline water easily accessible wherever you spend time.",
+                "Listening to your thirst signals and climate conditions.",
+                "Making water your first choice over sugary or very acidic drinks most of the time."
             ]
         },
         {
@@ -1759,6 +1885,7 @@ const generateBlogPosts = (): BlogPost[] => {
             text: "Over a few weeks, you will likely notice that drinking enough becomes automatic. Alkaline water is simply the medium that makes those habits easier—clean, smooth and ready whenever you reach for it."
         }
     ];
+
 
     const waterContent: BlogContentBlock[] = [
         {
@@ -1808,7 +1935,7 @@ const generateBlogPosts = (): BlogPost[] => {
 
         if (i === 5) {
             id = "alkaline-water-for-gyms-yoga-and-wellness-centres";
-            title = "Why Gyms and Yoga Studios Are Switching to Alkaline Water";
+            title = "Alkaline Water for Gyms, Yoga Studios & Wellness Centres | Hydration for Active Lifestyles";
             metaTitle = "Alkaline Water for Gyms, Yoga Studios & Wellness Centres | Hydration for Active Lifestyles";
             metaDesc = "See how alkaline water stations and bottles support hydration for gyms, yoga studios and wellness centres, enhancing member experience and strengthening your wellness brand.";
             content = gymWellnessContent;
@@ -1886,13 +2013,7 @@ const generateBlogPosts = (): BlogPost[] => {
             content = cookingIndianContent;
         }
 
-        // if (i === 15) {
-        //     id = "alkaline-water-and-weight-management";
-        //     title = "Alkaline Water for Weight Management | Metabolism, Detox & Hydration";
-        //     metaTitle = "Alkaline Water for Weight Management | Metabolism, Detox & Hydration";
-        //     metaDesc = "Curious if alkaline water can help with weight management? Learn how it supports metabolism, detoxification and healthy hydration as part of a balanced wellness routine.";
-        //     content = weightManagementContent;
-        // }
+
 
         if (i === 15) {
             id = "daily-routine-with-alkaline-water";
