@@ -44,12 +44,12 @@ export const AboutAboutPlan: React.FC = () => {
                         {/* Badges */}
                         <div className="absolute top-1/2 -translate-y-1/2 -right-8 flex flex-col gap-4">
                             <div className="w-8 h-24 bg-[#00659e] rounded-lg flex items-center justify-center text-white shadow-lg">
-                                <span className="-rotate-90 text-xs font-bold whitespace-nowrap tracking-widest">1 L</span>
+                                <span className="-rotate-90 text-xs font-bold whitespace-nowrap tracking-widest">20 L</span>
                             </div>
                             <div className="w-8 h-24 bg-[#00659e] rounded-lg flex items-center justify-center text-white shadow-lg">
                                 <span className="-rotate-90 text-[10px] font-bold leading-tight text-center">
-                                    <span className="block">12</span>
-                                    <span className="block mt-1">Bottles</span>
+                                    <span className="block">Pure</span>
+                                    <span className="block mt-1">Water</span>
                                 </span>
                             </div>
                         </div>

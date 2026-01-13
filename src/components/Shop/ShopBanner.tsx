@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import shopBanner1 from "../../assets/productimg/crausal_img/shopcrausal_1.png"
+import shopBanner2 from "../../assets/productimg/crausal_img/shopcrausal_2.png"
+import shopBanner3 from "../../assets/productimg/crausal_img/shopcrausal_3.png"
 
 const BANNER_IMAGES = [
-    "https://cdn.fstoppers.com/styles/full/s3/media/2020/12/21/nando-vertical-horizontal-11.jpg",
-    "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2500&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=2500&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=2500&auto=format&fit=crop"
+    shopBanner1,
+    shopBanner2,
+    shopBanner3
 ];
 
 export const ShopBanner: React.FC = () => {
@@ -19,11 +21,11 @@ export const ShopBanner: React.FC = () => {
 
     return (
         <div className="w-full max-w-[1090px] mx-auto px-4 md:px-8 pt-24 pb-8">
-            <div className="relative w-full bg-white rounded-[0.5rem] rounded-b-none border  border-zinc-800 p-10  shadow-xs">
+            <div className="relative w-full bg-white rounded-lg rounded-b-none border  border-zinc-800 p-10  shadow-xs">
                 {/* Camera/Home Button Dot */}
                 {/* <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-zinc-900 rounded-full z-10"></div> */}
 
-                <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-[0.5rem] overflow-hidden bg-gray-100">
+                <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-lg overflow-hidden bg-gray-100">
                     {BANNER_IMAGES.map((src, index) => (
                         <img
                             key={src}

@@ -43,11 +43,11 @@ export const Footer: React.FC = () => {
                     </div>
 
                     {/* Right: Contact & Address */}
-                    <div className="w-full md:w-1/3 flex flex-col items-start md:items-end text-[12px] text-zinc-800 font-medium leading-relaxed">
-                        <div className="mb-8 flex flex-col items-start md:items-end">
+                    <div className="w-full md:w-1/3 flex flex-col items-start md:items-end text-[16px] text-zinc-800 font-medium leading-relaxed">
+                        <div className="mb-2 flex flex-col items-start md:items-end">
                             <p className="uppercase font-bold tracking-widest mb-3 text-[14px] text-black">Contact</p>
-                            <p className="hover:text-blue-600 cursor-pointer pb-1">CONTACT@ASVA.ART</p>
-                            <p>+00 000 000 000</p>
+                            <p className="hover:text-blue-600 cursor-pointer pb-1">Asva@asva.gmail.com</p>
+                            <p>9999407455</p>
                         </div>
 
                         <div className="mb-8 flex flex-col items-start md:items-end">
@@ -58,7 +58,7 @@ export const Footer: React.FC = () => {
                                 Jai Vihar, Najafgarh Road,
                                 <br />
                                 Near Sant Haridas School,
-                                <br />
+                             
                                 Delhi - 110043
                             </p>
                         </div>

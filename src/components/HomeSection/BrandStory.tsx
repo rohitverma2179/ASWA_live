@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import brandWoman from "../../assets/home/bottle_png_.png"
+import brandmash from "../../assets/home/mashine_1.jpg"
 
 const BRAND_DATA = [
     {
         tag: "Packaged Alkaline Water",
         title: "Bottles & jars that fit Indian lifestyles.",
         description: "From 200ml event bottles to 20L refill jars, ASVA offers safe alkaline hydration formats for every use, home dining, clinics, gym refills, office pantries and hotel guests.",
-        image: "/assets/brand-woman.png",
+        image: brandWoman,
         cardLabel: "Alkaline Water Supply",
         cta: "Shop",
         link: "#",
@@ -16,7 +18,7 @@ const BRAND_DATA = [
         tag: "Portable Alkaline Ionizers",
         title: "Smart alkaline machines for home & business.",
         description: "Customers can choose ready-to-drink alkaline supply or convert water on demand using ASVA ionizer devices, making alkaline hydration convenient and scalable.",
-        image: "/assets/hero-bottles.png",
+        image: brandmash,
         cardLabel: "Ionizer Technology",
         cta: "Shop Now",
         link: "#",
@@ -82,7 +84,7 @@ export const BrandStory: React.FC = () => {
                         <img
                             key={activeData.image}
                             src={activeData.image}
-                            className="h-[500px] w-auto object-cover rounded-2xl shadow-sm animate-in fade-in duration-700"
+                            className="h-[500px] w-auto object-contain rounded-2xl shadow-sm animate-in fade-in duration-700"
                             alt={activeData.title}
                         />
                     </div>

@@ -1,36 +1,57 @@
 import React, { useState } from 'react';
+import BottleImage from '../../assets/bottle_png_.png';
 
-import Button from '../../assets/bottle_png_.png';
+const SUBSCRIPTION_PLANS = [
+    {
+        id: 'ASVA-SUB-FAM-20L-08-DL',
+        name: 'Family Plan',
+        details: '20L × 8 Jars / Month',
+        mrp: 640,
+        offerPrice: 600,
+        sku: 'ASVA-SUB-FAM-20L-08-DL'
+    },
+    {
+        id: 'ASVA-SUB-OFF-20L-20-DL',
+        name: 'Office Plan',
+        details: '20L × 20 Jars / Month',
+        mrp: 1600,
+        offerPrice: 1440,
+        sku: 'ASVA-SUB-OFF-20L-20-DL'
+    },
+    {
+        id: 'ASVA-SUB-PRO-20L-40-DL',
+        name: 'Pro Plan',
+        details: '20L × 40 Jars / Month',
+        mrp: 3200,
+        offerPrice: 2800,
+        sku: 'ASVA-SUB-PRO-20L-40-DL'
+    }
+];
 
 export const SubscriptionForm: React.FC = () => {
-    const BASE_PRICE = 99.95;
-
-    // State
-    const [quantity, setQuantity] = useState(1);
-    const [subType, setSubType] = useState('Daily');
+    const [selectedPlanId, setSelectedPlanId] = useState(SUBSCRIPTION_PLANS[0].id);
     const [startDate, setStartDate] = useState('');
     const [endDate, setEndDate] = useState('');
-    const [frequency, setFrequency] = useState('1 Month');
 
-    // Derived state
-    const months = parseInt(frequency.split(' ')[0]) || 1;
-    const totalPrice = (BASE_PRICE * quantity * months).toFixed(2);
+    const selectedPlan = SUBSCRIPTION_PLANS.find(p => p.id === selectedPlanId) || SUBSCRIPTION_PLANS[0];
 
     const handleSubmit = () => {
+        if (!startDate) {
+            alert('Please select a start date');
+            return;
+        }
         const formData = {
             product: 'Asva 20 Litre Water Jars',
-            quantity,
-            subscriptionType: subType,
+            plan: selectedPlan.name,
+            sku: selectedPlan.sku,
+            offerPrice: selectedPlan.offerPrice,
             startDate,
-            endDate,
-            paymentFrequency: frequency,
-            totalPrice
+            endDate
         };
         console.log('Subscription Form Data:', formData);
-        alert('Subscription details logged to console!');
+        alert(`Successfully subscribed to ${selectedPlan.name}!`);
     };
 
-    // Validation
     const isDateValid = !startDate || !endDate || new Date(endDate) >= new Date(startDate);
 
     return (
@@ -40,18 +61,17 @@ export const SubscriptionForm: React.FC = () => {
                 {/* Left: Bottles */}
                 <div className="flex justify-center relative lg:w-1/3">
                     <div className="flex gap-4">
-                        <img src={Button} alt="Bottle 1" className="h-64 md:h-96 w-auto object-contain" />
-                        {/* <img src="/assets/hero-bottles.png" alt="Bottle 2" className="h-64 md:h-96 w-auto object-contain translate-y-8" /> */}
+                        <img src={BottleImage} alt="Bottle 1" className="h-64 md:h-96 w-auto object-contain" />
                     </div>
                     {/* Badges */}
                     <div className="absolute top-1/2 -translate-y-1/2 -right-8 flex flex-col gap-4">
                         <div className="w-8 h-24 bg-[#00659e] rounded-lg flex items-center justify-center text-white shadow-lg">
-                            <span className="-rotate-90 text-xs font-bold whitespace-nowrap tracking-widest">1 L</span>
+                            <span className="-rotate-90 text-xs font-bold whitespace-nowrap tracking-widest">20 L</span>
                         </div>
                         <div className="w-8 h-24 bg-[#00659e] rounded-lg flex items-center justify-center text-white shadow-lg">
                             <span className="-rotate-90 text-[10px] font-bold leading-tight text-center">
-                                <span className="block">12</span>
-                                <span className="block mt-1">Bottles</span>
+                                <span className="block">Pure</span>
+                                <span className="block mt-1">Water</span>
                             </span>
                         </div>
                     </div>
@@ -61,103 +81,96 @@ export const SubscriptionForm: React.FC = () => {
                 <div className="lg:w-2/3 w-full max-w-2xl bg-white rounded-4xl border border-gray-200 p-8 md:p-10 shadow-sm">
                     <div className="mb-6">
                         <span className="text-[10px] text-gray-400 font-medium uppercase tracking-wide">Asva Packaged Drinking Water</span>
-                        <h3 className="text-xl md:text-2xl font-serif text-black mt-1 mb-2">- Asva 20 Litre Water Jars</h3>
+                        <h3 className="text-xl md:text-2xl font-serif text-black mt-1 mb-2">Core Subscription Plans</h3>
                         <p className="text-xs text-justify text-gray-500 leading-relaxed mb-6">
-                            The 20 litre pack is ideal for home and office use and gives you great value for money. ... Sources of its usage, hygiene is best maintained with the push tap and stand mechanism.
+                            Choose the perfect plan for your household or business. Our 20-litre jars are delivered with hygiene and quality at the forefront.
                         </p>
 
-                        <div className="flex items-center justify-between mb-8">
-                            <div className="border border-gray-300 rounded-full px-6 py-2 text-sm font-bold text-gray-700">
-                                ₹{BASE_PRICE}
-                            </div>
-
-                            {/* Quantity Selector */}
-                            <div className="flex items-center border border-gray-300 rounded-full px-4 py-1 gap-4">
-                                <button
-                                    onClick={() => setQuantity(q => Math.max(1, q - 1))}
-                                    className="text-lg font-medium text-gray-500 hover:text-black w-4 disabled:opacity-30"
-                                    disabled={quantity <= 1}
-                                >-</button>
-                                <span className="text-sm font-bold w-4 text-center">{quantity}</span>
-                                <button
-                                    onClick={() => setQuantity(q => q + 1)}
-                                    className="text-lg font-medium text-gray-500 hover:text-black w-4"
-                                >+</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="space-y-6 border border-gray-100 rounded-xl p-6">
-                        <div>
-                            <label className="block text-[10px] font-bold text-gray-900 mb-2">Select Subscription Type</label>
-                            <div className="flex gap-2">
-                                {['Daily', 'Alternate Days', 'Weekly'].map(type => (
+                        <div className="space-y-4 mb-8">
+                            <label className="block text-[10px] font-bold text-gray-900 mb-2 uppercase tracking-widest">Select Plan</label>
+                            <div className="grid gap-3">
+                                {SUBSCRIPTION_PLANS.map(plan => (
                                     <button
-                                        key={type}
-                                        onClick={() => setSubType(type)}
-                                        className={`px-4 py-1.5 rounded-full text-xs font-medium border transition-colors
-                                            ${subType === type
-                                                ? 'border-gray-800 bg-gray-50 text-black'
-                                                : 'border-gray-200 text-gray-500 hover:border-gray-300'
+                                        key={plan.id}
+                                        onClick={() => setSelectedPlanId(plan.id)}
+                                        className={`flex flex-col md:flex-row md:items-center justify-between p-4 rounded-2xl border transition-all text-left
+                                            ${selectedPlanId === plan.id
+                                                ? 'border-[#00659e] bg-blue-50/30'
+                                                : 'border-gray-100 hover:border-gray-200 bg-white'
                                             }`}
                                     >
-                                        {type}
+                                        <div>
+                                            <h4 className="text-sm font-bold text-gray-900">{plan.name}</h4>
+                                            <p className="text-[10px] text-gray-500">{plan.details}</p>
+                                        </div>
+                                        <div className="mt-2 md:mt-0 text-right">
+                                            <div className="flex items-center gap-2 justify-end">
+                                                <span className="text-xs text-gray-400 line-through">₹{plan.mrp}</span>
+                                                <span className="text-lg font-bold text-[#00659e]">₹{plan.offerPrice}</span>
+                                            </div>
+                                            <p className="text-[9px] text-gray-400 uppercase">Monthly</p>
+                                        </div>
                                     </button>
                                 ))}
                             </div>
                         </div>
+                    </div>
 
+                    <div className="space-y-6 border border-gray-100 rounded-2xl p-6">
                         <div>
-                            <label className="block text-[10px] font-bold text-gray-900 mb-2">Select</label>
+                            <label className="block text-[10px] font-bold text-gray-900 mb-2 uppercase tracking-widest">Subscription Duration</label>
                             <div className="flex gap-4">
-                                <input
-                                    type="date"
-                                    value={startDate}
-                                    onChange={(e) => setStartDate(e.target.value)}
-                                    className="border border-gray-300 rounded-full px-4 py-2 text-xs text-gray-600 w-full focus:outline-hidden focus:border-gray-500"
-                                    placeholder="Start Date"
-                                />
-                                <input
-                                    type="date"
-                                    value={endDate}
-                                    onChange={(e) => setEndDate(e.target.value)}
-                                    className={`border rounded-full px-4 py-2 text-xs text-gray-600 w-full focus:outline-hidden focus:border-gray-500
-                                        ${!isDateValid ? 'border-red-300 bg-red-50' : 'border-gray-300'}
-                                    `}
-                                    placeholder="End Date"
-                                />
+                                <div className="w-full">
+                                    <p className="text-[9px] text-gray-400 mb-1 ml-2">Start Date</p>
+                                    <input
+                                        type="date"
+                                        value={startDate}
+                                        onChange={(e) => setStartDate(e.target.value)}
+                                        className="border border-gray-300 rounded-full px-5 py-3 text-xs text-gray-600 w-full focus:outline-none focus:border-[#00659e]"
+                                        placeholder="Start Date"
+                                    />
+                                </div>
+                                <div className="w-full">
+                                    <p className="text-[9px] text-gray-400 mb-1 ml-2">End Date (Optional)</p>
+                                    <input
+                                        type="date"
+                                        value={endDate}
+                                        onChange={(e) => setEndDate(e.target.value)}
+                                        className={`border rounded-full px-5 py-3 text-xs text-gray-600 w-full focus:outline-none focus:border-[#00659e]
+                                            ${!isDateValid ? 'border-red-300 bg-red-50' : 'border-gray-300'}
+                                        `}
+                                        placeholder="End Date"
+                                    />
+                                </div>
                             </div>
-                            {!isDateValid && <p className="text-[10px] text-red-500 mt-1 pl-2">End date must be after start date</p>}
+                            {!isDateValid && <p className="text-[10px] text-red-500 mt-1 pl-2 font-medium">End date must be after start date</p>}
                         </div>
 
-                        <div>
-                            <label className="block text-[10px] font-bold text-gray-900 mb-2">Payment Frequency</label>
-                            <select
-                                value={frequency}
-                                onChange={(e) => setFrequency(e.target.value)}
-                                className="w-full border border-gray-300 rounded-full px-4 py-2 text-xs text-gray-600 focus:outline-hidden focus:border-gray-500 appearance-none bg-white"
+                        <div className="pt-4 flex items-center justify-between border-t border-gray-100 mt-6">
+                            <div>
+                                <p className="text-[10px] text-gray-400 uppercase tracking-widest">Selected: {selectedPlan.name}</p>
+                                <p className="text-xl font-bold text-gray-900">Total: ₹{selectedPlan.offerPrice}</p>
+                            </div>
+                            <button
+                                onClick={handleSubmit}
+                                className="bg-[#00659e] text-white px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:opacity-90 transition-all shadow-lg shadow-blue-200"
                             >
-                                {['1 Month', '3 Months', '6 Months', '12 Months'].map(f => (
-                                    <option key={f} value={f}>{f}</option>
-                                ))}
-                            </select>
-                        </div>
-
-                        <div className="pt-2 text-right">
-                            <p className="text-xs font-bold text-gray-900">Total: ₹{totalPrice}</p>
+                                Subscribe Now
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="text-center mt-12">
+            {/* <div className="text-center mt-12">
                 <button
-                    onClick={handleSubmit}
-                    className="text-xs font-bold text-gray-500 uppercase tracking-widest hover:text-black transition-colors border-b border-transparent hover:border-black pb-0.5"
+                    className="text-[10px] font-bold text-gray-400 uppercase tracking-widest hover:text-black transition-all border-b border-transparent hover:border-black pb-0.5"
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
-                    Shop
+                    Back to top
                 </button>
-            </div>
+            </div> */}
         </section>
     );
 };
+

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 interface ProductGalleryProps {
     image: string;
-    badges: string[];
 }
 
 export const ProductGallery: React.FC<ProductGalleryProps> = ({ image }) => {
